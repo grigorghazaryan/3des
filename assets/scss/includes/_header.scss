@@ -1,8 +1,18 @@
 header {
 
+    #fixedNavbar {
+        @media (max-width: 992px) { 
+            display: none;
+        }
+    }
+
     .flex-1 {
         flex: 1;
         flex-basis: 100%;
+
+        @media (max-width: 992px) { 
+            display: none;
+        }
     }
 
     nav {
@@ -146,4 +156,13 @@ header {
     top: 15px;
     opacity: 0;
     transition: .5s;
+}
+
+.navbar-light .navbar-toggler {
+    color: rgba(0,0,0,.5);
+    border-color: transparent;
+
+    &:focus {
+        outline: none;
+    }
 }

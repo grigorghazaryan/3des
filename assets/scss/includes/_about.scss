@@ -1,8 +1,12 @@
 .about-us {
     padding: 168px 0;
-    .about-us__wrapper {
 
+    .about-us__wrapper {
         display: flex;
+
+        @media (max-width: 992px) {
+            flex-direction: column;
+        }
 
         .about-left {
             flex: 1;

@@ -22,8 +22,16 @@
                 display: flex;
                 margin-bottom: 32px;
 
+                @media (max-width: 992px) {
+                    margin-bottom: 15px;
+                }
+
                 .input-parent:first-child {
                     margin-right: 53px;
+
+                    @media (max-width: 992px) {
+                        margin-right: 15px;
+                    }
                 }
 
                 .input-parent {

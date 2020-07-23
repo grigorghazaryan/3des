@@ -9,8 +9,18 @@ section.our-products {
             margin-top: 26px;
             display: flex;
 
+            @media (max-width: 992px) {
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+            }
+
             .product:nth-child(2) {
                 margin: 0 26px;
+
+                @media (max-width: 992px) {
+                   margin: 26px 0;
+                }
             }
 
             .product {
@@ -51,6 +61,30 @@ section.our-products {
                     color: #242424;
                     border-radius: 20px;
                     padding: 8px;
+                }
+            }
+        }
+
+        .first {
+            @media (max-width: 768px) {
+                .product:nth-child(1) {
+                    flex: 1;
+                }
+                .product:nth-child(2) {
+                    flex: 1;
+                    margin-left: 15px;
+                }
+            }
+        }
+
+        .second {
+            @media (max-width: 768px) {
+                .product:nth-child(2) {
+                    flex: 1;
+                }
+                .product:nth-child(3) {
+                    flex: 1;
+                    margin-left: 15px;
                 }
             }
         }

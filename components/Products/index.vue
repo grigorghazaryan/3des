@@ -6,7 +6,7 @@
                 <span class="dot" style="background-color: #36A7AA;"></span>
             </div>
             <div class="products-parent">
-                <div class="products-parent-row">
+                <div class="products-parent-row first">
                     <div class="product ">
                         <img src="~assets/images/prod1.png" alt="product">
                         <div class="shop-button">Shop</div>
@@ -20,7 +20,7 @@
                          <div class="shop-button">Shop</div>
                     </div>
                 </div>
-                <div class="products-parent-row">
+                <div class="products-parent-row second">
                    <div class="product">
                         <img src="~assets/images/prod3.png" alt="product">
                          <div class="shop-button">Shop</div>
