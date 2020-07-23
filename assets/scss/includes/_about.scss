@@ -1,0 +1,31 @@
+.about-us {
+    padding: 168px 0;
+    .about-us__wrapper {
+
+        display: flex;
+
+        .about-left {
+            flex: 1;
+            margin-right: 60px;
+        }
+
+        .about-right {
+            flex: 2;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .about-left__header {
+            font-size: 24px;
+        }
+
+        p {
+            margin-top: 26px;
+            font-size: 18px;
+            font-family: WhitneySansLight;
+        }
+
+    }
+}

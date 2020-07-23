@@ -1,0 +1,95 @@
+.contact-us {
+    //padding: 168px 0;
+    padding: 95px 0;
+
+    .section-header {
+        margin-bottom: 0;
+    } 
+
+
+    .contact-us__form-parent {
+        display: flex;
+        justify-content: center;
+
+        .form {
+            width: 80%;
+            background-image: url('~assets/images/contact-map.png');
+            background-repeat: no-repeat;
+            background-position: 0 -65px;
+            padding-top: 140px;
+
+            .form__row {
+                display: flex;
+                margin-bottom: 32px;
+
+                .input-parent:first-child {
+                    margin-right: 53px;
+                }
+
+                .input-parent {
+                    flex: 1;
+
+                    input {
+                        width: 100%;
+                        border: 1px solid #151D41;
+                        border-radius: 5px;
+                        height: 64px;
+                        padding: 15px;
+                        font-family: WhitneySansLight;
+                        color: #252525;
+
+                        &:focus {
+                            outline: none;
+                            border-color: #36A7AA;
+                        }
+                    }
+                    
+                }
+                .textarea-parent {
+                    width: 100%;
+
+                    textarea {
+                        width: 100%;
+                        min-height: 234px;
+                        resize: none;
+                        border-radius: 5px;
+                        padding: 15px;
+                        font-family: WhitneySansLight;
+                        color: #252525;
+                        border: 1px solid #151D41;
+
+                        &:focus {
+                            outline: none;
+                            border-color: #36A7AA;
+                        }
+                    }
+                }
+            }
+            .send-button-parent {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+                .send {
+                    color: #fff;
+                    background-color: #F16649;
+                    border-radius: 30px;
+                    font-size: 18px;
+                    border: 1px solid transparent;
+                    outline: none;
+                    width: 173px;
+                    height: 54px;
+                    transition: .3s ease-in;
+                    box-sizing: border-box;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: transparent;
+                        color: #000;
+                        border-color: #36A7AA;
+                    }
+                }
+            }
+        }
+    }
+}

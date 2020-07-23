@@ -1,0 +1,24 @@
+.back-to-top {
+    visibility: hidden;
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+    z-index: 9;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.29);
+    cursor: pointer;
+
+    color: #252525;
+
+    &:hover {
+        color: #252525;
+        text-decoration: none;
+    }
+}
