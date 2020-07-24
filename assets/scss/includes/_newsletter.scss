@@ -41,6 +41,16 @@
         }
     }
 
+    .subscribe-button-parent {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        @media (max-width: 992px) {
+            justify-content: flex-end;
+        }
+    }
+
     .subscribe-button {
         color: #fff;
         background-color: #F16649;

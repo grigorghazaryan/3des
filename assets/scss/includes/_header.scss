@@ -1,4 +1,3 @@
-header {
 
     #fixedNavbar {
         @media (max-width: 992px) { 
@@ -12,6 +11,34 @@ header {
 
         @media (max-width: 992px) { 
             display: none;
+        }
+    }
+
+    .mobile-v {
+        display: none;
+
+        @media (max-width: 992px) {
+            display: block;
+        }
+    }
+
+    .card-parent {
+        position: relative;
+        cursor: pointer;
+
+        .card-counter {
+            position: absolute;
+            top: -13px;
+            left: -16px;
+            font-family: WhitneySansLight;
+        }
+        svg .a {
+            fill: #707070
+        }
+        &:hover {
+            svg .a {
+                fill: #f16649
+            }
         }
     }
 
@@ -82,26 +109,6 @@ header {
                     color: #242424;
                 }
             }
-
-            .card-parent {
-                position: relative;
-                cursor: pointer;
-
-                .card-counter {
-                    position: absolute;
-                    top: -13px;
-                    left: -16px;
-                    font-family: WhitneySansLight;
-                }
-                svg .a {
-                    fill: #707070
-                }
-                &:hover {
-                    svg .a {
-                        fill: #f16649
-                    }
-                }
-            }
         }
 
         .collapse {
@@ -141,8 +148,6 @@ header {
             }
         }
     }
-
-}
 
 
 

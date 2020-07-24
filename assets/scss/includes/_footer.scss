@@ -30,12 +30,20 @@ footer {
             flex-wrap: wrap;
         }
 
+
         svg {
             margin-right: 12px;
         }
 
         div {
             margin-right: 55px;
+
+            @media (max-width: 768px) {
+                width: 100%;
+                text-align: center;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
         }
 
         div:last-child {
@@ -52,7 +60,20 @@ footer {
         justify-content: center;
         align-items: center;
 
+        @media (max-width: 768px) {
+            flex-wrap: wrap;
+
+            div {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
         div:first-child {
+            @media (max-width: 768px) {
+                margin-right: 0;
+                margin-bottom: 7px;
+            }
             margin-right: 82px;
         }
 

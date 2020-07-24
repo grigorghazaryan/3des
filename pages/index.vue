@@ -8,6 +8,7 @@
     <Services />
     <ContactUs />
     <Newsletter />
+    <LiveChat />
     <BackToTop />
 
   </div>

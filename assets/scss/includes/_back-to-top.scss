@@ -14,11 +14,19 @@
     height: 60px;
     box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.29);
     cursor: pointer;
-
     color: #252525;
+
+    i {
+        transition: .5s;
+    }
 
     &:hover {
         color: #252525;
         text-decoration: none;
+    }
+
+    &:hover i {
+        color: #36A7AA;
+        transform: scale(1.4);
     }
 }

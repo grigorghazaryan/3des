@@ -24,7 +24,7 @@
                             <input type="text" placeholder="* Email address">
                         </div>
                     </div>
-                    <div class="form__row">
+                    <div class="form__row textarea-w">
                         <div class="textarea-parent">
                             <textarea placeholder="Message"></textarea>
                         </div>

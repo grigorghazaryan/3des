@@ -15,7 +15,7 @@
                         <input type="text" id="email-adress" placeholder="freebies@sales.com">
                     </div>
                 </div>
-                <div class="col-md-3 d-flex justify-content-start align-items-center">
+                <div class="col-md-3 subscribe-button-parent">
                     <button class="subscribe-button">Subscribe</button>
                 </div>
             </div>

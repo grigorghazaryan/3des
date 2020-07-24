@@ -14,6 +14,9 @@ section.our-products {
                 flex-wrap: wrap;
                 justify-content: space-evenly;
             }
+            @media (max-width: 768px) {
+                margin: 16px 0;
+            }
 
             .product:nth-child(2) {
                 margin: 0 26px;
@@ -21,11 +24,14 @@ section.our-products {
                 @media (max-width: 992px) {
                    margin: 26px 0;
                 }
+                @media (max-width: 768px) {
+                    margin: 16px 0;
+                }
             }
 
             .product {
                 position: relative;
-                height: 315px;
+                //height: 315px;
                 display: flex;
                 justify-content: center;
                 cursor: pointer;
@@ -72,19 +78,24 @@ section.our-products {
                 }
                 .product:nth-child(2) {
                     flex: 1;
-                    margin-left: 15px;
+                    margin-left: 16px;
                 }
             }
         }
 
         .second {
             @media (max-width: 768px) {
+                .product:nth-child(1) {
+                    order: 3;
+                }
                 .product:nth-child(2) {
                     flex: 1;
+                    order: 1;
                 }
                 .product:nth-child(3) {
                     flex: 1;
                     margin-left: 15px;
+                    order: 2;
                 }
             }
         }
