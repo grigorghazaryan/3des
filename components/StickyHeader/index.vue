@@ -17,7 +17,7 @@
                     <a class="nav-link">Shop</a>
                     <span class="nav-dot" style="background-color: #36A7AA;"></span>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="/frame">Frame</a>
+                        <a class="dropdown-item" href="/frame">Frames</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -51,10 +51,11 @@
     .dropdown-menu a {
         padding-left: 23px;
     }
-    .dropdown-item {
-        padding: 5px 16px !important;
+    .dropdown-menu a.dropdown-item {
+        padding: 5px 16px;
+        text-transform: capitalize;
     }
-    .dropdown-item:active {
+    .dropdown-menu a.dropdown-item:active {
         background-color: initial;
     }
 </style>
