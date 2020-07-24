@@ -7,12 +7,14 @@
 <script>
 export default {
     name: 'BackToTop',
-    created () {
-        if (process.client) {
+    mounted () {
+        if(process.client) {
             window.onscroll = function () {
                 if (pageYOffset >= 400) {
+                    console.log('visible')
                     document.getElementById('scrollTop').style.visibility = "visible";
                 } else {
+                    console.log('hidden')
                     document.getElementById('scrollTop').style.visibility = "hidden";
                 }
             };

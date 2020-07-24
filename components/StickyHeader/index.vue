@@ -44,10 +44,8 @@ export default {
         if (process.client) {
             window.onscroll = function () {
                 if (pageYOffset == 0) {
-                    console.log('0000')
                     document.getElementById('fixedNavbar').classList.remove('shadow')
                 } else {
-                    console.log('else')
                      document.getElementById('fixedNavbar').classList.add('shadow')
                 }
 
