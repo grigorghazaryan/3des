@@ -40,15 +40,22 @@
 <script>
 export default {
     name: 'StickyHeader',
-    mounted () {
+    created () {
         if (process.client) {
             window.onscroll = function () {
                 if (pageYOffset == 0) {
+                    console.log('0')
                     document.getElementById('fixedNavbar').classList.remove('shadow')
                 } else {
+                    console.log('0+')
                      document.getElementById('fixedNavbar').classList.add('shadow')
                 }
-
+                
+                if (pageYOffset >= 400) {
+                    document.getElementById('scrollTop').style.visibility = "visible";
+                } else {
+                    document.getElementById('scrollTop').style.visibility = "hidden";
+                }
             };
         }
     }

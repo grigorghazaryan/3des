@@ -9,15 +9,13 @@ export default {
     name: 'BackToTop',
     mounted () {
         if(process.client) {
-            window.onscroll = function () {
-                if (pageYOffset >= 400) {
-                    console.log('visible')
-                    document.getElementById('scrollTop').style.visibility = "visible";
-                } else {
-                    console.log('hidden')
-                    document.getElementById('scrollTop').style.visibility = "hidden";
-                }
-            };
+            //window.onscroll = function () {
+               // if (pageYOffset >= 400) {
+               //     document.getElementById('scrollTop').style.visibility = "visible";
+              //  } else {
+               //     document.getElementById('scrollTop').style.visibility = "hidden";
+               // }
+            //};
         }
     }
 
