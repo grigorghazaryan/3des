@@ -17,7 +17,7 @@
                     <a class="nav-link">Shop</a>
                     <span class="nav-dot" style="background-color: #36A7AA;"></span>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="/frame">Frames</a>
+                        <a class="dropdown-item" href="/frames">Frames</a>
                     </div>
                 </li>
                 <li class="nav-item">
