@@ -10,7 +10,7 @@
 
                 <div class="flex-1"></div>
                 
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/">
                     <img src="~/assets/images/logo.png" alt="Logo">
                 </a>
 
