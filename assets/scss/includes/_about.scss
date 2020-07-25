@@ -1,6 +1,14 @@
 .about-us {
     padding: 168px 0;
 
+    @media (max-width: 768px) { 
+        padding: 71px 0 0;
+
+        .section-header {
+            margin-bottom: 32px;
+        }
+    }
+
     .about-us__wrapper {
         display: flex;
 

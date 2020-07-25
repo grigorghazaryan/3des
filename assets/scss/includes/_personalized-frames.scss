@@ -167,6 +167,7 @@
     opacity: 1;
     margin-bottom: 34px;
     transition: .3s;
+    cursor: pointer;
     &:focus {
         outline: none;
     }
@@ -175,20 +176,19 @@
     }
 }
 
-
 .toggle-inputs{
     display: none
 }
+
 .textDropable {
-    display: inline-block;
-    width: fit-content;
-    font-size: 4.95ex;
+    display: inline;
     line-height: 49px;
     cursor: grab;
     width: max-content;
 }
+
 .rotate {
-    transform: rotate(180deg);
+    transform: rotate(180deg) !important;
 }
 
 .checked-font {
