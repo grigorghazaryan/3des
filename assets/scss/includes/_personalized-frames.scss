@@ -2,6 +2,10 @@
     padding: 64px;
     color: #252525;
 
+    @media (max-width: 768px) {
+        padding: 27px 5px;
+    }
+
     .personalized-frames_header {
         font-size: 30px;
         margin: 0;
@@ -27,7 +31,6 @@
             top: 35px;
         }
     }
-
 
     .two-blocks-parent {
         margin-top: 64px;

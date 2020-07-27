@@ -522,6 +522,11 @@ section.our-products .products-parent .products-parent-row {
 section.our-products .products-parent .products-parent-row .two-parent {
   display: flex;
   gap: 24px;
+  justify-content: center;
+}
+
+section.our-products .products-parent .products-parent-row .two-parent .product {
+  flex: 1;
 }
 
 section.our-products .products-parent .products-parent-row .product {
@@ -1107,6 +1112,12 @@ section.our-products .more-parent .more-button i {
   color: #252525;
 }
 
+@media (max-width: 768px) {
+  .personalized-frames {
+    padding: 27px 5px;
+  }
+}
+
 .personalized-frames .personalized-frames_header {
   font-size: 30px;
   margin: 0;
@@ -1337,6 +1348,12 @@ section.our-products .more-parent .more-button i {
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  .preview-frame-parent {
+    height: 520px;
+  }
+}
+
 .preview-frame-parent .frame {
   position: relative;
   width: 385px;
@@ -1359,8 +1376,8 @@ section.our-products .more-parent .more-button i {
 .preview-frame-parent .frame .fr .draggable svg {
   width: 100%;
   height: 100%;
-  max-width: 55px;
-  max-height: 55px;
+  max-width: 100px;
+  max-height: 100px;
   display: inline-block;
 }
 
@@ -1429,6 +1446,7 @@ section.our-products .more-parent .more-button i {
   height: 55px;
   background-color: #F16649;
   border-radius: 28px;
+  font-size: 18px;
   color: #fff;
   border: 2px solid transparent;
   display: flex;
@@ -1512,6 +1530,13 @@ section.our-products .more-parent .more-button i {
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  .sticker-items-parent {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
+
 .sticker-items-parent .sticker-parent {
   margin-top: 16px;
   width: 112px;
@@ -1524,6 +1549,12 @@ section.our-products .more-parent .more-button i {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .sticker-items-parent .sticker-parent {
+    width: 22%;
+  }
 }
 
 .sticker-items-parent .sticker-parent svg .a {
