@@ -62,3 +62,44 @@ body {
 .carousel-indicators li {
     margin-right: 13px;
 }
+
+
+.textDropable.rotate span.click-me {
+    transform: rotate(270deg);
+    top: -15px;
+    right: -15px;
+}
+
+.textDropable span.click-me {
+    font-size: 15px;
+    font-family: cursive;
+    position: absolute;
+    top: -25px;
+    cursor: pointer;
+    color: #6f6f6f;
+}
+
+.sticker-parent span.click-me {
+    font-size: 15px;
+    font-family: cursive;
+    position: absolute;
+    top: -15px;
+    right: 0;
+    cursor: pointer;
+    color: #6f6f6f;
+}
+
+div#right .sticker-parent span,
+div#left .sticker-parent span {
+    transform: rotate(270deg);
+    top: -15px;
+    right: -5px;
+}
+
+.ui-resizable-se {
+    cursor: se-resize;
+    width: 12px;
+    height: 12px;
+    right: -3px;
+    bottom: -3px;
+}
