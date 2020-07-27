@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.ui.rotatable/1.0.1/jquery.ui.rotatable.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <style>
@@ -141,21 +144,37 @@
 
                      <div class="input-parent-block">
                          <input id="top-input" type="text" placeholder="Enter your top text here" maxlength="15">
-                         <div class="limitor"><span class="top-counter">0</span>/15</div>
+                         <div class="limitor">
+                             <span class="top-counter co">0</span>
+                             / 
+                             <span class="top-maxlength">15</span>
+                        </div>
                      </div>
 
                      <div class="toggle-inputs">
                          <div class="input-parent-block">
                              <input id="bottom-input" type="text" placeholder="Enter your bottom text here" maxlength="15">
-                             <div class="limitor"><span class="bottom-counter">0</span>/15</div>
+                             <div class="limitor">
+                                 <span class="bottom-counter co">0</span>
+                                 /
+                                 <span class="bottom-maxlength">15</span>
+                            </div>
                          </div>
                          <div class="input-parent-block">
                              <input id="left-input" type="text" placeholder="Enter your left text here" maxlength="20">
-                             <div class="limitor"><span class="left-counter">0</span>/20</div>
+                             <div class="limitor">
+                                <span class="left-counter co">0</span>
+                                /
+                                <span class="left-maxlength">20</span>
+                            </div>
                          </div>
                          <div class="input-parent-block">
                              <input id="right-input" type="text" placeholder="Enter your right text here" maxlength="20">
-                             <div class="limitor"><span class="right-counter">0</span>/20</div>
+                             <div class="limitor">
+                                <span class="right-counter co">0</span>
+                                /
+                                <span class="right-maxlength">20</span>
+                            </div>
                          </div>
                      </div>
 
@@ -367,5 +386,6 @@
 
 <script src="./assets/js/frame.js"></script>
 <script src="./assets/js/main.js"></script>
+
 </body>
 </html>

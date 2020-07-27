@@ -1152,11 +1152,13 @@ section.our-products .more-parent .more-button i {
   letter-spacing: 0.16px;
   font-size: 16px;
   font-family: WhitneySansLight;
+  text-transform: uppercase;
 }
 
 .personalized-frames .two-blocks-parent .input-parent-block input::placeholder {
   color: #A2A2A2;
   opacity: 1;
+  text-transform: initial;
 }
 
 .personalized-frames .two-blocks-parent .input-parent-block input:focus {
@@ -1274,6 +1276,47 @@ section.our-products .more-parent .more-button i {
   line-height: 49px;
   cursor: grab;
   width: max-content;
+  text-transform: uppercase;
+}
+
+.textDropable.rotate span.click-me {
+  transform: rotate(270deg);
+  top: -15px;
+  right: -15px;
+}
+
+.textDropable span.click-me {
+  font-size: 15px;
+  font-family: cursive;
+  position: absolute;
+  top: -25px;
+  cursor: pointer;
+  color: #6f6f6f;
+}
+
+.sticker-parent span.click-me {
+  font-size: 15px;
+  font-family: cursive;
+  position: absolute;
+  top: -15px;
+  right: 0;
+  cursor: pointer;
+  color: #6f6f6f;
+}
+
+div#right .sticker-parent span,
+div#left .sticker-parent span {
+  transform: rotate(270deg);
+  top: -15px;
+  right: -5px;
+}
+
+.ui-resizable-se {
+  cursor: se-resize;
+  width: 12px;
+  height: 12px;
+  right: -3px;
+  bottom: -3px;
 }
 
 .rotate {
@@ -1321,8 +1364,10 @@ section.our-products .more-parent .more-button i {
 
 .preview-frame-parent .frame .fr .draggable,
 .preview-frame-parent .frame .fr .draggable svg {
-  width: 50px;
-  height: 50px;
+  width: 100%;
+  height: 100%;
+  max-width: 55px;
+  max-height: 55px;
   display: inline-block;
 }
 
