@@ -1394,6 +1394,14 @@ section.our-products .more-parent .more-button i {
   transform: rotate(-1deg);
 }
 
+@media (max-width: 400px) {
+  .preview-frame-parent .frame .top {
+    left: 2%;
+    top: 4%;
+    width: 91%;
+  }
+}
+
 .preview-frame-parent .frame .right {
   width: 14%;
   height: 73.5%;
@@ -1402,6 +1410,16 @@ section.our-products .more-parent .more-button i {
   left: 76%;
   transform: rotate(0.1deg);
   writing-mode: tb-rl;
+}
+
+@media (max-width: 400px) {
+  .preview-frame-parent .frame .right {
+    height: 68%;
+    top: 14%;
+    left: 76%;
+    width: 17%;
+    transform: rotate(-0.1deg);
+  }
 }
 
 .preview-frame-parent .frame .bottom {
@@ -1413,6 +1431,15 @@ section.our-products .more-parent .more-button i {
   transform: rotate(-0.5deg);
 }
 
+@media (max-width: 400px) {
+  .preview-frame-parent .frame .bottom {
+    width: 90%;
+    left: 3%;
+    transform: rotate(-1.1deg);
+    bottom: 6.8%;
+  }
+}
+
 .preview-frame-parent .frame .left {
   width: 14%;
   height: 73%;
@@ -1421,6 +1448,15 @@ section.our-products .more-parent .more-button i {
   right: 80%;
   transform: rotate(-0.3deg);
   writing-mode: tb-rl;
+}
+
+@media (max-width: 400px) {
+  .preview-frame-parent .frame .left {
+    top: 15%;
+    right: 81.5%;
+    height: 68%;
+    width: 16%;
+  }
 }
 
 .snaptarget-hover {
