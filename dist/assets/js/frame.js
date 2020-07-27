@@ -53,8 +53,7 @@ function setDroppable(id) {
             $('<span class="click-me">X</span>').appendTo('.fr > .sticker-parent').click(removeElement);
             
     }
-    } );
-    
+    } ); 
 }
 
 function checkDefaultFont() {
@@ -74,16 +73,18 @@ function setFontFamily(value, el) {
     switch(value) {
         case 'classic':
             el.style.fontFamily = 'WhitneySans';
-            el.style.lineHeight = '80px';
-            el.style.fontSize = '4.5ex';
+            el.style.lineHeight = '';
+            el.style.fontSize = '4.3ex';
             break;
         case 'rounded':
             el.style.fontFamily = 'Chewy';
-            el.style.fontSize = '5ex';
+            el.style.fontSize = '5.6ex';
+            el.style.lineHeight = '57px';
             break;
         case 'script':
             el.style.fontFamily = 'Damion'
             el.style.fontSize = '4ex';
+            el.style.lineHeight = '50px';
             break;
         case 'chunky':
             el.style.fontFamily = 'Arial'
@@ -101,33 +102,67 @@ function createElementOnFrame( valueId, frameId ) {
         let value = document.querySelector( valueId ).value;
 
         if ( value.length !== 0 ) {
-            
-            let font = localStorage.getItem( 'font' ),
+
+            if($(frameId).children('.textDropable').length) {
+                $(frameId + ' > .textDropable > span.clear-text').html(value)
+            }else {
+               
+               let font = localStorage.getItem( 'font' ),
                 div = document.createElement( 'div' ),
                 id = (frameId + counter).replace('#', ''),
-                span = document.createElement('span');
+                pre = document.createElement('span');
 
-            if(frameId == '#right' || frameId == '#left') {
-                div.className = 'textDropable rotate'
-            } else {
-                div.className = 'textDropable'
+                if(frameId == '#right' || frameId == '#left') {
+                    div.className = 'textDropable rotate'
+                } else {
+                    div.className = 'textDropable'
+                }
+
+                div.id = id;
+                pre.className = 'clear-text'
+                pre.innerHTML = value;
+                div.appendChild(pre);
+
+                setTimeout( () => {
+                    let w = div.offsetWidth + 2;
+                    div.style.width = w + 'px';
+                }, 0 );
+
+                setFontFamily( font, div );
+                document.querySelector( frameId ).append( div );
+
+                switch(frameId) {
+                    case '#top':
+                        $( '#'+id ).draggable({ 
+                            containment: frameId,
+                            axis: 'x'
+                        })  
+                        break;
+                    case '#bottom':
+                        $( '#'+id ).draggable({ 
+                            containment: frameId,
+                            axis: 'x'
+                        })  
+                        break;    
+                    case '#right':
+                        $( '#'+id ).draggable({ 
+                            containment: frameId,
+                            axis: 'y'
+                        })  
+                        break;  
+                    case '#left':
+                        $( '#'+id ).draggable({ 
+                            containment: frameId,
+                            axis: 'y'
+                        })  
+                        break;  
+                    default:
+                        break;
+                }
+
+                $('<span class="click-me">X</span>').appendTo('.textDropable').click(removeElement);
             }
-
-            div.id = id;
-            span.className = 'clear-text'
-            span.innerHTML = value;
-            div.appendChild(span);
-
-            setTimeout( () => {
-                let w = div.offsetWidth + 2;
-                div.style.width = w + 'px';
-            }, 0 );
-
-            setFontFamily( font, div );
-            document.querySelector( frameId ).append( div );
-
-            $( '#'+id ).draggable( { containment: frameId} )   
-            $('<span class="click-me">X</span>').appendTo('.textDropable').click(removeElement);
+            
         }
 
 }
@@ -144,10 +179,17 @@ function checkExistedValue(id, length) {
 }
 
 function removeElement() {
+
+    if($(this).parent().hasClass('textDropable')) {
+        let parent = $(this).parent()
+        let parentsParent = parent.parent()[0].id;
+        $('#'+parentsParent+'-input').val('');
+    }
+
     $(this).parent().remove();
-    
+
     setTimeout(()=>{
-      checkExistedValue('top', 15);
+        checkExistedValue('top', 15);
        checkExistedValue('bottom', 15);
        checkExistedValue('right', 20);
        checkExistedValue('left', 20);
@@ -189,22 +231,17 @@ textValidation('#left-input', '.left-counter', 20);
 textValidation( '#right-input', '.right-counter', 20 );
 
 document.querySelector( '.apply-button' ).onclick = function () {
+
     createElementOnFrame('#top-input', '#top');
-    checkExistedValue('top', 15);
 
     createElementOnFrame('#bottom-input', '#bottom');
-    checkExistedValue('bottom', 15);
 
     createElementOnFrame('#right-input', '#right');
-    checkExistedValue('right', 20);
 
     createElementOnFrame( '#left-input', '#left' );
-    checkExistedValue('left', 20);
 
-    clearInputs();
+    // clearInputs();
 }
-
-
 
 function resetInputCounterValues(id, value) {
     $('#' + id + '-input').attr('maxlength', value);

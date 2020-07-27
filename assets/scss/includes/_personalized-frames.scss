@@ -188,9 +188,11 @@
     cursor: grab;
     width: max-content;
     text-transform: uppercase;
+
+    span.clear-text {
+        white-space: break-spaces;
+    }
 }
-
-
 
 .rotate {
     transform: rotate(180deg) !important;

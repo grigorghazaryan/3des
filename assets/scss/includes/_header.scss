@@ -12,6 +12,23 @@
         @media (max-width: 992px) { 
             display: none;
         }
+
+        .back-button {
+            font-size: 14px;
+            font-family: WhitneySansLight;
+            cursor: pointer;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            color: inherit;
+            text-decoration: none;
+
+            svg {
+                width: 13px;
+                height: 11px;
+                margin-right: 10px;
+            }
+        }
     }
 
     .mobile-v {

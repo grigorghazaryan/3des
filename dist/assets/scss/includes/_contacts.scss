@@ -114,6 +114,10 @@
                 justify-content: flex-end;
                 align-items: center;
 
+                @media (max-width: 768px) {
+                    justify-content: center;
+                }
+
                 .send {
                     color: #fff;
                     background-color: #F16649;

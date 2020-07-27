@@ -49,6 +49,9 @@
         @media (max-width: 992px) {
             justify-content: flex-end;
         }
+        @media (max-width: 768px) {
+            justify-content: center;
+        }
     }
 
     .subscribe-button {

@@ -120,6 +120,23 @@ body {
   }
 }
 
+.flex-1 .back-button {
+  font-size: 14px;
+  font-family: WhitneySansLight;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+}
+
+.flex-1 .back-button svg {
+  width: 13px;
+  height: 11px;
+  margin-right: 10px;
+}
+
 .mobile-v {
   display: none;
 }
@@ -441,6 +458,12 @@ nav .collapse .navbar-nav li:last-child {
 @media (max-width: 992px) {
   .newsletter .subscribe-button-parent {
     justify-content: flex-end;
+  }
+}
+
+@media (max-width: 768px) {
+  .newsletter .subscribe-button-parent {
+    justify-content: center;
   }
 }
 
@@ -858,6 +881,12 @@ section.our-products .more-parent .more-button i {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .contact-us .contact-us__form-parent .form .send-button-parent {
+    justify-content: center;
+  }
 }
 
 .contact-us .contact-us__form-parent .form .send-button-parent .send {
@@ -1279,6 +1308,10 @@ section.our-products .more-parent .more-button i {
   text-transform: uppercase;
 }
 
+.textDropable span.clear-text {
+  white-space: break-spaces;
+}
+
 .rotate {
   transform: rotate(180deg) !important;
 }
@@ -1378,14 +1411,14 @@ section.our-products .more-parent .more-button i {
 }
 
 .fix-button-parent {
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  /* position: fixed; */
+  /* bottom: 0; */
+  /* left: 0; */
   width: 100%;
-  height: 183px;
+  /* height: 183px; */
   background-color: #fff;
-  box-shadow: 4px 0px 8px #00000029;
-  padding: 78px 0 50px 0;
+  /* box-shadow: 4px 0px 8px #00000029; */
+  /* padding: 0 50px 0; */
   display: flex;
   justify-content: center;
   z-index: 999;
@@ -1503,7 +1536,7 @@ section.our-products .more-parent .more-button i {
 }
 
 .sticker-items-parent .sticker-parent:hover svg .a {
-  fill: #36A7AA;
+  fill: #36A7AA !important;
 }
 
 .sticker-parent.draggable.fr.ui-draggable {
