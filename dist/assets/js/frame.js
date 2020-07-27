@@ -6,7 +6,7 @@ $( ".draggable" ).draggable( {
     helper: "clone",
     appendTo: "body",
     revert: "invalid",
-    snap: ".fr",
+    //snap: ".fr",
     stack: ".draggable",
     scroll: false
 } );
@@ -33,7 +33,7 @@ function setDroppable(id) {
                 item.addClass('fr');
                 item.draggable({
                 containment: id,
-                snap: false,
+                snap: true,
                 stack: ".draggable",
                 scroll: false
             });
@@ -46,8 +46,8 @@ function setDroppable(id) {
             $('.fr > .sticker-parent').resizable({
                 // autoHide: true,
                 // containment: id,
-                maxWidth: 55,
-                maxHeight: 55,
+                maxWidth: 95,
+                maxHeight: 95,
 
             });
             $('<span class="click-me">X</span>').appendTo('.fr > .sticker-parent').click(removeElement);

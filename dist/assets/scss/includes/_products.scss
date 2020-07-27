@@ -32,6 +32,11 @@ section.our-products {
             .two-parent {
                 display: flex;
                 gap: 24px;
+                justify-content: center;
+
+                .product {
+                    flex: 1;
+                }
             }
 
             .product {
