@@ -144,7 +144,6 @@ function checkExistedValue(id, length) {
 }
 
 function removeElement() {
-    console.log('removed')
     $(this).parent().remove();
     
     setTimeout(()=>{
