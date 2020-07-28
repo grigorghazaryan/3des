@@ -135,6 +135,7 @@ body {
   width: 13px;
   height: 11px;
   margin-right: 10px;
+  fill: #252525;
 }
 
 .mobile-v {
@@ -292,6 +293,7 @@ nav .collapse .navbar-nav li:last-child {
 }
 
 .navbar-light .navbar-toggler {
+  padding: 0;
   color: rgba(0, 0, 0, 0.5);
   border-color: transparent;
 }
@@ -1124,12 +1126,44 @@ section.our-products .more-parent .more-button i {
   text-align: center;
 }
 
+.personalized-frames .personalized-frames_header .reset {
+  all: initial;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .personalized-frames .personalized-frames_header {
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .personalized-frames .personalized-frames_header .reset {
+    display: block;
+  }
+}
+
 .personalized-frames .step-by-step-progres-parent {
   position: relative;
   margin-top: 17px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.personalized-frames .mobile-back {
+  display: none;
+}
+
+.personalized-frames .mobile-back svg {
+  width: 13px;
+  height: 13px;
+}
+
+@media (max-width: 768px) {
+  .personalized-frames .mobile-back {
+    display: block;
+  }
 }
 
 .personalized-frames .reset {
@@ -1140,6 +1174,12 @@ section.our-products .more-parent .more-button i {
   font-family: WhitneySansLight;
   font-size: 16px;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .personalized-frames .reset {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 670px) and (min-width: 300px) {
@@ -1285,6 +1325,17 @@ section.our-products .more-parent .more-button i {
   font-size: 18px;
 }
 
+@media (max-width: 768px) {
+  .personalized-frames .two-blocks-parent {
+    margin-top: 32px;
+  }
+  .personalized-frames .two-blocks-parent .left-col {
+    position: sticky;
+    top: 0;
+    z-index: 7;
+  }
+}
+
 .apply-button {
   width: 100%;
   height: 50px;
@@ -1350,7 +1401,7 @@ section.our-products .more-parent .more-button i {
 
 @media (max-width: 768px) {
   .preview-frame-parent {
-    height: 520px;
+    height: 245px;
   }
 }
 
@@ -1364,15 +1415,23 @@ section.our-products .more-parent .more-button i {
   background-position: center;
 }
 
+@media (max-width: 768px) {
+  .preview-frame-parent .frame {
+    height: 245px;
+    background-size: contain;
+  }
+}
+
 .preview-frame-parent .frame .fr {
-  z-index: 2;
+  z-index: 999;
 }
 
 .preview-frame-parent .frame .fr .draggable {
-  width: 50px;
+  width: 55px;
+  height: 55px;
+  cursor: grab;
 }
 
-.preview-frame-parent .frame .fr .draggable,
 .preview-frame-parent .frame .fr .draggable svg {
   width: 100%;
   height: 100%;
@@ -1386,11 +1445,11 @@ section.our-products .more-parent .more-button i {
 }
 
 .preview-frame-parent .frame .top {
-  width: 84.44%;
-  height: 53px;
+  width: 86.5%;
+  height: 63px;
   position: absolute;
-  top: 1.2%;
-  left: 5.6%;
+  top: 0%;
+  left: 4.5%;
   transform: rotate(-1deg);
 }
 
@@ -1403,12 +1462,12 @@ section.our-products .more-parent .more-button i {
 }
 
 .preview-frame-parent .frame .right {
-  width: 14%;
-  height: 73.5%;
+  width: 17.5%;
+  height: 71.4%;
   position: absolute;
-  top: 11%;
-  left: 76%;
-  transform: rotate(0.1deg);
+  top: 12%;
+  left: 74%;
+  transform: rotate(-0.3deg);
   writing-mode: tb-rl;
 }
 
@@ -1423,11 +1482,11 @@ section.our-products .more-parent .more-button i {
 }
 
 .preview-frame-parent .frame .bottom {
-  width: 83.9%;
-  height: 53px;
+  width: 87%;
+  height: 67px;
   position: absolute;
-  bottom: 4.8%;
-  left: 6.2%;
+  bottom: 3%;
+  left: 5%;
   transform: rotate(-0.5deg);
 }
 
@@ -1441,12 +1500,12 @@ section.our-products .more-parent .more-button i {
 }
 
 .preview-frame-parent .frame .left {
-  width: 14%;
-  height: 73%;
+  width: 17.5%;
+  height: 70.95%;
   position: absolute;
-  top: 12%;
-  right: 80%;
-  transform: rotate(-0.3deg);
+  top: 13.085%;
+  right: 78%;
+  transform: rotate(-0.1deg);
   writing-mode: tb-rl;
 }
 
@@ -1514,10 +1573,22 @@ section.our-products .more-parent .more-button i {
   width: 360px;
 }
 
+@media (max-width: 768px) {
+  .progressbar-wrapper {
+    width: 150px;
+  }
+}
+
 .progressbar-wrapper .progressbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .progressbar-wrapper .progressbar {
+    margin: 0 auto;
+  }
 }
 
 .progressbar-wrapper .progressbar div {
@@ -1558,6 +1629,32 @@ section.our-products .more-parent .more-button i {
   top: 45%;
   left: 0;
   z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .progressbar-wrapper .progressbar div:before {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 2px;
+    background: #707070;
+    top: 45%;
+    left: -28px;
+    z-index: -1;
+  }
+  .progressbar-wrapper .progressbar div.active:before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: #BDB130;
+    top: 45%;
+    left: 0;
+    z-index: 2;
+  }
+  .progressbar-wrapper .progressbar div:last-child:before {
+    width: 38px;
+  }
 }
 
 .sticker-items-parent {

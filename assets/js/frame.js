@@ -5,11 +5,25 @@ checkDefaultFont();
 $( ".draggable" ).draggable( {
     helper: "clone",
     appendTo: "body",
-    revert: "invalid",
-    //snap: ".fr",
-    stack: ".draggable",
-    scroll: false
+    revert: false,
+    //snap: ".ui-droppable",
+    //stack: ".draggable",
+    scroll: false,
 } );
+
+function makeOffsetArray(tObj, offsetX, offsetY) {
+    var p = tObj.position();
+
+   // p.right = p.left + tObj.width();
+   // p.bottom = p.top + tObj.height();
+
+    return [
+      p.left - offsetX,
+      p.top - offsetY,
+      p.right,
+      p.bottom
+    ];
+}
 
 function setDroppable(id) {
     $(id).droppable({
@@ -26,29 +40,32 @@ function setDroppable(id) {
                 origPos = item.offset();
                 ct.append(item);
             } else {
+
                 origPos = ui.offset;
                 item = item.clone();
                 ct.append(item);
                 item.removeClass("ui-draggable");
                 item.addClass('fr');
+
                 item.draggable({
-                containment: id,
-                snap: true,
-                stack: ".draggable",
-                scroll: false
-            });
+                    containment: $(id),
+                    //snap: false,
+                    //stack: ".draggable",
+                    //scroll: false
+                });
             }
             item.css({
                 top: origPos.top - ctPos.top - 1,
                 left: origPos.left - ctPos.left -1
             } );
-            $('.fr > .sticker-parent').rotatable();
-            $('.fr > .sticker-parent').resizable({
-                // autoHide: true,
-                // containment: id,
-                maxWidth: 95,
-                maxHeight: 95,
 
+            $('.fr > .sticker-parent').rotatable({}).resizable({
+                maxWidth: 73,
+                maxHeight: 73,
+                minWidth: 40,
+                minHeight: 40,
+                animateDuration: "fast",
+                autoHide: true,
             });
             $('<span class="click-me">X</span>').appendTo('.fr > .sticker-parent').click(removeElement);
             
@@ -79,7 +96,8 @@ function setFontFamily(value, el) {
         case 'rounded':
             el.style.fontFamily = 'Chewy';
             el.style.fontSize = '5.6ex';
-            el.style.lineHeight = '57px';
+            el.style.lineHeight = '61px';
+            el.style.margin = '0 8px';
             break;
         case 'script':
             el.style.fontFamily = 'Damion'
@@ -141,7 +159,7 @@ function createElementOnFrame( valueId, frameId ) {
                     case '#bottom':
                         $( '#'+id ).draggable({ 
                             containment: frameId,
-                            axis: 'x'
+                        axis: 'x'
                         })  
                         break;    
                     case '#right':
@@ -259,7 +277,11 @@ $("input[type='radio']" ).click( function () {
     }
 })
 
-document.querySelector( '.reset' ).onclick = function () {
+function removeIcons(id) {
+    $(id).html('')
+}
+
+$('.reset').click(function() {
     clearInnerHtml('#top');
     clearInnerHtml('#right');
     clearInnerHtml('#bottom');
@@ -273,5 +295,11 @@ document.querySelector( '.reset' ).onclick = function () {
     resetInputCounterValues('bottom', 15);
     resetInputCounterValues('left', 15);
 
+
+    removeIcons('#top')
+    removeIcons('#right')
+    removeIcons('#bottom')
+    removeIcons('#left')
+
     clearInputs();
-}
+})

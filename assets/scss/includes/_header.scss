@@ -27,6 +27,7 @@
                 width: 13px;
                 height: 11px;
                 margin-right: 10px;
+                fill: #252525;
             }
         }
     }
@@ -190,6 +191,7 @@
 }
 
 .navbar-light .navbar-toggler {
+    padding: 0;
     color: rgba(0,0,0,.5);
     border-color: transparent;
 
