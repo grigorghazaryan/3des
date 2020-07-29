@@ -11,20 +11,6 @@ $( ".draggable" ).draggable( {
     scroll: false,
 } );
 
-function makeOffsetArray(tObj, offsetX, offsetY) {
-    var p = tObj.position();
-
-   // p.right = p.left + tObj.width();
-   // p.bottom = p.top + tObj.height();
-
-    return [
-      p.left - offsetX,
-      p.top - offsetY,
-      p.right,
-      p.bottom
-    ];
-}
-
 function setDroppable(id) {
     $(id).droppable({
         accept: ".draggable",
@@ -86,7 +72,54 @@ function textValidation(id, counterClass, limit) {
     }
 }
 
-function setFontFamily(value, el) {
+// Detect text length and set size
+// Refactor code If else to switch case
+
+function setFontSize(el, length) {
+    if(length <= 8) {
+        el.style.fontSize = '4rem';
+        el.style.lineHeight = '70px';
+    }else if(length == 9 ) {
+        el.style.fontSize = '3.65rem';
+        el.style.lineHeight = '66px';
+    }else if(length == 10) {
+        el.style.fontSize = '3.35rem';
+        el.style.lineHeight = '69px';
+    }else if(length == 11) {
+        el.style.fontSize = '3.5rem';
+        el.style.lineHeight = '69px';
+    }else if(length == 12 ) {
+        el.style.fontSize = '3.2rem';
+        el.style.lineHeight = '69px';
+    }else if(length == 13 ) {
+        el.style.fontSize = '2.85rem';
+        el.style.lineHeight = '69px';
+    }else if(length == 14 ) {
+        el.style.fontSize = '2.6rem';
+        el.style.lineHeight = '69px';
+    }else if(length == 15 ) {
+        el.style.fontSize = '2.8rem';
+        el.style.lineHeight = '69px';
+    }else if(length == 16 ) {
+        el.style.fontSize = '2.8rem';
+        el.style.lineHeight = '69px';
+    }else if(length == 17 ) {
+        el.style.fontSize = '2.65rem';
+        el.style.lineHeight = '69px';
+    }else if(length == 18 ) {
+        el.style.fontSize = '2.55rem';
+        el.style.lineHeight = '69px';
+    }else if(length == 19 ) {
+        el.style.fontSize = '2.4rem';
+        el.style.lineHeight = '69px';
+    }else if(length == 20 ) {
+        el.style.fontSize = '2.3rem';
+        el.style.lineHeight = '69px';
+    }
+}
+
+function setFontFamily(value, el, length) {
+    console.log('LENGTH', length)
     switch(value) {
         case 'classic':
             el.style.fontFamily = 'WhitneySans';
@@ -95,9 +128,7 @@ function setFontFamily(value, el) {
             break;
         case 'rounded':
             el.style.fontFamily = 'Chewy';
-            el.style.fontSize = '5.6ex';
-            el.style.lineHeight = '61px';
-            el.style.margin = '0 8px';
+            setFontSize(el, length);
             break;
         case 'script':
             el.style.fontFamily = 'Damion'
@@ -119,20 +150,26 @@ function createElementOnFrame( valueId, frameId ) {
 
         let value = document.querySelector( valueId ).value;
 
+        console.log('value', value.length)
+
         if ( value.length !== 0 ) {
 
-            if($(frameId).children('.textDropable').length) {
-                $(frameId + ' > .textDropable > span.clear-text').html(value)
-            }else {
+            //if($(frameId).children('.textDropable').length) {
+                //$(frameId + ' > .textDropable > span.clear-text').html(value)
+            //}else {
+
+                if($(frameId).children('.textDropable').length) {
+                    $(frameId).html('')
+                }
                
-               let font = localStorage.getItem( 'font' ),
-                div = document.createElement( 'div' ),
-                id = (frameId + counter).replace('#', ''),
-                pre = document.createElement('span');
+                let font = localStorage.getItem( 'font' ),
+                    div = document.createElement( 'div' ),
+                    id = (frameId + counter).replace('#', ''),
+                    pre = document.createElement('span');
 
                 if(frameId == '#right' || frameId == '#left') {
                     div.className = 'textDropable rotate'
-                } else {
+                }else {
                     div.className = 'textDropable'
                 }
 
@@ -146,7 +183,7 @@ function createElementOnFrame( valueId, frameId ) {
                     div.style.width = w + 'px';
                 }, 0 );
 
-                setFontFamily( font, div );
+                setFontFamily( font, div, value.length );
                 document.querySelector( frameId ).append( div );
 
                 switch(frameId) {
@@ -179,7 +216,7 @@ function createElementOnFrame( valueId, frameId ) {
                 }
 
                 $('<span class="click-me">X</span>').appendTo('.textDropable').click(removeElement);
-            }
+           // }
             
         }
 

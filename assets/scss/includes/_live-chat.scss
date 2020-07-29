@@ -18,6 +18,11 @@
         left: 2%;
     }
 
+    @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+        top: 80%;
+    }
+
+
     & svg .aa {
         fill:#676463;
     }

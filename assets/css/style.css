@@ -173,6 +173,9 @@ nav {
 }
 
 @media (max-width: 768px) {
+  nav .navbar-brand {
+    margin: 0;
+  }
   nav .navbar-brand img {
     width: 105px;
   }
@@ -334,6 +337,13 @@ nav .collapse .navbar-nav li:last-child {
   height: 31px;
 }
 
+.mobile-menu-body {
+  height: 81%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .mobile-menu__items {
   width: 100%;
   display: flex;
@@ -368,9 +378,8 @@ nav .collapse .navbar-nav li:last-child {
 }
 
 .mobile-menu__lng-change {
-  position: absolute;
-  bottom: 32px;
-  right: 23px;
+  margin: 0 20px 20px 0;
+  width: 130px;
 }
 
 .mobile-menu__lng-change .languages {
@@ -389,6 +398,44 @@ nav .collapse .navbar-nav li:last-child {
 
 .mobile-menu__lng-change .languages .active {
   color: #242424;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+  .mobile-menu {
+    overflow: scroll;
+  }
+  .mobile-menu-body {
+    height: 150%;
+  }
+}
+
+.shadow {
+  position: sticky;
+  top: 0;
+  z-index: 8;
+  background-color: #fff !important;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16078);
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+li.nav-item.dropdown .dropdown-menu {
+  padding: 23px 0;
+}
+
+li.nav-item.dropdown .dropdown-menu a {
+  padding-left: 23px;
+}
+
+li.nav-item.dropdown .dropdown-menu a.dropdown-item {
+  padding: 5px 16px;
+  text-transform: capitalize;
+}
+
+li.nav-item.dropdown .dropdown-menu a.dropdown-item:active {
+  background-color: initial;
 }
 
 .main-video video {
@@ -942,6 +989,12 @@ section.our-products .more-parent .more-button i {
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+  .back-to-top {
+    top: 80%;
+  }
+}
+
 .back-to-top i {
   transition: .5s;
 }
@@ -975,6 +1028,12 @@ section.our-products .more-parent .more-button i {
   .support-icon-wrapper {
     top: 85%;
     left: 2%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+  .support-icon-wrapper {
+    top: 80%;
   }
 }
 
@@ -1423,7 +1482,7 @@ section.our-products .more-parent .more-button i {
 }
 
 .preview-frame-parent .frame .fr {
-  z-index: 999;
+  z-index: 88;
 }
 
 .preview-frame-parent .frame .fr .draggable {
@@ -1705,6 +1764,219 @@ section.our-products .more-parent .more-button i {
 
 .sticker-parent.draggable.fr.ui-draggable {
   position: absolute !important;
+}
+
+.sign-in-black {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #2525254D;
+  z-index: 999;
+  transition: .3s;
+}
+
+.sign-in__parent {
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  max-width: 1121px;
+  height: auto;
+  background: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  padding: 30px;
+  transition: .3s;
+}
+
+.sign-in__parent .sign-in-block {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #F16649;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-in__parent .sign-in-block .popup-close {
+  position: absolute;
+  right: 4%;
+  top: 1%;
+  font-size: 25px;
+  display: none;
+}
+
+.sign-in__parent .sign-in-block .sup {
+  display: none;
+}
+
+.sign-in__parent .sign-in-block .sign-in, .sign-in__parent .sign-in-block .sign-up {
+  width: 550px;
+  margin: 35px 0;
+}
+
+.sign-in__parent .sign-in-block .sign-in h2, .sign-in__parent .sign-in-block .sign-in p, .sign-in__parent .sign-in-block .sign-up h2, .sign-in__parent .sign-in-block .sign-up p {
+  text-align: center;
+}
+
+.sign-in__parent .sign-in-block .sign-in h2, .sign-in__parent .sign-in-block .sign-up h2 {
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.sign-in__parent .sign-in-block .sign-in p, .sign-in__parent .sign-in-block .sign-up p {
+  font-family: WhitneySansLight;
+  color: #151D41;
+  margin-bottom: 67px;
+}
+
+@media (max-width: 400px) {
+  .sign-in__parent .sign-in-block .sign-in p, .sign-in__parent .sign-in-block .sign-up p {
+    margin-bottom: 20px;
+  }
+}
+
+.sign-in__parent .sign-in-block .sign-in .double-input-parent, .sign-in__parent .sign-in-block .sign-up .double-input-parent {
+  gap: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 400px) {
+  .sign-in__parent .sign-in-block .sign-in .double-input-parent, .sign-in__parent .sign-in-block .sign-up .double-input-parent {
+    gap: 20px;
+  }
+}
+
+.sign-in__parent .sign-in-block .sign-in .login-input-parent,
+.sign-in__parent .sign-in-block .sign-in .double-input-parent, .sign-in__parent .sign-in-block .sign-up .login-input-parent,
+.sign-in__parent .sign-in-block .sign-up .double-input-parent {
+  width: 100%;
+  margin-bottom: 25px;
+  font-family: WhitneySansLight;
+}
+
+@media (max-width: 400px) {
+  .sign-in__parent .sign-in-block .sign-in .login-input-parent,
+  .sign-in__parent .sign-in-block .sign-in .double-input-parent, .sign-in__parent .sign-in-block .sign-up .login-input-parent,
+  .sign-in__parent .sign-in-block .sign-up .double-input-parent {
+    margin-bottom: 15px;
+  }
+}
+
+.sign-in__parent .sign-in-block .sign-in .login-input-parent input,
+.sign-in__parent .sign-in-block .sign-in .double-input-parent input, .sign-in__parent .sign-in-block .sign-up .login-input-parent input,
+.sign-in__parent .sign-in-block .sign-up .double-input-parent input {
+  width: 100%;
+  height: 64px;
+  background: #FFFFFF;
+  border: 1px solid #151D41;
+  border-radius: 5px;
+  padding: 24px 18px;
+  transition: border .3s ease-in-out;
+}
+
+.sign-in__parent .sign-in-block .sign-in .login-input-parent input:focus,
+.sign-in__parent .sign-in-block .sign-in .double-input-parent input:focus, .sign-in__parent .sign-in-block .sign-up .login-input-parent input:focus,
+.sign-in__parent .sign-in-block .sign-up .double-input-parent input:focus {
+  border-color: #36A7AA;
+  outline: none;
+  box-shadow: none;
+}
+
+.sign-in__parent .sign-in-block .sign-in .sign-in-button-wrapper, .sign-in__parent .sign-in-block .sign-up .sign-in-button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+@media (max-width: 400px) {
+  .sign-in__parent .sign-in-block .sign-in .sign-in-button-wrapper, .sign-in__parent .sign-in-block .sign-up .sign-in-button-wrapper {
+    margin-bottom: 10px;
+  }
+}
+
+.sign-in__parent .sign-in-block .sign-in .sign-in-button-wrapper a, .sign-in__parent .sign-in-block .sign-up .sign-in-button-wrapper a {
+  color: #151D41;
+  font-family: WhitneySansLight;
+  text-decoration: underline;
+}
+
+.sign-in__parent .sign-in-block .sign-in .sign-in-button-wrapper button, .sign-in__parent .sign-in-block .sign-up .sign-in-button-wrapper button {
+  color: #fff;
+  background-color: #F16649;
+  border-radius: 30px;
+  font-size: 18px;
+  border: 1px solid transparent;
+  outline: none;
+  width: 173px;
+  height: 54px;
+  transition: .3s ease-in;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.sign-in__parent .sign-in-block .sign-in .sign-in-button-wrapper button:hover, .sign-in__parent .sign-in-block .sign-up .sign-in-button-wrapper button:hover {
+  background: transparent;
+  color: #000;
+  border-color: #36A7AA;
+}
+
+.sign-in__parent .sign-in-block .sign-in .sign-in-bottom-block, .sign-in__parent .sign-in-block .sign-up .sign-in-bottom-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: WhitneySansLight;
+}
+
+.sign-in__parent .sign-in-block .sign-in .sign-in-bottom-block a, .sign-in__parent .sign-in-block .sign-up .sign-in-bottom-block a {
+  text-decoration: none;
+  color: #F16649;
+}
+
+.sign-in__parent .sign-in-block .sign-in .sign-in-bottom-block div, .sign-in__parent .sign-in-block .sign-up .sign-in-bottom-block div {
+  margin-right: 10px;
+  color: #151D41;
+}
+
+@media (max-width: 650px) {
+  .sign-in__parent .sign-in-block {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .sign-in__parent {
+    height: 100%;
+  }
+  .sign-in__parent .sign-in-block {
+    border: none;
+    padding: 0;
+  }
+  .sign-in__parent .sign-in-block .popup-close {
+    display: block;
+  }
+}
+
+@media (max-width: 400px) {
+  .sign-in__parent .sign-in-button-wrapper {
+    flex-direction: column;
+  }
+  .sign-in__parent .sign-in-button-wrapper a {
+    margin-bottom: 15px;
+  }
+  .sign-in__parent .double-input-parent {
+    flex-direction: column;
+  }
 }
 
 footer {

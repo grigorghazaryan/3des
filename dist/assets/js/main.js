@@ -48,3 +48,53 @@ document.querySelector('.chat-close').onclick = function(e) {
     document.querySelector('.live-chat-wrapper').style.display = 'none'
     e.stopPropagation();
 }
+
+// Open popup
+$('.sign-in').click(function() {
+    let black = document.querySelector('.sign-in-black'),
+        popup = document.querySelector('.sign-in__parent');
+
+        black.style.visibility = 'visible';
+        black.style.opacity = '1'
+        popup.style.visibility = 'visible';
+        popup.style.opacity = '1'
+});
+
+// Close popup
+document.querySelector('.sign-in-black').onclick = function() {
+    let popup = document.querySelector('.sign-in__parent');
+
+        this.style.visibility = 'hidden';
+        this.style.opacity = '0'
+        popup.style.visibility = 'hidden';
+        popup.style.opacity = '0'
+}
+document.querySelector('.popup-close').onclick = function() {
+    let popup = document.querySelector('.sign-in__parent'),
+        black = document.querySelector('.sign-in-black');
+
+        black.style.visibility = 'hidden';
+        black.style.opacity = '0'
+        popup.style.visibility = 'hidden';
+        popup.style.opacity = '0'
+}
+
+
+// Open sign up
+document.querySelector('.s-up').onclick = function() {
+    document.querySelector('.sin').style.display = "none"
+    document.querySelector('.sup').style.display = "block"
+}
+
+// Open sign in
+document.querySelector('.s-in').onclick = function() {
+    document.querySelector('.sup').style.display = "none"
+    document.querySelector('.sin').style.display = "block"
+}
+
+
+(function(w,d,v3){
+w.chaportConfig = {
+  appId : '5f2186fd90fc3c4af67bb893'
+};
+if(w.chaport)return;v3=w.chaport={};v3._q=[];v3._l={};v3.q=function(){v3._q.push(arguments)};v3.on=function(e,fn){if(!v3._l[e])v3._l[e]=[];v3._l[e].push(fn)};var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://app.chaport.com/javascripts/insert.js';var ss=d.getElementsByTagName('script')[0];ss.parentNode.insertBefore(s,ss)})(window, document);

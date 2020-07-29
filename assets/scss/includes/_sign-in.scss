@@ -1,0 +1,199 @@
+.sign-in-black {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #2525254D;
+    z-index: 999;
+    transition: .3s;
+}
+
+.sign-in__parent {
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    max-width: 1121px;
+    height: auto;
+    background: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    padding: 30px;
+    transition: .3s;
+
+    .sign-in-block {
+        width: 100%;
+        height: 100%;
+        border: 2px solid #F16649;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .popup-close {
+            position: absolute;
+            right: 4%;
+            top: 1%;
+            font-size: 25px;
+            display: none;
+        }
+
+        .sup {
+            display: none;
+        }
+
+        .sign-in, .sign-up {
+            width: 550px;
+            margin: 35px 0;
+
+            h2, p {
+                text-align: center;
+            }
+
+            h2 {
+                text-transform: uppercase;
+                margin-bottom: 16px;
+            }
+
+            p  {
+                font-family: WhitneySansLight;
+                color: #151D41;
+                margin-bottom: 67px;
+
+                @media (max-width: 400px) {
+                    margin-bottom: 20px;
+                }
+            }
+
+            .double-input-parent {
+                gap: 25px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                @media (max-width: 400px) {
+                   gap: 20px;
+                }
+            }
+
+            .login-input-parent,
+            .double-input-parent {
+                width: 100%;
+                margin-bottom: 25px;
+                font-family: WhitneySansLight;
+
+                @media (max-width: 400px) {
+                    margin-bottom: 15px;
+                }
+
+                input {
+                    width: 100%;
+                    height: 64px;
+                    background: #FFFFFF;
+                    border: 1px solid #151D41;
+                    border-radius: 5px;
+                    padding: 24px 18px;
+                    transition: border .3s ease-in-out;
+
+                    &:focus {
+                        border-color: #36A7AA;
+                        outline: none;
+                        box-shadow: none;
+                    }
+                }
+            }
+
+            .sign-in-button-wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 70px;
+
+                @media (max-width: 400px) {
+                    margin-bottom: 10px;
+                }
+
+                a {
+                    color: #151D41;
+                    font-family: WhitneySansLight;
+                    text-decoration: underline;
+                }
+
+                button {
+                    color: #fff;
+                    background-color: #F16649;
+                    border-radius: 30px;
+                    font-size: 18px;
+                    border: 1px solid transparent;
+                    outline: none;
+                    width: 173px;
+                    height: 54px;
+                    transition: .3s ease-in;
+                    box-sizing: border-box;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: transparent;
+                        color: #000;
+                        border-color: #36A7AA;
+                    }
+                }
+            }
+
+            .sign-in-bottom-block {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: WhitneySansLight;
+
+                a {
+                    text-decoration: none;
+                    color: #F16649;
+                }
+
+                div {
+                    margin-right: 10px;
+                    color: #151D41;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 650px) {
+        .sign-in-block {
+            padding: 1rem;
+        }
+    }
+
+    @media (max-width: 500px) {
+        height: 100%;
+
+        .sign-in-block {
+            border: none;
+            padding: 0;
+
+            .popup-close {
+                display: block;
+            }
+        }
+    }
+
+    @media (max-width: 400px) {
+        .sign-in-button-wrapper {
+            flex-direction: column;
+
+            a{
+                margin-bottom: 15px;
+            }
+        }
+
+        .double-input-parent {
+            flex-direction: column;
+        }
+    }
+}
