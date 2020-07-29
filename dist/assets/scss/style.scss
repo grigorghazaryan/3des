@@ -64,5 +64,18 @@ div#left .sticker-parent span {
 }
 
 
+.chaport-launcher-button.no-photo.chaport-launcher-anim.chaport-anim-show {
+    position: fixed;
+    left: 100px;
+    bottom: 100px;
+}
+
+
+.chaport-container.chaport-container-positioned.chaport-position-left.chaport-window-dark-gray.chaport-expanded {
+    bottom: 84px !important;
+    left: 84px;
+}
+
+
 // Nedd to change
 @import './includes/media';
