@@ -64,10 +64,13 @@
             left: 4.5%;
             transform: rotate(-1deg);
 
-            @media (max-width: 400px) {
-                left: 2%;
-                top: 4%;
-                width: 91%;
+            @media (max-width: 767px) {
+                width: 39%;
+                height: 25px;
+                position: absolute;
+                top: 5%;
+                left: 29.5%;
+                transform: rotate(-1deg);
             }
         }
 
@@ -80,12 +83,14 @@
             transform: rotate(-0.3deg);
             writing-mode: tb-rl;
 
-            @media (max-width: 400px) {
-                height: 68%;
+            @media (max-width: 767px) {
+                width: 7%;
+                height: 69%;
+                position: absolute;
                 top: 14%;
-                left: 76%;
-                width: 17%;
-                transform: rotate(-.1deg);
+                left: 61.5%;
+                transform: rotate(-0.3deg);
+                writing-mode: tb-rl;
             }
         }
 
@@ -97,11 +102,13 @@
             left: 5%;
             transform: rotate(-.5deg);
 
-            @media (max-width: 400px) {
-                width: 90%;
-                left: 3%;
-                transform: rotate(-1.1deg);
-                bottom: 6.8%;
+            @media (max-width: 767px) {
+                width: 38.5%;
+                height: 24px;
+                position: absolute;
+                bottom: 8%;
+                left: 30%;
+                transform: rotate(-0.5deg);
             }
         }
 
@@ -114,11 +121,14 @@
             transform: rotate(-0.1deg);
             writing-mode: tb-rl;
 
-            @media (max-width: 400px) {
-                top: 15%;
-                right: 81.5%;
+            @media (max-width: 767px) {
+                width: 7%;
                 height: 68%;
-                width: 16%;
+                position: absolute;
+                top: 15%;
+                right: 63.2%;
+                transform: rotate(-0.3deg);
+                writing-mode: tb-rl;
             }
         }
     

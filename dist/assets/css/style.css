@@ -18,24 +18,22 @@
 
 .whitneysans {
   font-family: WhitneySans;
-  font-size: 5ex;
+  font-size: 4.4rem;
 }
 
 .chewy {
   font-family: Chewy;
-  font-size: 5ex;
-  line-height: 57px;
-  height: 48px;
+  font-size: 4rem;
 }
 
 .damion {
   font-family: Damion;
-  font-size: 4ex;
+  font-size: 6.5rem;
 }
 
 .arial {
   font-family: Arial;
-  font-size: 4ex;
+  font-size: 4rem;
 }
 
 html {
@@ -1424,13 +1422,12 @@ section.our-products .more-parent .more-button i {
 
 .textDropable {
   width: max-content !important;
-  max-width: 320px !important;
+  max-width: 310px !important;
   margin: 0 6px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 68px;
-  line-height: 49px;
+  height: 95px;
   cursor: grab;
   text-transform: uppercase;
 }
@@ -1439,12 +1436,28 @@ section.our-products .more-parent .more-button i {
   white-space: break-spaces;
 }
 
+@media (max-width: 767px) {
+  .textDropable {
+    max-width: 150px !important;
+    width: max-content;
+    height: 40px;
+  }
+}
+
 .textDropable.rotate {
   transform: rotate(180deg) !important;
-  width: 60px !important;
+  width: 95px !important;
   height: max-content !important;
   max-height: 357px !important;
   margin: 6px 0;
+}
+
+@media (max-width: 767px) {
+  .textDropable.rotate {
+    width: 40px !important;
+    height: max-content !important;
+    max-height: 169px !important;
+  }
 }
 
 .checked-font {
@@ -1525,11 +1538,14 @@ section.our-products .more-parent .more-button i {
   transform: rotate(-1deg);
 }
 
-@media (max-width: 400px) {
+@media (max-width: 767px) {
   .preview-frame-parent .frame .top {
-    left: 2%;
-    top: 4%;
-    width: 91%;
+    width: 39%;
+    height: 25px;
+    position: absolute;
+    top: 5%;
+    left: 29.5%;
+    transform: rotate(-1deg);
   }
 }
 
@@ -1543,13 +1559,15 @@ section.our-products .more-parent .more-button i {
   writing-mode: tb-rl;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 767px) {
   .preview-frame-parent .frame .right {
-    height: 68%;
+    width: 7%;
+    height: 69%;
+    position: absolute;
     top: 14%;
-    left: 76%;
-    width: 17%;
-    transform: rotate(-0.1deg);
+    left: 61.5%;
+    transform: rotate(-0.3deg);
+    writing-mode: tb-rl;
   }
 }
 
@@ -1562,12 +1580,14 @@ section.our-products .more-parent .more-button i {
   transform: rotate(-0.5deg);
 }
 
-@media (max-width: 400px) {
+@media (max-width: 767px) {
   .preview-frame-parent .frame .bottom {
-    width: 90%;
-    left: 3%;
-    transform: rotate(-1.1deg);
-    bottom: 6.8%;
+    width: 38.5%;
+    height: 24px;
+    position: absolute;
+    bottom: 8%;
+    left: 30%;
+    transform: rotate(-0.5deg);
   }
 }
 
@@ -1581,12 +1601,15 @@ section.our-products .more-parent .more-button i {
   writing-mode: tb-rl;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 767px) {
   .preview-frame-parent .frame .left {
-    top: 15%;
-    right: 81.5%;
+    width: 7%;
     height: 68%;
-    width: 16%;
+    position: absolute;
+    top: 15%;
+    right: 63.2%;
+    transform: rotate(-0.3deg);
+    writing-mode: tb-rl;
   }
 }
 
@@ -2097,18 +2120,32 @@ footer .rights-reserved {
 
 .textDropable.rotate span.click-me {
   transform: rotate(270deg);
-  top: -15px;
-  right: -15px;
+  top: 0;
+  right: 0;
+}
+
+@media (max-width: 767px) {
+  .textDropable.rotate span.click-me {
+    top: -16px;
+    right: 0px;
+  }
 }
 
 .textDropable span.click-me {
   font-size: 15px;
   font-family: cursive;
   position: absolute;
-  top: -25px;
+  top: 0;
   right: 0;
   cursor: pointer;
   color: #6f6f6f;
+}
+
+@media (max-width: 767px) {
+  .textDropable span.click-me {
+    top: -15px;
+    right: 0px;
+  }
 }
 
 .sticker-parent span.click-me {
@@ -2143,9 +2180,24 @@ div#left .sticker-parent span {
   z-index: 8;
 }
 
+@media (max-width: 767px) {
+  .chaport-launcher-button.no-photo.chaport-launcher-anim.chaport-anim-show {
+    top: 85% !important;
+    left: 2% !important;
+    bottom: initial;
+  }
+}
+
 .chaport-container.chaport-container-positioned.chaport-position-left.chaport-window-dark-gray.chaport-expanded {
   bottom: 84px !important;
   left: 84px;
+}
+
+@media (max-width: 767px) {
+  .chaport-container.chaport-container-positioned.chaport-position-left.chaport-window-dark-gray.chaport-expanded {
+    bottom: 35px !important;
+    left: 0%;
+  }
 }
 
 @media screen and (max-width: 1200px) and (min-width: 768px) {

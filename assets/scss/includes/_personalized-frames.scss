@@ -235,29 +235,40 @@
 
 .textDropable {
     width: max-content !important;
-    max-width: 320px !important;
+    max-width: 310px !important;
     margin: 0 6px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    height: 68px;
-    line-height: 49px;
+    height: 95px;
     cursor: grab;
     text-transform: uppercase;
 
     span.clear-text {
         white-space: break-spaces;
     }
+
+    @media (max-width: 767px) {
+        max-width: 150px !important;
+        width: max-content;
+        height: 40px;
+    }
 }
 
 .textDropable.rotate {
     transform: rotate(180deg) !important;
-    width: 60px !important;
+    width: 95px !important;
     height: max-content !important;
     max-height: 357px !important;
     margin: 6px 0;
+
+    @media (max-width: 767px) {
+        width: 40px !important;
+        height: max-content !important;
+        max-height: 169px !important;
+    }
 }
 
 .checked-font {

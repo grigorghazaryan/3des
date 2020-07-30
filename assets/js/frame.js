@@ -74,21 +74,24 @@ function textValidation(id, counterClass, limit) {
 function setFontFamily(value, el, length) {
     switch(value) {
         case 'classic':
-            el.style.fontFamily = 'WhitneySans';
-            el.style.fontSize = '4.3rem';
+            el.classList.add( 'whitneysans' );
+           // el.style.fontFamily = 'WhitneySans';
+            //el.style.fontSize = '4.3rem';
             break;
         case 'rounded':
-            el.style.fontFamily = 'Chewy';
-            el.style.fontSize = '4rem';
+            el.classList.add( 'chewy' );
+           // el.style.fontFamily = 'Chewy';
+           // el.style.fontSize = '4rem';
             break;
         case 'script':
-            el.style.fontFamily = 'Damion'
-            el.style.fontSize = '6.5rem';
-            el.style.lineHeight = '50px';
+            el.classList.add( 'damion' );
+            //el.style.fontFamily = 'Damion'
+            //el.style.fontSize = '6.5rem';
             break;
         case 'chunky':
-            el.style.fontFamily = 'Arial'
-            el.style.fontSize = '3.8ex';
+            el.classList.add( 'arial' );
+           // el.style.fontFamily = 'Arial'
+           // el.style.fontSize = '4rem';
             break;
         default:
             break;

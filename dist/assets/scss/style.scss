@@ -25,18 +25,28 @@
 
 .textDropable.rotate span.click-me {
     transform: rotate(270deg);
-    top: -15px;
-    right: -15px;
+    top: 0;
+    right: 0;
+
+    @media (max-width: 767px) {
+        top: -16px;
+        right: 0px;
+    }
 }
 
 .textDropable span.click-me {
     font-size: 15px;
     font-family: cursive;
     position: absolute;
-    top: -25px;
+    top: 0;
     right: 0;
     cursor: pointer;
     color: #6f6f6f;
+
+    @media (max-width: 767px) {
+        top: -15px;
+        right: 0px;
+    }
 }
 
 .sticker-parent span.click-me {
@@ -70,12 +80,23 @@ div#left .sticker-parent span {
     left: 100px;
     bottom: 100px;
     z-index: 8;
+
+    @media (max-width: 767px) { 
+        top: 85% !important;
+        left: 2% !important;
+        bottom: initial;
+    }
 }
 
 
 .chaport-container.chaport-container-positioned.chaport-position-left.chaport-window-dark-gray.chaport-expanded {
     bottom: 84px !important;
     left: 84px;
+
+    @media (max-width: 767px) {
+        bottom: 35px !important;
+        left: 0%;
+    }
 }
 
 
