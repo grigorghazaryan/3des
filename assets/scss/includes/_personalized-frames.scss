@@ -235,9 +235,14 @@
 
 .textDropable {
     width: max-content !important;
-    max-width: 334px !important;
-    // display: inline-block;
-    height: 60px;
+    max-width: 320px !important;
+    margin: 0 6px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 68px;
     line-height: 49px;
     cursor: grab;
     text-transform: uppercase;
@@ -252,6 +257,7 @@
     width: 60px !important;
     height: max-content !important;
     max-height: 357px !important;
+    margin: 6px 0;
 }
 
 .checked-font {

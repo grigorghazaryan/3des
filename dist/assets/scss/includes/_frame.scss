@@ -29,6 +29,9 @@
 
         .fr {
             z-index: 88;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             
             .draggable {
                 width: 55px;

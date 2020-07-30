@@ -68,7 +68,6 @@ function textValidation(id, counterClass, limit) {
         let counter = e.target.value.length,
             counterElement = document.querySelector( counterClass );
         counter <= limit && (counterElement.innerHTML = counter)
-        
     }
 }
 
@@ -76,31 +75,15 @@ function setFontFamily(value, el, length) {
     switch(value) {
         case 'classic':
             el.style.fontFamily = 'WhitneySans';
-            el.style.lineHeight = '';
-            el.style.fontSize = '4.3ex';
+            el.style.fontSize = '4.3rem';
             break;
         case 'rounded':
             el.style.fontFamily = 'Chewy';
-            el.style.fontSize = '5.52rem';
-
-            if(length >= 12) {
-                el.style.lineHeight = '43px'
-            }
-            if(length >= 14) {
-               el.style.lineHeight = '40px'
-            }
-
-            // Rotate frames
-            if(el.classList.contains('rotate')) {
-                if(length >= 11) {
-                    el.style.lineHeight = '52px'
-                 }
-            }
-
+            el.style.fontSize = '4rem';
             break;
         case 'script':
             el.style.fontFamily = 'Damion'
-            el.style.fontSize = '4ex';
+            el.style.fontSize = '6.5rem';
             el.style.lineHeight = '50px';
             break;
         case 'chunky':
@@ -140,8 +123,8 @@ function createElementOnFrame( valueId, frameId ) {
                 div.appendChild(pre);
 
                 setTimeout( () => {
-                    let w = div.offsetWidth + 2;
-                    div.style.width = w + 'px';
+                    //let w = div.offsetWidth + 2;
+                    //div.style.width = w + 'px';
                     
                     textFit(document.querySelector('#'+id));
                     $('<span class="click-me">X</span>').appendTo('.textDropable').click(removeElement);
