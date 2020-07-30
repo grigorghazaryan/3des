@@ -234,10 +234,12 @@
 }
 
 .textDropable {
-    display: inline;
+    width: max-content !important;
+    max-width: 334px !important;
+    // display: inline-block;
+    height: 60px;
     line-height: 49px;
     cursor: grab;
-    width: max-content;
     text-transform: uppercase;
 
     span.clear-text {
@@ -245,8 +247,11 @@
     }
 }
 
-.rotate {
+.textDropable.rotate {
     transform: rotate(180deg) !important;
+    width: 60px !important;
+    height: max-content !important;
+    max-height: 357px !important;
 }
 
 .checked-font {

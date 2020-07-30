@@ -72,54 +72,7 @@ function textValidation(id, counterClass, limit) {
     }
 }
 
-// Detect text length and set size
-// Refactor code If else to switch case
-
-function setFontSize(el, length) {
-    if(length <= 8) {
-        el.style.fontSize = '4rem';
-        el.style.lineHeight = '70px';
-    }else if(length == 9 ) {
-        el.style.fontSize = '3.65rem';
-        el.style.lineHeight = '66px';
-    }else if(length == 10) {
-        el.style.fontSize = '3.35rem';
-        el.style.lineHeight = '69px';
-    }else if(length == 11) {
-        el.style.fontSize = '3.5rem';
-        el.style.lineHeight = '69px';
-    }else if(length == 12 ) {
-        el.style.fontSize = '3.2rem';
-        el.style.lineHeight = '69px';
-    }else if(length == 13 ) {
-        el.style.fontSize = '2.85rem';
-        el.style.lineHeight = '69px';
-    }else if(length == 14 ) {
-        el.style.fontSize = '2.6rem';
-        el.style.lineHeight = '69px';
-    }else if(length == 15 ) {
-        el.style.fontSize = '2.8rem';
-        el.style.lineHeight = '69px';
-    }else if(length == 16 ) {
-        el.style.fontSize = '2.8rem';
-        el.style.lineHeight = '69px';
-    }else if(length == 17 ) {
-        el.style.fontSize = '2.65rem';
-        el.style.lineHeight = '69px';
-    }else if(length == 18 ) {
-        el.style.fontSize = '2.55rem';
-        el.style.lineHeight = '69px';
-    }else if(length == 19 ) {
-        el.style.fontSize = '2.4rem';
-        el.style.lineHeight = '69px';
-    }else if(length == 20 ) {
-        el.style.fontSize = '2.3rem';
-        el.style.lineHeight = '69px';
-    }
-}
-
 function setFontFamily(value, el, length) {
-    console.log('LENGTH', length)
     switch(value) {
         case 'classic':
             el.style.fontFamily = 'WhitneySans';
@@ -128,7 +81,22 @@ function setFontFamily(value, el, length) {
             break;
         case 'rounded':
             el.style.fontFamily = 'Chewy';
-            setFontSize(el, length);
+            el.style.fontSize = '5.52rem';
+
+            if(length >= 12) {
+                el.style.lineHeight = '43px'
+            }
+            if(length >= 14) {
+               el.style.lineHeight = '40px'
+            }
+
+            // Rotate frames
+            if(el.classList.contains('rotate')) {
+                if(length >= 11) {
+                    el.style.lineHeight = '52px'
+                 }
+            }
+
             break;
         case 'script':
             el.style.fontFamily = 'Damion'
@@ -145,23 +113,16 @@ function setFontFamily(value, el, length) {
 }
 
 function createElementOnFrame( valueId, frameId ) {
-
         counter++;
-
         let value = document.querySelector( valueId ).value;
-
-        console.log('value', value.length)
-
         if ( value.length !== 0 ) {
 
-            //if($(frameId).children('.textDropable').length) {
-                //$(frameId + ' > .textDropable > span.clear-text').html(value)
-            //}else {
+            if($(frameId + " .clear-text ").text() !== value) {
 
                 if($(frameId).children('.textDropable').length) {
                     $(frameId).html('')
                 }
-               
+                
                 let font = localStorage.getItem( 'font' ),
                     div = document.createElement( 'div' ),
                     id = (frameId + counter).replace('#', ''),
@@ -181,11 +142,14 @@ function createElementOnFrame( valueId, frameId ) {
                 setTimeout( () => {
                     let w = div.offsetWidth + 2;
                     div.style.width = w + 'px';
-                }, 0 );
+                    
+                    textFit(document.querySelector('#'+id));
+                    $('<span class="click-me">X</span>').appendTo('.textDropable').click(removeElement);
+                    
+                }, 0);
 
                 setFontFamily( font, div, value.length );
                 document.querySelector( frameId ).append( div );
-
                 switch(frameId) {
                     case '#top':
                         $( '#'+id ).draggable({ 
@@ -213,11 +177,8 @@ function createElementOnFrame( valueId, frameId ) {
                         break;  
                     default:
                         break;
-                }
-
-                $('<span class="click-me">X</span>').appendTo('.textDropable').click(removeElement);
-           // }
-            
+                }  
+            } 
         }
 
 }
@@ -245,17 +206,19 @@ function removeElement() {
 
     setTimeout(()=>{
         checkExistedValue('top', 15);
-       checkExistedValue('bottom', 15);
-       checkExistedValue('right', 20);
-       checkExistedValue('left', 20);
+        checkExistedValue('bottom', 15);
+        checkExistedValue('right', 20);
+        checkExistedValue('left', 20);
     }, 0)
 }
 
 function clearInputs() {
+
     document.querySelector( '#top-input' ).value = '',
     document.querySelector( '#right-input' ).value = '',
     document.querySelector( '#bottom-input' ).value = '',
     document.querySelector( '#left-input' ).value = '';
+    
     let counters = document.querySelectorAll( '.limitor > span.co' );
     for ( let i = 0; i < counters.length; i++) {
         counters[i].innerHTML = 0;
@@ -286,16 +249,10 @@ textValidation('#left-input', '.left-counter', 20);
 textValidation( '#right-input', '.right-counter', 20 );
 
 document.querySelector( '.apply-button' ).onclick = function () {
-
     createElementOnFrame('#top-input', '#top');
-
     createElementOnFrame('#bottom-input', '#bottom');
-
     createElementOnFrame('#right-input', '#right');
-
     createElementOnFrame( '#left-input', '#left' );
-
-    // clearInputs();
 }
 
 function resetInputCounterValues(id, value) {

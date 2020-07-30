@@ -322,7 +322,7 @@ nav .collapse .navbar-nav li:last-child {
   background: #fff;
   top: 0;
   left: 0;
-  z-index: 99999;
+  z-index: 9999999999999;
 }
 
 .mobile-menu__header {
@@ -1423,10 +1423,11 @@ section.our-products .more-parent .more-button i {
 }
 
 .textDropable {
-  display: inline;
+  width: max-content !important;
+  max-width: 334px !important;
+  height: 60px;
   line-height: 49px;
   cursor: grab;
-  width: max-content;
   text-transform: uppercase;
 }
 
@@ -1434,8 +1435,11 @@ section.our-products .more-parent .more-button i {
   white-space: break-spaces;
 }
 
-.rotate {
+.textDropable.rotate {
   transform: rotate(180deg) !important;
+  width: 60px !important;
+  height: max-content !important;
+  max-height: 357px !important;
 }
 
 .checked-font {
@@ -1776,7 +1780,7 @@ section.our-products .more-parent .more-button i {
   top: 0;
   left: 0;
   background-color: #2525254D;
-  z-index: 999;
+  z-index: 9999999999;
   transition: .3s;
 }
 
@@ -1791,7 +1795,7 @@ section.our-products .more-parent .more-button i {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 9999;
+  z-index: 99999999999999;
   padding: 30px;
   transition: .3s;
 }
@@ -2127,6 +2131,7 @@ div#left .sticker-parent span {
   position: fixed;
   left: 100px;
   bottom: 100px;
+  z-index: 8;
 }
 
 .chaport-container.chaport-container-positioned.chaport-position-left.chaport-window-dark-gray.chaport-expanded {
