@@ -33,12 +33,7 @@
             justify-content: center;
             align-items: center;
             
-            .draggable {
-                width: 55px;
-                height: 55px;
-                cursor: grab;
-
-            }
+           
 
             //.draggable,
             .draggable svg {
@@ -47,6 +42,11 @@
                 max-width: 100px;
                 max-height: 100px;
                 display: inline-block;
+
+                @media (max-width: 767px) { 
+                    max-width: 30px;
+                    max-height: 30px;
+                }
                 
             }
 
@@ -54,6 +54,30 @@
                 fill: #252525;
             }
             
+        }
+
+        #top .draggable,
+        #bottom .draggable {
+            cursor: grab;
+            width: 81px;
+            height: 69px;
+
+            @media (max-width: 767px) { 
+                width: 37px;
+                height: 27px;
+            }
+        }
+
+        #right .draggable,
+        #left .draggable {
+            cursor: grab;
+            width: 69px;
+            height: 81px;
+
+            @media (max-width: 767px) { 
+                width: 27px;
+                height: 37px;
+            }
         }
 
         .top {
@@ -67,10 +91,8 @@
             @media (max-width: 767px) {
                 width: 39%;
                 height: 25px;
-                position: absolute;
                 top: 5%;
                 left: 29.5%;
-                transform: rotate(-1deg);
             }
         }
 
@@ -88,7 +110,7 @@
                 height: 69%;
                 position: absolute;
                 top: 14%;
-                left: 64.5%;
+                left: 62%;
                 transform: rotate(-0.3deg);
                 writing-mode: tb-rl;
             }
@@ -103,11 +125,11 @@
             transform: rotate(-.5deg);
 
             @media (max-width: 767px) {
-                width: 38.5%;
+                width: 39.5%;
                 height: 24px;
                 position: absolute;
                 bottom: 8%;
-                left: 30%;
+                left: 29.5%;
                 transform: rotate(-0.5deg);
             }
         }
@@ -126,13 +148,13 @@
                 height: 68%;
                 position: absolute;
                 top: 15%;
-                right: 66%;
+                right: 63.5%;
                 transform: rotate(-0.3deg);
                 writing-mode: tb-rl;
             }
         }
     
-}
+    }
 }
 
 .snaptarget-hover {

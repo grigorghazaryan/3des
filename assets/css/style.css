@@ -410,7 +410,7 @@ nav .collapse .navbar-nav li:last-child {
 .shadow {
   position: sticky;
   top: 0;
-  z-index: 8;
+  z-index: 999;
   background-color: #fff !important;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16078);
 }
@@ -1511,12 +1511,6 @@ section.our-products .more-parent .more-button i {
   align-items: center;
 }
 
-.preview-frame-parent .frame .fr .draggable {
-  width: 55px;
-  height: 55px;
-  cursor: grab;
-}
-
 .preview-frame-parent .frame .fr .draggable svg {
   width: 100%;
   height: 100%;
@@ -1525,8 +1519,45 @@ section.our-products .more-parent .more-button i {
   display: inline-block;
 }
 
+@media (max-width: 767px) {
+  .preview-frame-parent .frame .fr .draggable svg {
+    max-width: 30px;
+    max-height: 30px;
+  }
+}
+
 .preview-frame-parent .frame .fr .draggable svg .a {
   fill: #252525;
+}
+
+.preview-frame-parent .frame #top .draggable,
+.preview-frame-parent .frame #bottom .draggable {
+  cursor: grab;
+  width: 81px;
+  height: 69px;
+}
+
+@media (max-width: 767px) {
+  .preview-frame-parent .frame #top .draggable,
+  .preview-frame-parent .frame #bottom .draggable {
+    width: 37px;
+    height: 27px;
+  }
+}
+
+.preview-frame-parent .frame #right .draggable,
+.preview-frame-parent .frame #left .draggable {
+  cursor: grab;
+  width: 69px;
+  height: 81px;
+}
+
+@media (max-width: 767px) {
+  .preview-frame-parent .frame #right .draggable,
+  .preview-frame-parent .frame #left .draggable {
+    width: 27px;
+    height: 37px;
+  }
 }
 
 .preview-frame-parent .frame .top {
@@ -1542,10 +1573,8 @@ section.our-products .more-parent .more-button i {
   .preview-frame-parent .frame .top {
     width: 39%;
     height: 25px;
-    position: absolute;
     top: 5%;
     left: 29.5%;
-    transform: rotate(-1deg);
   }
 }
 
@@ -1565,7 +1594,7 @@ section.our-products .more-parent .more-button i {
     height: 69%;
     position: absolute;
     top: 14%;
-    left: 64.5%;
+    left: 62%;
     transform: rotate(-0.3deg);
     writing-mode: tb-rl;
   }
@@ -1582,11 +1611,11 @@ section.our-products .more-parent .more-button i {
 
 @media (max-width: 767px) {
   .preview-frame-parent .frame .bottom {
-    width: 38.5%;
+    width: 39.5%;
     height: 24px;
     position: absolute;
     bottom: 8%;
-    left: 30%;
+    left: 29.5%;
     transform: rotate(-0.5deg);
   }
 }
@@ -1607,7 +1636,7 @@ section.our-products .more-parent .more-button i {
     height: 68%;
     position: absolute;
     top: 15%;
-    right: 66%;
+    right: 63.5%;
     transform: rotate(-0.3deg);
     writing-mode: tb-rl;
   }

@@ -45,18 +45,26 @@ function setDroppable(id) {
                 left: origPos.left - ctPos.left -1
             } );
 
-            $('.fr > .sticker-parent').rotatable({}).resizable({
-                maxWidth: 73,
-                maxHeight: 73,
-                minWidth: 40,
-                minHeight: 40,
-                animateDuration: "fast",
-                autoHide: true,
-            });
+            if(window.matchMedia("(max-width: 767px)").matches){
+                $('.fr > .sticker-parent').rotatable().resizable({
+                    disabled: true
+                });
+            } else{
+                $('.fr > .sticker-parent').rotatable().resizable({
+                    containment: $(id),
+                    maxWidth: 80,
+                    maxHeight: 80,
+                    minWidth: 40,
+                    minHeight: 40,
+                    animateDuration: "fast",
+                    autoHide: true,
+                });
+            }
+
             $('<span class="click-me">X</span>').appendTo('.fr > .sticker-parent').click(removeElement);
-            
-    }
-    } ); 
+           
+        }
+    }); 
 }
 
 function checkDefaultFont() {
@@ -273,7 +281,7 @@ $('.reset').click(function() {
     resetInputCounterValues('top', 15);
     resetInputCounterValues('right', 20);
     resetInputCounterValues('bottom', 15);
-    resetInputCounterValues('left', 15);
+    resetInputCounterValues('left', 20);
 
 
     removeIcons('#top')
