@@ -134,8 +134,9 @@ function createElementOnFrame( valueId, frameId ) {
                 div.appendChild(pre);
 
                 setTimeout( () => {
-                    //let w = div.offsetWidth + 2;
-                    //div.style.width = w + 'px';
+
+                    //let w = div.offsetWidth + 5;
+                   // div.style.width = w + 'px';
                     
                     textFit(document.querySelector('#'+id));
                     $('<span class="click-me">X</span>').appendTo('.textDropable').click(removeElement);
@@ -144,6 +145,7 @@ function createElementOnFrame( valueId, frameId ) {
 
                 setFontFamily( font, div, value.length );
                 document.querySelector( frameId ).append( div );
+
                 switch(frameId) {
                     case '#top':
                         $( '#'+id ).draggable({ 

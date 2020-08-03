@@ -18,12 +18,12 @@
 
 .whitneysans {
   font-family: WhitneySans;
-  font-size: 5rem;
+  font-size: 4.4rem;
 }
 
 .chewy {
   font-family: Chewy;
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 .damion {
@@ -1422,7 +1422,7 @@ section.our-products .more-parent .more-button i {
 
 .textDropable {
   width: max-content !important;
-  max-width: 315px !important;
+  max-width: 310px !important;
   margin: 0 6px;
   display: flex;
   justify-content: center;
@@ -1434,7 +1434,6 @@ section.our-products .more-parent .more-button i {
 
 .textDropable span.clear-text {
   white-space: break-spaces;
-  letter-spacing: 2px;
 }
 
 @media (max-width: 767px) {
@@ -1450,6 +1449,7 @@ section.our-products .more-parent .more-button i {
   width: 95px !important;
   height: max-content !important;
   max-height: 357px !important;
+  margin: 6px 0;
 }
 
 @media (max-width: 767px) {
