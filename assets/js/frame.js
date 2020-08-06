@@ -1,4 +1,6 @@
 let counter = 0;
+let step = 1;
+let svgArr = [];
 
 checkDefaultFont();
 
@@ -17,6 +19,8 @@ function setDroppable(id) {
         activeClass: "snaptarget-hover",
         drop: function (event, ui) {
 
+            svgArr.push(ui.draggable.context.childNodes[1])
+
             var ct = $(this);
             var item = $(ui.draggable);
             var origPos;
@@ -30,8 +34,11 @@ function setDroppable(id) {
                 origPos = ui.offset;
                 item = item.clone();
                 ct.append(item);
+                //ct.append(ui.draggable.css('position','static'))
                 item.removeClass("ui-draggable");
                 item.addClass('fr');
+
+               // ct.append(ui.draggable.css('position','static'))
 
                 item.draggable({
                     containment: $(id),
@@ -40,25 +47,29 @@ function setDroppable(id) {
                     //scroll: false
                 });
             }
+
             item.css({
-                top: origPos.top - ctPos.top - 1,
-                left: origPos.left - ctPos.left -1
-            } );
+                top: origPos.top - ctPos.top - 3,
+                left: origPos.left - ctPos.left -3
+            });
 
             if(window.matchMedia("(max-width: 767px)").matches){
                 $('.fr > .sticker-parent').rotatable().resizable({
                     disabled: true
                 });
             } else{
-                $('.fr > .sticker-parent').rotatable().resizable({
-                    containment: $(id),
-                    maxWidth: 80,
-                    maxHeight: 80,
-                    minWidth: 40,
-                    minHeight: 40,
-                    animateDuration: "fast",
-                    autoHide: true,
-                });
+                item.rotatable()
+                
+                // .resizable({
+                //     containment: $(id),
+                //     //maxWidth: 80,
+                //     //maxHeight: 80,
+                //     snap: false,
+                //     minWidth: 40,
+                //     minHeight: 40,
+                //     animateDuration: "fast",
+                //     autoHide: true,
+                // });
             }
 
             $('<span class="click-me">X</span>').appendTo('.fr > .sticker-parent').click(removeElement);
@@ -79,36 +90,32 @@ function textValidation(id, counterClass, limit) {
     }
 }
 
-function setFontFamily(value, el, length) {
+function setFontFamily(value, el) {
     switch(value) {
         case 'classic':
             el.classList.add( 'whitneysans' );
-           // el.style.fontFamily = 'WhitneySans';
-            //el.style.fontSize = '4.3rem';
             break;
         case 'rounded':
             el.classList.add( 'chewy' );
-           // el.style.fontFamily = 'Chewy';
-           // el.style.fontSize = '4rem';
             break;
         case 'script':
             el.classList.add( 'damion' );
-            //el.style.fontFamily = 'Damion'
-            //el.style.fontSize = '6.5rem';
             break;
         case 'chunky':
             el.classList.add( 'arial' );
-           // el.style.fontFamily = 'Arial'
-           // el.style.fontSize = '4rem';
             break;
         default:
             break;
     }
 }
 
-function createElementOnFrame( valueId, frameId ) {
+function createElementOnFrame( valueId, frameId, ls_key ) {
         counter++;
         let value = document.querySelector( valueId ).value;
+
+        // Set values to localstorage
+        localStorage.setItem(  ls_key , value)
+
         if ( value.length !== 0 ) {
 
             if($(frameId + " .clear-text ").text() !== value) {
@@ -134,16 +141,14 @@ function createElementOnFrame( valueId, frameId ) {
                 div.appendChild(pre);
 
                 setTimeout( () => {
-
                     //let w = div.offsetWidth + 5;
                    // div.style.width = w + 'px';
-                    
                     textFit(document.querySelector('#'+id));
                     $('<span class="click-me">X</span>').appendTo('.textDropable').click(removeElement);
-                    
+                    $('.clear-text').resizable({})
                 }, 0);
 
-                setFontFamily( font, div, value.length );
+                setFontFamily( font, div );
                 document.querySelector( frameId ).append( div );
 
                 switch(frameId) {
@@ -174,9 +179,10 @@ function createElementOnFrame( valueId, frameId ) {
                     default:
                         break;
                 }  
+
+                //$( '#'+id ).draggable({ containment: frameId })  
             } 
         }
-
 }
 
 function checkExistedValue(id, length) {
@@ -245,10 +251,10 @@ textValidation('#left-input', '.left-counter', 20);
 textValidation( '#right-input', '.right-counter', 20 );
 
 document.querySelector( '.apply-button' ).onclick = function () {
-    createElementOnFrame('#top-input', '#top');
-    createElementOnFrame('#bottom-input', '#bottom');
-    createElementOnFrame('#right-input', '#right');
-    createElementOnFrame( '#left-input', '#left' );
+    createElementOnFrame('#top-input', '#top', 'topText');
+    createElementOnFrame('#bottom-input', '#bottom', 'bottomText');
+    createElementOnFrame('#right-input', '#right', 'rightText');
+    createElementOnFrame( '#left-input', '#left', 'leftText' );
 }
 
 function resetInputCounterValues(id, value) {
@@ -256,9 +262,10 @@ function resetInputCounterValues(id, value) {
     $('.' + id + '-maxlength').html(value)
 }
 
-$("input[type='radio']" ).click( function () {
+// Set font family
+$("input[name='font']" ).click( function () {
 
-    $("input[type='radio']").parent().removeClass('checked-font');
+    $("input[name='font']").parent().removeClass('checked-font');
     $( this ).parent().addClass( 'checked-font' );
     
     var radioValue = $( "input[name='font']:checked" ).val();
@@ -269,6 +276,13 @@ $("input[type='radio']" ).click( function () {
 
 function removeIcons(id) {
     $(id).html('')
+}
+
+function setPreviewInputValues() {
+    $('#preview-top-value').val(localStorage.getItem('topText'))
+    $('#preview-bottom-value').val(localStorage.getItem('bottomText'))
+    $('#preview-right-value').val(localStorage.getItem('rightText'))
+    $('#preview-left-value').val(localStorage.getItem('leftText'))
 }
 
 $('.reset').click(function() {
@@ -292,4 +306,113 @@ $('.reset').click(function() {
     removeIcons('#left')
 
     clearInputs();
+
+    // Refactor 
+    $('.frame-back-side').css('background', '#fff');
+    $('.frame-parent').css('background','#fff')
+    $('.front-col-par .color-item').removeClass('checked-color')
+    $('.back-col-par .color-item').removeClass('checked-color')
+    $('.stick-col-par .color-item').removeClass('checked-color')
+
+})
+
+function setFontFamilyPrev() {
+    let value = localStorage.getItem('font')
+    switch(value) {
+        case 'classic':
+            $('.font-border').addClass( 'whitneysans' );
+            break;
+        case 'rounded':
+            $('.font-border').addClass( 'chewy' );
+            break;
+        case 'script':
+            $('.font-border').addClass( 'damion' );
+            break;
+        case 'chunky':
+            $('.font-border').addClass( 'arial' );
+            break;
+        default:
+            break;
+    }
+}
+
+$('.back-button').click(function() {
+    step--;
+    switch(step) {
+        case 1:
+            $('.first-step').css('display', 'block')
+            $('.second-step').css('display', 'none')
+            $(this).css('display', 'none')
+            $( ".frame-parent" ).animate({ "left": "5%" }, "slow" );
+            $( ".frame-back-parent" ).hide( "slow" );
+            $('.progress-second').removeClass('active-second')
+        break;
+        case 2:
+            $('.second-step').css('display', 'block')
+            $('.third-step').css('display', 'none')
+            $('.accept-reviewed-checkbox').css('display', 'none')
+            $('.progress-third').removeClass('active-third')
+            $('.pers-fr').html('Personalized Frames')
+    }
+})
+
+$('.go-to-first').click(function() {
+    $('.third-step').css('display', 'none')
+    $('.accept-reviewed-checkbox').css('display', 'none')
+    $('.first-step').css('display', 'block')
+})
+
+$('.go-to-second').click(function() {
+    $('.third-step').css('display', 'none')
+    $('.accept-reviewed-checkbox').css('display', 'none')
+    $('.second-step').css('display', 'block')
+})
+
+$('.first-step-button').click(function() {
+    step++;
+    $('.first-step').css('display', 'none')
+    $('.second-step').css('display', 'block')
+    $('.back-button').css('display', 'flex')
+    $( ".frame-parent" ).animate({ "left": "-5%" }, "slow" );
+    $( ".frame-back-parent" ).show( "slow" );
+    $('.progress-second').addClass('active-second')
+})
+
+$('.second-step-button').click(function() {
+    step++;
+    $('.second-step').css('display', 'none')
+    $('.third-step').css('display', 'block')
+    $('.accept-reviewed-checkbox').css('display', 'block')
+    setPreviewInputValues()
+    $('.progress-third').addClass('active-third')
+    $('.pers-fr').html('Personalization Complete')
+    setFontFamilyPrev()
+
+})
+
+$("input[name='back-color']" ).click( function () {
+    $("input[name='back-color']").parent().removeClass('checked-color');
+    $( this ).parent().addClass( 'checked-color' );
+    $('.frame-back-side').css('background', $( this ).val());
+    $('.front-back').css('background', $( this ).val());
+    
+})
+
+$("input[name='front-color']" ).click( function () {
+    $("input[name='front-color']").parent().removeClass('checked-color');
+    $( this ).parent().addClass( 'checked-color' );
+    $('.frame-parent').css('background', $( this ).val())
+    $('.front-prev').css('background', $( this ).val())
+})
+
+$("input[name='font-color']" ).click( function () {
+    $("input[name='font-color']").parent().removeClass('checked-color');
+    $( this ).parent().addClass( 'checked-color' );
+
+    $('.textDropable').css('color', $( this ).val())
+    $('.front-font').css('background', $( this ).val())
+    
+
+    $('.fr .sticker-parent svg path.c').css('fill', $( this ).val())
+    $('.fr .sticker-parent svg circle.c').css('fill', $( this ).val())
 })
