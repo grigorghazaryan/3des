@@ -13,10 +13,10 @@
     }
 
     .back-button {
+        display: none;
         font-size: 14px;
         font-family: WhitneySansLight;
         cursor: pointer;
-        display: flex;
         justify-content: flex-start;
         align-items: center;
         color: inherit;

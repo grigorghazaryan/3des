@@ -19,8 +19,7 @@
 @import './includes/sticker-carousel';
 @import './includes/sign-in';
 @import './includes/footer';
-
-
+@import './includes/checkbox';
 
 
 .textDropable.rotate span.click-me {
@@ -97,6 +96,14 @@ div#left .sticker-parent span {
         bottom: 35px !important;
         left: 0%;
     }
+}
+
+.ui-rotatable-handle {
+    position: absolute;
+}
+
+.mb-19 {
+    margin-bottom: 19px;
 }
 
 

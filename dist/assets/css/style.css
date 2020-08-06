@@ -119,10 +119,10 @@ body {
 }
 
 .flex-1 .back-button {
+  display: none;
   font-size: 14px;
   font-family: WhitneySansLight;
   cursor: pointer;
-  display: flex;
   justify-content: flex-start;
   align-items: center;
   color: inherit;
@@ -459,7 +459,7 @@ li.nav-item.dropdown .dropdown-menu a.dropdown-item:active {
   min-height: 240px;
   height: auto;
   background-color: #ECECEC;
-  margin-top: 50px;
+  margin-top: 100px;
   padding: 34px 0 51px 0;
 }
 
@@ -1168,7 +1168,7 @@ section.our-products .more-parent .more-button i {
 }
 
 .personalized-frames {
-  padding: 64px;
+  padding: 64px 64px 0 64px;
   color: #252525;
 }
 
@@ -1253,10 +1253,150 @@ section.our-products .more-parent .more-button i {
 
 .personalized-frames .two-blocks-parent .left-col, .personalized-frames .two-blocks-parent .right-col {
   flex: 1;
+  position: relative;
 }
 
 .personalized-frames .two-blocks-parent .left-col {
   margin-right: 50px;
+}
+
+.personalized-frames .two-blocks-parent .left-col .frame-back-parent {
+  display: none;
+  width: 115px;
+  height: 165px;
+  position: absolute;
+  bottom: 2.5%;
+  right: -17.5%;
+}
+
+.personalized-frames .two-blocks-parent .left-col .frame-back-parent .frame-back-side {
+  border: 1px solid black;
+  width: 115px;
+  height: 165px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.personalized-frames .two-blocks-parent .left-col .frame-back-parent .frame-back-side .frame-backside-circle {
+  width: 42px;
+  height: 42px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.personalized-frames .two-blocks-parent .left-col .accept-reviewed-checkbox {
+  position: relative;
+  display: none;
+  margin-top: 60px;
+  font-size: 18px;
+  font-size: WhitneySansLight;
+  color: #252525;
+}
+
+.personalized-frames .two-blocks-parent .right-col .second-step {
+  display: none;
+}
+
+.personalized-frames .two-blocks-parent .right-col .second-step .color-parent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 22px 0 40px;
+}
+
+.personalized-frames .two-blocks-parent .right-col .second-step .color-parent .color-item {
+  width: 62px;
+  height: 48px;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  transition: .3s;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.personalized-frames .two-blocks-parent .right-col .second-step .color-parent .color-item:hover {
+  border-color: #36A7AA;
+}
+
+.personalized-frames .two-blocks-parent .right-col .second-step .color-parent .color-item input {
+  display: none;
+}
+
+.personalized-frames .two-blocks-parent .right-col .second-step .color-parent .color-item .color-item-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.personalized-frames .two-blocks-parent .right-col .third-step {
+  display: none;
+}
+
+.personalized-frames .two-blocks-parent .right-col .third-step .edit-parent {
+  width: 100%;
+  text-align: right;
+  font-size: 16px;
+  padding: 10px 0;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #676464;
+}
+
+.personalized-frames .two-blocks-parent .right-col .third-step .edit-parent span {
+  color: #36A7AA;
+  cursor: pointer;
+}
+
+.personalized-frames .two-blocks-parent .right-col .third-step .stickers-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 16px;
+}
+
+.personalized-frames .two-blocks-parent .right-col .third-step .stickers-preview .sticker-preview {
+  width: 78px;
+  height: 60px;
+  border: 2px solid #36A7AA;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.personalized-frames .two-blocks-parent .right-col .third-step .stickers-preview .sticker-preview svg {
+  width: 100%;
+  height: 100%;
+}
+
+.personalized-frames .two-blocks-parent .right-col .third-step .color-preview {
+  width: 112px;
+  height: 60px;
+  border: 1px solid #36A7AA;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.personalized-frames .two-blocks-parent .right-col .third-step .color-preview div {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.personalized-frames .two-blocks-parent .right-col .third-step .c-prev {
+  display: flex;
+  justify-content: space-between;
+}
+
+.personalized-frames .two-blocks-parent .right-col .third-step .c-prev .c-prev-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .personalized-frames .two-blocks-parent .field-parent {
@@ -1278,6 +1418,12 @@ section.our-products .more-parent .more-button i {
 
 .personalized-frames .two-blocks-parent .input-parent-block {
   position: relative;
+}
+
+.personalized-frames .two-blocks-parent .input-parent-block.preview input {
+  border: 1px solid #36A7AA;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .personalized-frames .two-blocks-parent .input-parent-block input {
@@ -1304,6 +1450,10 @@ section.our-products .more-parent .more-button i {
   border-color: #007bff;
 }
 
+.personalized-frames .two-blocks-parent .input-parent-block input:disabled {
+  background-color: inherit;
+}
+
 .personalized-frames .two-blocks-parent .input-parent-block .limitor {
   position: absolute;
   right: 2%;
@@ -1317,6 +1467,14 @@ section.our-products .more-parent .more-button i {
   justify-content: space-between;
   margin-bottom: 34px;
   margin-top: 16px;
+}
+
+.personalized-frames .two-blocks-parent .fonts-list.preview {
+  margin-bottom: 0;
+}
+
+.personalized-frames .two-blocks-parent .fonts-list.preview .font-item {
+  height: 60px;
 }
 
 .personalized-frames .two-blocks-parent .fonts-list .font-item {
@@ -1352,6 +1510,11 @@ section.our-products .more-parent .more-button i {
 
 .personalized-frames .two-blocks-parent .fonts-list .font-item:nth-child(4) .font-prev {
   font-weight: 900;
+}
+
+.personalized-frames .two-blocks-parent .fonts-list .font-item .font-prev.font-border {
+  border-color: #36A7AA;
+  cursor: default;
 }
 
 .personalized-frames .two-blocks-parent .fonts-list .font-prev {
@@ -1469,6 +1632,45 @@ section.our-products .more-parent .more-button i {
   color: #fff !important;
 }
 
+.checked-color {
+  background-color: #009688;
+}
+
+.gold {
+  background-color: #BDB130;
+  border: 1px solid #BDB130;
+}
+
+.red {
+  background-color: #F16649;
+  border: 1px solid #f16649;
+}
+
+.green {
+  background-color: #36A7AA;
+  border: 1px solid #36A7AA;
+}
+
+.dark-red {
+  background-color: #AB2328;
+  border: 1px solid #AB2328;
+}
+
+.gray {
+  background-color: #97999B;
+  border: 1px solid #97999B;
+}
+
+.black-c {
+  background-color: #000;
+  border: 1px solid #000;
+}
+
+.white {
+  background-color: #fff;
+  border: 1px solid #707070;
+}
+
 .preview-frame-parent {
   width: 568px;
   height: 608px;
@@ -1491,10 +1693,26 @@ section.our-products .more-parent .more-button i {
   position: relative;
   width: 385px;
   height: 500px;
-  background-image: url(../images/frame.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+}
+
+.preview-frame-parent .frame .frame-parent {
+  height: 487px;
+  width: 335px;
+  left: 5%;
+  position: absolute;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+.preview-frame-parent .frame .frame-child {
+  position: absolute;
+  width: 200px;
+  height: 356px;
+  background: white;
+  top: 13%;
+  left: 20%;
+  border: 1px solid black;
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
@@ -1514,8 +1732,6 @@ section.our-products .more-parent .more-button i {
 .preview-frame-parent .frame .fr .draggable svg {
   width: 100%;
   height: 100%;
-  max-width: 100px;
-  max-height: 100px;
   display: inline-block;
 }
 
@@ -1561,12 +1777,11 @@ section.our-products .more-parent .more-button i {
 }
 
 .preview-frame-parent .frame .top {
-  width: 86.5%;
+  width: 100%;
   height: 63px;
   position: absolute;
   top: 0%;
-  left: 4.5%;
-  transform: rotate(-1deg);
+  left: 0;
 }
 
 @media (max-width: 767px) {
@@ -1579,12 +1794,11 @@ section.our-products .more-parent .more-button i {
 }
 
 .preview-frame-parent .frame .right {
-  width: 17.5%;
-  height: 71.4%;
+  width: 20%;
+  height: 73.2%;
   position: absolute;
-  top: 12%;
-  left: 74%;
-  transform: rotate(-0.3deg);
+  top: 13%;
+  right: 0;
   writing-mode: tb-rl;
 }
 
@@ -1595,18 +1809,16 @@ section.our-products .more-parent .more-button i {
     position: absolute;
     top: 14%;
     left: 62%;
-    transform: rotate(-0.3deg);
     writing-mode: tb-rl;
   }
 }
 
 .preview-frame-parent .frame .bottom {
-  width: 87%;
+  width: 100%;
   height: 67px;
   position: absolute;
-  bottom: 3%;
-  left: 5%;
-  transform: rotate(-0.5deg);
+  bottom: 0;
+  left: 0;
 }
 
 @media (max-width: 767px) {
@@ -1621,12 +1833,11 @@ section.our-products .more-parent .more-button i {
 }
 
 .preview-frame-parent .frame .left {
-  width: 17.5%;
-  height: 70.95%;
+  width: 20%;
+  height: 73.2%;
   position: absolute;
-  top: 13.085%;
-  right: 78%;
-  transform: rotate(-0.1deg);
+  top: 13%;
+  left: 0;
   writing-mode: tb-rl;
 }
 
@@ -1658,10 +1869,11 @@ section.our-products .more-parent .more-button i {
   display: flex;
   justify-content: center;
   z-index: 999;
+  margin-top: 64px;
 }
 
 .fix-button-parent .next-button {
-  width: 330px;
+  width: 214px;
   height: 55px;
   background-color: #F16649;
   border-radius: 28px;
@@ -1753,6 +1965,44 @@ section.our-products .more-parent .more-button i {
   top: 45%;
   left: 0;
   z-index: -1;
+}
+
+.progressbar-wrapper .progressbar div.active-second {
+  background: #bdb130;
+  border-color: #bdb130;
+}
+
+.progressbar-wrapper .progressbar div.active-second:before {
+  content: '';
+  position: absolute;
+  width: 94px;
+  height: 2px;
+  background: #BDB130;
+  top: 45%;
+  left: -86px;
+  z-index: -1;
+}
+
+.progressbar-wrapper .progressbar div.active-second:after {
+  content: '';
+  position: absolute;
+  width: 94px;
+  height: 2px;
+  background: #707070;
+  top: 45%;
+  left: 0;
+  z-index: -1;
+}
+
+.progressbar-wrapper .progressbar div.active-third {
+  background: #bdb130;
+  border-color: #bdb130;
+}
+
+.progressbar-wrapper .progressbar div.active-third:before {
+  width: 170px;
+  background: #bdb130;
+  left: -160px;
 }
 
 @media (max-width: 768px) {
@@ -2147,6 +2397,66 @@ footer .rights-reserved {
   text-align: center;
 }
 
+.chechbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.chechbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.chechbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #F16649;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.chechbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.chechbox-container .checkmark:after {
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
 .textDropable.rotate span.click-me {
   transform: rotate(270deg);
   top: 0;
@@ -2227,6 +2537,14 @@ div#left .sticker-parent span {
     bottom: 35px !important;
     left: 0%;
   }
+}
+
+.ui-rotatable-handle {
+  position: absolute;
+}
+
+.mb-19 {
+  margin-bottom: 19px;
 }
 
 @media screen and (max-width: 1200px) and (min-width: 768px) {
