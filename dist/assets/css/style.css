@@ -2457,6 +2457,348 @@ footer .rights-reserved {
   background: white;
 }
 
+.my-cart {
+  margin-top: 40px;
+}
+
+.my-cart h1 {
+  font-size: 30px;
+  font-family: WhitneySans;
+  text-align: center;
+  color: #252525;
+}
+
+.my-cart .continue-shopping {
+  text-decoration: underline;
+  font-family: WhitneySans;
+  color: #F16649;
+  font-size: 16px;
+  text-align: right;
+  margin: 20px 0 60px;
+  cursor: pointer;
+}
+
+.my-cart .cart-item {
+  background-color: #F5F5F5;
+  box-shadow: 0px 4px 8px #00000029;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  padding: 45px 65px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.my-cart .cart-item .cart-frame {
+  width: 200px;
+  height: 200px;
+  background-image: url("../images/textimage.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  border: 1px solid #707070;
+}
+
+.my-cart .cart-item .cart-section {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+  margin-top: 45px;
+}
+
+.my-cart .cart-item .cart-section .title {
+  font-family: WhitneySans;
+  font-size: 24px;
+  color: #252525;
+}
+
+.my-cart .cart-item .cart-section .subtitle {
+  color: #252525;
+  font-family: WhitneySansLight;
+}
+
+.my-cart .cart-item .cart-section .quantity-counter {
+  width: 100%;
+  background-color: #fff;
+  color: #575757;
+  border: 1px solid #151D41;
+  border-radius: 5px;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.my-cart .cart-item .cart-section .quantity-counter .counter-item:nth-child(1),
+.my-cart .cart-item .cart-section .quantity-counter .counter-item:nth-child(3):nth-child(3) {
+  cursor: pointer;
+  opacity: .9;
+}
+
+.my-cart .cart-item .cart-section .delete {
+  width: 100%;
+  text-align: left;
+}
+
+.my-cart .cart-item .cart-section .delete svg {
+  cursor: pointer;
+}
+
+.my-cart .cart-item .cart-section .delete svg .a {
+  width: 14px;
+  height: 14px;
+  fill: #A5A3A3;
+}
+
+.my-cart .cart-item .cart-section .edit {
+  width: 100%;
+  font-family: WhitneySans;
+  color: #36A7AA;
+  text-decoration: underline;
+  text-align: right;
+}
+
+.my-cart .cart-item .cart-section .edit span {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) and (min-width: 280px) {
+  .my-cart .cart-item {
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .my-cart .cart-item .cart-section {
+    margin-top: 10px;
+  }
+  .my-cart .cart-item .cart-section .delete {
+    text-align: center;
+  }
+}
+
+.privacy-policy {
+  margin-top: 40px;
+}
+
+.privacy-policy h1 {
+  font-size: 35px;
+  font-family: WhitneySans;
+  text-align: center;
+  color: #252525;
+}
+
+.privacy-policy .title {
+  font-family: WhitneySans;
+  color: #252525;
+  font-size: 32px;
+  margin: 30px 0 35px;
+}
+
+.privacy-policy .last-update {
+  font-family: WhitneySansLight;
+  color: #A7A7A7;
+  font-size: 16px;
+}
+
+.privacy-policy .flex-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.privacy-policy .thank-message {
+  text-align: center;
+  font-size: 18px;
+  font-family: WhitneySansMedium;
+  margin-bottom: 30px;
+}
+
+.privacy-policy .thank-message a {
+  color: #F16649;
+}
+
+.privacy-policy .mini-title {
+  font-family: WhitneySans;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.privacy-policy .medium-title {
+  font-family: WhitneySans;
+  font-size: 18px;
+}
+
+.privacy-policy p {
+  color: #252525;
+  font-size: 16px;
+  font-family: WhitneySansLight;
+}
+
+.privacy-policy p a {
+  color: #36A7AA;
+}
+
+.privacy-policy ul {
+  font-family: WhitneySansLight;
+  color: #252525;
+}
+
+.privacy-policy .background-colored {
+  background-color: #F5F5F5;
+  padding: 35px 0;
+}
+
+.privacy-policy .privacy-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mt-35 {
+  margin-top: 35px;
+}
+
+.mb-35 {
+  margin-bottom: 35px;
+}
+
+.card {
+  border: none;
+}
+
+.card .card-header {
+  font-family: WhitneySans;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+  border-top: 1px solid #D0D0D0;
+  border-bottom: 1px solid #D0D0D0;
+}
+
+.card .card-header h2 button.btn.btn-link {
+  width: 100%;
+  padding: 0;
+  font-size: 18px;
+  color: #252525;
+  text-decoration: none;
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .card-header h2 button.btn.btn-link:active, .card .card-header h2 button.btn.btn-link:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.card .card-header h2 button.btn.btn-link:hover {
+  text-decoration: none;
+}
+
+.card .card-body {
+  padding: 0;
+}
+
+.faq {
+  margin-top: 40px;
+}
+
+.faq h1 {
+  font-size: 35px;
+  font-family: WhitneySans;
+  text-align: center;
+  color: #252525;
+}
+
+.faq .title {
+  font-size: 18px;
+  font-family: WhitneySansMedium;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.faq .subtitle {
+  font-size: 16px;
+  font-family: WhitneySansMedium;
+  text-align: center;
+  margin-top: 7px;
+}
+
+.faq .subtitle a {
+  color: #F16649;
+}
+
+.faq .search-input-parent {
+  margin-top: 40px;
+  position: relative;
+}
+
+.faq .search-input-parent input {
+  width: 100%;
+  font-family: WhitneySansLight;
+  color: #A7A7A7;
+  background-color: #ECECEC;
+  padding: 18px 40px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+}
+
+.faq .search-input-parent button {
+  top: 0;
+  right: 10px;
+  border-radius: 50px;
+  background-color: #F16649;
+  color: #fff;
+  border: none;
+  padding: 18px 30px;
+  position: absolute;
+  font-size: 18px;
+  font-family: WhitneySans;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faq .search-input-parent button svg {
+  margin-right: 6px;
+}
+
+.faq .search-input-parent button svg .a {
+  fill: #fff;
+}
+
+.faq .accordion {
+  margin: 40px 0;
+}
+
+.faq .accordion .card {
+  border: none;
+}
+
+.faq .accordion .card .card-header {
+  font-family: WhitneySans;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+  border-top: 1px solid #D0D0D0;
+  border-bottom: none;
+}
+
+.faq .accordion .card .card-header#headingOne {
+  border-top: none;
+}
+
+.faq .accordion .card .card-header h2 button.btn.btn-link svg {
+  margin-right: 10px;
+}
+
+.faq .accordion .card .card-header h2 button.btn.btn-link svg .a {
+  fill: #F16649;
+}
+
 .textDropable.rotate span.click-me {
   transform: rotate(270deg);
   top: 0;

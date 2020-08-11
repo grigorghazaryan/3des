@@ -1,0 +1,127 @@
+.privacy-policy {
+    margin-top: 40px;
+
+    h1 {
+        font-size: 35px;
+        font-family: WhitneySans;
+        text-align: center;
+        color: #252525;
+    }
+
+    .title {
+        font-family: WhitneySans;
+        color:#252525;
+        font-size: 32px;
+        margin: 30px 0 35px;
+    }
+
+    .last-update {
+        font-family: WhitneySansLight;
+        color: #A7A7A7;
+        font-size: 16px;
+    }
+
+    .flex-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .thank-message {
+        text-align: center;
+        font-size: 18px;
+        font-family: WhitneySansMedium;
+        margin-bottom: 30px;
+
+        a {
+            color: #F16649;
+        }
+    }
+
+    .mini-title {
+        font-family: WhitneySans;
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+
+    .medium-title {
+        font-family: WhitneySans;
+        font-size: 18px;
+    }
+
+    p {
+        color: #252525;
+        font-size: 16px;
+        font-family: WhitneySansLight;
+
+        a {
+            color: #36A7AA;
+        }
+    }
+
+    ul {
+        font-family: WhitneySansLight;
+        color: #252525;
+    }
+
+    .background-colored {
+        background-color: #F5F5F5;
+        padding: 35px 0;
+    }
+
+    .privacy-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.mt-35 {
+    margin-top: 35px;
+}
+.mb-35 {
+    margin-bottom: 35px;
+}
+
+
+.card {
+    border: none;
+
+    .card-header {
+        font-family: WhitneySans;
+        padding: 0;
+        background-color: transparent;
+        border-radius: 0;
+        border-top: 1px solid #D0D0D0;
+        border-bottom: 1px solid #D0D0D0;
+
+        h2 {
+            button.btn.btn-link {
+                width: 100%;
+                padding: 0;
+                font-size: 18px;
+                color: #252525;
+                text-decoration: none;
+                padding: 16px 0;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &:active, &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                }
+
+            }
+        }
+    }
+
+    .card-body {
+        padding: 0;
+    }
+}
