@@ -13,6 +13,7 @@
     margin-top: 64px;
 
 
+
     .next-button {
         width: 214px;
         height: 55px;
@@ -26,7 +27,7 @@
         align-items: center;
         outline: none;
         transition: .3s;
-        cursor: pointer;
+        text-decoration: none;
 
         svg {
             width: 30px;

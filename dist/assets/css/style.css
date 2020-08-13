@@ -18,22 +18,22 @@
 
 .whitneysans {
   font-family: WhitneySans;
-  font-size: 5rem;
+  font-size: 7rem;
 }
 
 .chewy {
   font-family: Chewy;
-  font-size: 5rem;
+  font-size: 7rem;
 }
 
 .damion {
   font-family: Damion;
-  font-size: 6.5rem;
+  font-size: 7rem;
 }
 
 .arial {
   font-family: Arial;
-  font-size: 4rem;
+  font-size: 7rem;
 }
 
 html {
@@ -1274,6 +1274,13 @@ section.our-products .more-parent .more-button i {
   right: -17.5%;
 }
 
+@media (max-width: 768px) {
+  .personalized-frames .two-blocks-parent .left-col .frame-back-parent {
+    bottom: 6%;
+    right: 3%;
+  }
+}
+
 .personalized-frames .two-blocks-parent .left-col .frame-back-parent .frame-back-side {
   border: 1px solid black;
   width: 115px;
@@ -1298,6 +1305,13 @@ section.our-products .more-parent .more-button i {
   font-size: 18px;
   font-size: WhitneySansLight;
   color: #252525;
+}
+
+@media (max-width: 768px) {
+  .personalized-frames .two-blocks-parent .left-col .accept-reviewed-checkbox {
+    margin-top: 15px;
+    background: #fff;
+  }
 }
 
 .personalized-frames .two-blocks-parent .right-col .second-step {
@@ -1590,12 +1604,11 @@ section.our-products .more-parent .more-button i {
 
 .textDropable {
   width: max-content !important;
-  max-width: 315px !important;
-  margin: 0 6px;
+  max-width: 333px !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 95px;
+  height: 115px;
   cursor: grab;
   text-transform: uppercase;
 }
@@ -1615,9 +1628,9 @@ section.our-products .more-parent .more-button i {
 
 .textDropable.rotate {
   transform: rotate(180deg) !important;
-  width: 95px !important;
+  width: 115px !important;
   height: max-content !important;
-  max-height: 357px !important;
+  max-height: 355px !important;
 }
 
 @media (max-width: 767px) {
@@ -1898,7 +1911,7 @@ section.our-products .more-parent .more-button i {
   align-items: center;
   outline: none;
   transition: .3s;
-  cursor: pointer;
+  text-decoration: none;
 }
 
 .fix-button-parent .next-button svg {
@@ -1986,6 +1999,7 @@ section.our-products .more-parent .more-button i {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -2225,25 +2239,16 @@ section.our-products .more-parent .more-button i {
   }
 }
 
-.sign-in__parent .sign-in-block .sign-in .double-input-parent, .sign-in__parent .sign-in-block .sign-up .double-input-parent {
-  gap: 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@media (max-width: 400px) {
-  .sign-in__parent .sign-in-block .sign-in .double-input-parent, .sign-in__parent .sign-in-block .sign-up .double-input-parent {
-    gap: 20px;
-  }
-}
-
 .sign-in__parent .sign-in-block .sign-in .login-input-parent,
 .sign-in__parent .sign-in-block .sign-in .double-input-parent, .sign-in__parent .sign-in-block .sign-up .login-input-parent,
 .sign-in__parent .sign-in-block .sign-up .double-input-parent {
   width: 100%;
   margin-bottom: 25px;
   font-family: WhitneySansLight;
+  gap: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @media (max-width: 400px) {
@@ -2272,6 +2277,15 @@ section.our-products .more-parent .more-button i {
   border-color: #36A7AA;
   outline: none;
   box-shadow: none;
+}
+
+@media (max-width: 767px) {
+  .sign-in__parent .sign-in-block .sign-in .double-input-parent, .sign-in__parent .sign-in-block .sign-up .double-input-parent {
+    gap: inherit;
+  }
+  .sign-in__parent .sign-in-block .sign-in .double-input-parent input:nth-child(1), .sign-in__parent .sign-in-block .sign-up .double-input-parent input:nth-child(1) {
+    margin-bottom: 15px;
+  }
 }
 
 .sign-in__parent .sign-in-block .sign-in .sign-in-button-wrapper, .sign-in__parent .sign-in-block .sign-up .sign-in-button-wrapper {
@@ -3406,6 +3420,7 @@ div#left .sticker-parent span {
     margin-bottom: 45px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
   }
   .preview-frame-parent {
     width: 100%;

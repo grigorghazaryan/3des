@@ -87,6 +87,11 @@
                 bottom: 2.5%;
                 right: -17.5%;
 
+                @media (max-width: 768px) {
+                    bottom: 6%;
+                    right: 3%;
+                }
+
                 .frame-back-side {
                     border: 1px solid black;
                     width: 115px;
@@ -113,6 +118,12 @@
                 font-size: 18px;
                 font-size: WhitneySansLight;
                 color: #252525;
+
+
+                @media (max-width: 768px) {
+                    margin-top: 15px;
+                    background: #fff;
+                }
             }
         }
 
@@ -408,14 +419,14 @@
 
 .textDropable {
     width: max-content !important;
-    max-width: 315px !important;
-    margin: 0 6px;
+    max-width: 333px !important;
+    //margin: 0 6px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    height: 95px;
+    height: 115px;
     cursor: grab;
     text-transform: uppercase;
 
@@ -433,9 +444,9 @@
 
 .textDropable.rotate {
     transform: rotate(180deg) !important;
-    width: 95px !important;
+    width: 115px !important;
     height: max-content !important;
-    max-height: 357px !important;
+    max-height: 355px !important;
    // margin: 6px 0;
 
     @media (max-width: 767px) {

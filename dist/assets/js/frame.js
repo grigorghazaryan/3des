@@ -173,11 +173,9 @@ function createElementOnFrame( valueId, frameId, ls_key ) {
                 div.appendChild(pre);
 
                 setTimeout( () => {
-                    //let w = div.offsetWidth + 5;
-                   // div.style.width = w + 'px';
+                    console.log('id= ', id)
                     textFit(document.querySelector('#'+id));
                     $('<span class="click-me">X</span>').appendTo('.textDropable').click(removeElement);
-                    $('.clear-text').resizable({})
                 }, 0);
 
                 setFontFamily( font, div );
@@ -397,7 +395,11 @@ $('.back-button').click(function() {
             $('.first-step').css('display', 'block')
             $('.second-step').css('display', 'none')
             $(this).css('display', 'none')
-            $( ".frame-parent" ).animate({ "left": "5%" }, "slow" );
+            if(window.matchMedia("(max-width: 767px)").matches){
+                $( ".frame-parent" ).animate({ "left": "30%" }, "slow" );
+            } else {
+                $( ".frame-parent" ).animate({ "left": "5%" }, "slow" );
+            }
             $( ".frame-back-parent" ).hide( "slow" );
             $('.progress-second').removeClass('active-second')
         break;
@@ -427,7 +429,13 @@ $('.first-step-button').click(function() {
     $('.first-step').css('display', 'none')
     $('.second-step').css('display', 'block')
     $('.back-button').css('display', 'flex')
-    $( ".frame-parent" ).animate({ "left": "-5%" }, "slow" );
+
+    if(window.matchMedia("(max-width: 767px)").matches){
+        $( ".frame-parent" ).animate({ "left": "5%" }, "slow" );
+    } else {
+        $( ".frame-parent" ).animate({ "left": "-5%" }, "slow" );
+    }
+    
     $( ".frame-back-parent" ).show( "slow" );
     $('.progress-second').addClass('active-second')
 })
