@@ -1,0 +1,303 @@
+.shopping {
+
+    .shopping-parent {
+        margin-top: 85px;
+        padding-bottom: 30px;
+        padding: 0 65px;
+    }
+
+    .choose-shopping-method {
+        margin-top: 65px;
+
+        .title {
+            color: #252525;
+            font-family: WhitneySans;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .method-box {
+            margin-top: 38px;
+
+            .method-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 60px;
+
+                .chechbox-container {
+                    margin: 0;
+
+                    span:first-child {
+                        color: #BABABA;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .method-final-title {
+            color: #252525;
+            font-family: WhitneySans;
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+
+        .price {
+            font-size: 16px;
+            color:#252525;
+            font-family: WhitneySansLight;
+        }
+
+        .next-button {
+            width: 330px;
+            height: 55px;
+            background: #F16649;
+            border-radius: 28px;
+            color: #fff;
+            border: 1px solid transparent;
+            margin-top: 64px;
+            transition: .3s ease-in;
+            box-sizing: border-box;
+            cursor: pointer;
+
+            &:hover {
+                background: transparent;
+                color: #000;
+                border-color: #36A7AA;
+            }
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+
+    .payment-parent {
+        display: none;
+        margin-top: 50px;
+
+        .card-info-parent {
+            box-shadow: 0px 4px 8px #00000029;
+            border-radius: 20px;
+            padding: 50px 22px;
+
+            .icons-parent {
+                display: flex;
+                gap: 80px;
+                justify-content: center;
+                margin-bottom: 50px;
+            }
+
+            .card-logo-parent {
+                width: 100%;
+                border: 1px solid #95989a;
+                border-radius: 5px;
+                padding: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .formRow {
+                margin-bottom: 16px;
+            }
+        }
+
+        .field-parent {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            span {
+                cursor: pointer;
+            }
+        }
+
+        .final-preview-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 23px;
+
+            .image-parent {
+                width: 75px;
+                height: 75px;
+                border: 1px solid #707070;
+                border-radius: 5px;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 95%;
+                }
+            }
+
+            .preview-item {
+                font-size: 16px;
+                color: #252525;
+                margin-right: 60px;
+
+                .product-quality {
+                    font-family: WhitneySansLight;
+                    margin-top: 11px;
+                }
+            }
+
+            .product-price {
+                font-family: WhitneySansLight;
+                margin-top: 11px;
+            }
+        }
+        .price-final {
+            .price-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 16px;
+                margin: 25px 0;
+
+                .title {
+                    font-family: WhitneySans;
+                }
+                .price {
+                    font-family: WhitneySansLight;
+                }
+            }
+        }
+        .use-shipping-address {
+            margin-top: 20px;
+
+            .shipping-address {
+                font-family: WhitneySansLight;
+                font-size: 16px;
+                padding-left: 35px;
+            }
+        }
+        .promo-or-coupon-parent {
+            width: 100%;
+
+            .formRow {
+                margin: 0;
+            }
+
+            .promo-title {
+                font-size: 24px;
+                font-family: WhitneySans;
+                margin-bottom: 15px;
+            }
+
+            .apply-button {
+                color: #fff;
+                background-color: #F16649;
+                border-radius: 30px;
+                font-size: 18px;
+                border: 1px solid transparent;
+                outline: none;
+                width: 173px;
+                height: 54px;
+                transition: .3s ease-in;
+                box-sizing: border-box;
+                cursor: pointer;
+
+                &:hover {
+                    background: transparent;
+                    color: #000;
+                    border-color: #36A7AA;
+                }
+            }
+
+        }
+        .place-order {
+            width: 330px;
+            height: 55px;
+            background: #F16649;
+            border-radius: 28px;
+            color: #fff;
+            border: 1px solid transparent;
+            margin-top: 70px;
+            transition: .3s ease-in;
+            box-sizing: border-box;
+            cursor: pointer;
+
+            &:hover {
+                background: transparent;
+                color: #000;
+                border-color: #36A7AA;
+            }
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 280px) { 
+        
+        .personalized-frames_header {
+                justify-content: center;
+                font-size: 28px;
+        }
+
+        .shopping-parent {
+            padding: 0;
+        }
+
+        .start-final-view {
+            margin-top: 35px;
+        }
+
+        .totals {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            margin-bottom: 25px;
+        }
+
+        .choose-shopping-method {
+            .method-box {
+                .method-header {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+
+        .payment-parent {
+            .card-info-parent {
+                .icons-parent {
+                    flex-wrap: wrap;
+                }
+                .card-logo-parent {
+                    margin-bottom: 16px;
+                }
+            }
+            .field-parent {
+                margin-top: 35px;
+            }
+            .price {
+                margin: 0;
+            }
+            .promo-title {
+                margin-top: 35px;
+            }
+            .apply-button-parent{
+                text-align: center;
+            }
+        }
+    }
+}
+
+.text-right {
+    text-align: right;
+}
+.text-left {
+    text-align: left;
+}
+.pb-30 {
+    padding-bottom: 30px;
+}

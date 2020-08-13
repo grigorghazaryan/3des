@@ -29,6 +29,12 @@
             position: absolute;
             border: 1px solid black;
             box-sizing: border-box;
+
+            @media (max-width: 768px) {
+                zoom: .45;
+                left: 30%;
+                top: 5%;
+            }
         }
 
         .frame-child {

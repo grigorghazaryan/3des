@@ -42,6 +42,7 @@
 .card-parent {
     position: relative;
     cursor: pointer;
+    color: #000;
 
     .card-counter {
         position: absolute;
@@ -53,6 +54,7 @@
         fill: #707070
     }
     &:hover {
+        color: initial;
         svg .a {
             fill: #f16649
         }
