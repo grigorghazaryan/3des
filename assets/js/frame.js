@@ -30,16 +30,17 @@ let svgArray = [
 
 
 ];
+let fontColor = "";
 
 checkDefaultFont();
 
 $( ".draggable" ).draggable( {
     helper: "clone",
-    appendTo: "body",
-    revert: false,
+    appendTo: "html",
+    //revert: false,
     //snap: ".ui-droppable",
     //stack: ".draggable",
-    scroll: false,
+    //scroll: false,
 } );
 
 function setDroppable(id) {
@@ -48,8 +49,7 @@ function setDroppable(id) {
         activeClass: "snaptarget-hover",
         drop: function (event, ui) {
 
-            var dataId = ui.draggable[0].attributes.data_id.value
-            stickersArray.push(dataId)
+            
 
             var ct = $(this);
             var item = $(ui.draggable);
@@ -59,11 +59,15 @@ function setDroppable(id) {
             if (item.is('.fr')) {
                 origPos = item.offset();
                 ct.append(item);
+                console.log('if')
             } else {
 
                 origPos = ui.offset;
                 item = item.clone();
                 ct.append(item);
+
+                var dataId = ui.draggable[0].attributes.data_id.value
+                stickersArray.push(dataId)
 
                 //ct.append(ui.draggable.css('position','static'))
 
@@ -103,6 +107,14 @@ function setDroppable(id) {
             //     //     autoHide: true,
             //     // });
             // }
+
+            if(fontColor == '') {
+                $('.fr .sticker-parent svg path.c').css('fill', "#242424")
+                $('.fr .sticker-parent svg circle.c').css('fill', "#242424")
+            } else {
+                $('.fr .sticker-parent svg path.c').css('fill', fontColor)
+                $('.fr .sticker-parent svg circle.c').css('fill',fontColor)
+            }
 
             $('<span class="click-me" data_id='+ dataId +'>X</span>').appendTo(item).click(removeElement);
            // $('<span class="click-me" data_id='+ dataId +'>X</span>').appendTo('.fr > .sticker-parent').click(removeElement);
@@ -150,10 +162,11 @@ function createElementOnFrame( valueId, frameId, ls_key ) {
 
         if ( value.length !== 0 ) {
 
-            if($(frameId + " .clear-text ").text() !== value) {
+           //if($(frameId + " .clear-text ").text() !== value) {
 
                 if($(frameId).children('.textDropable').length) {
-                    $(frameId).html('')
+                    console.log(frameId)
+                    $(frameId + ' > .textDropable').remove()
                 }
                 
                 let font = localStorage.getItem( 'font' ),
@@ -167,13 +180,18 @@ function createElementOnFrame( valueId, frameId, ls_key ) {
                     div.className = 'textDropable'
                 }
 
+                if(fontColor == '') {
+                    div.style.color = "#242424"
+                } else {
+                    div.style.color = fontColor
+                }
+
                 div.id = id;
                 pre.className = 'clear-text'
                 pre.innerHTML = value;
                 div.appendChild(pre);
 
                 setTimeout( () => {
-                    console.log('id= ', id)
                     textFit(document.querySelector('#'+id));
                     $('<span class="click-me">X</span>').appendTo('.textDropable').click(removeElement);
                 }, 0);
@@ -211,7 +229,7 @@ function createElementOnFrame( valueId, frameId, ls_key ) {
                 }  
 
                 //$( '#'+id ).draggable({ containment: frameId })  
-            } 
+            //} 
         }
 }
 
@@ -308,6 +326,30 @@ $("input[name='font']" ).click( function () {
     if(radioValue){
         localStorage.setItem('font', radioValue)
     }
+
+    $(".textDropable").removeClass("whitneysans chewy damion arial");
+
+    createElementOnFrame('#top-input', '#top', 'topText');
+    createElementOnFrame('#bottom-input', '#bottom', 'bottomText');
+    createElementOnFrame('#right-input', '#right', 'rightText');
+    createElementOnFrame( '#left-input', '#left', 'leftText' );
+    
+    // switch(radioValue) {
+    //     case 'classic':
+    //         $(".textDropable").addClass( 'whitneysans' );
+    //         break;
+    //     case 'rounded':
+    //         $(".textDropable").addClass( 'chewy' );
+    //         break;
+    //     case 'script':
+    //         $(".textDropable").addClass( 'damion' );
+    //         break;
+    //     case 'chunky':
+    //         $(".textDropable").addClass( 'arial' );
+    //         break;
+    //     default:
+    //         break;
+    // }
 })
 
 function renderSelectedStickers() {
@@ -473,8 +515,7 @@ $("input[name='font-color']" ).click( function () {
 
     $('.textDropable').css('color', $( this ).val())
     $('.front-font').css('background', $( this ).val())
-    
-
+    fontColor = $( this ).val();
     $('.fr .sticker-parent svg path.c').css('fill', $( this ).val())
     $('.fr .sticker-parent svg circle.c').css('fill', $( this ).val())
 })

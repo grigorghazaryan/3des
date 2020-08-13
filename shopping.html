@@ -36,10 +36,10 @@
                         <div class="line">|</div>
                         <div class="active">ENG</div>
                     </div>
-                    <div class="card-parent">
+                    <a href="my-cart.html" class="card-parent">
                         <div class="card-counter">01</div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 21.71 21.176"><defs><style>.a{fill:#f16649;}</style></defs><g transform="translate(638.806 974.9)"><g transform="translate(-638.806 -974.9)"><path class="a" d="M26.286,17.5c0,4.616-1.822,8.174-4.246,8.174s-4.255-3.583-4.255-8.2a.961.961,0,0,1-.421-.748.891.891,0,0,1,.9-.882h.842a.876.876,0,0,1,.474,1.63c0,4.115,1.458,6.436,2.455,6.436s2.473-2.559,2.46-6.466a.923.923,0,0,1-.381-.718.891.891,0,0,1,.9-.882h.842a.891.891,0,0,1,.9.882.919.919,0,0,1-.483.774Zm6.577,13.625L29.632,11.839a.894.894,0,0,0-.891-.739h-13.4a.9.9,0,0,0-.891.739L11.2,31.247a.89.89,0,0,0,.891,1.024H32A.88.88,0,0,0,32.863,31.126Z" transform="translate(-11.194 -11.1)"/></g></g></svg>
-                    </div>
+                    </a>
                 </div>
             </div>
 
@@ -153,93 +153,95 @@
 
         <div id="shopping">
             <div class="shopping-parent border-bottom">
-                <div class="row">
-                    <div class="col-md-6">
-                        <fieldset class="formRow">
-                            <div class="formRow--item">
-                                <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
-                                    <input type="text" class="formRow--input js-input" id="firstName" placeholder="* First name">
-                                </label>
-                            </div>
-                        </fieldset>
+                <form action="#" id="form">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <fieldset class="formRow">
+                                <div class="formRow--item">
+                                    <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
+                                        <input type="text" name="firstName" class="formRow--input js-input" id="firstName" placeholder="* First name">
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-6">
+                            <fieldset class="formRow">
+                                <div class="formRow--item">
+                                    <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
+                                        <input type="text" name="lastName" class="formRow--input js-input" id="lastName" placeholder="* Last name">
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-6">
+                            <fieldset class="formRow">
+                                <div class="formRow--item">
+                                    <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
+                                        <input type="text" name="email" class="formRow--input js-input" id="emailAdress" placeholder="* Email addess">
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-6">
+                            <fieldset class="formRow">
+                                <div class="formRow--item">
+                                    <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
+                                        <input type="text" name="streetAddress" class="formRow--input js-input" id="streetAdress" placeholder="* Street addess">
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <fieldset class="formRow">
-                            <div class="formRow--item">
-                                <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
-                                    <input type="text" class="formRow--input js-input" id="lastName" placeholder="* Last name">
-                                </label>
-                            </div>
-                        </fieldset>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <fieldset class="formRow">
+                                <div class="formRow--item">
+                                    <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
+                                        <input type="text" name="city" class="formRow--input js-input" id="city" placeholder="* City">
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-4">
+                            <fieldset class="formRow">
+                                <div class="formRow--item">
+                                    <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
+                                        <input type="text" name="state" class="formRow--input js-input" id="stateProvince" placeholder="* State/Province">
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-4">
+                            <fieldset class="formRow">
+                                <div class="formRow--item">
+                                    <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
+                                        <input type="number" name="postal" class="formRow--input js-input" id="zipPostalcode" placeholder="* Zip/Postal code">
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <fieldset class="formRow">
-                            <div class="formRow--item">
-                                <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
-                                    <input type="text" class="formRow--input js-input" id="emailAdress" placeholder="* Email addess">
-                                </label>
-                            </div>
-                        </fieldset>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <fieldset class="formRow">
+                                <div class="formRow--item">
+                                    <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
+                                        <input type="text" name="country" class="formRow--input js-input" id="country" placeholder="* Country">
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-6">
+                            <fieldset class="formRow">
+                                <div class="formRow--item">
+                                    <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
+                                        <input type="number" name="phone" class="formRow--input js-input" id="phone" placeholder="* Phone number">
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <fieldset class="formRow">
-                            <div class="formRow--item">
-                                <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
-                                    <input type="text" class="formRow--input js-input" id="streetAdress" placeholder="* Street addess">
-                                </label>
-                            </div>
-                        </fieldset>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <fieldset class="formRow">
-                            <div class="formRow--item">
-                                <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
-                                    <input type="text" class="formRow--input js-input" id="city" placeholder="* City">
-                                </label>
-                            </div>
-                        </fieldset>
-                    </div>
-                    <div class="col-md-4">
-                        <fieldset class="formRow">
-                            <div class="formRow--item">
-                                <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
-                                    <input type="text" class="formRow--input js-input" id="stateProvince" placeholder="* State/Province">
-                                </label>
-                            </div>
-                        </fieldset>
-                    </div>
-                    <div class="col-md-4">
-                        <fieldset class="formRow">
-                            <div class="formRow--item">
-                                <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
-                                    <input type="text" class="formRow--input js-input" id="zipPostalcode" placeholder="* Zip/Postal code">
-                                </label>
-                            </div>
-                        </fieldset>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <fieldset class="formRow">
-                            <div class="formRow--item">
-                                <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
-                                    <input type="text" class="formRow--input js-input" id="country" placeholder="* Country">
-                                </label>
-                            </div>
-                        </fieldset>
-                    </div>
-                    <div class="col-md-6">
-                        <fieldset class="formRow">
-                            <div class="formRow--item">
-                                <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
-                                    <input type="text" class="formRow--input js-input" id="phone" placeholder="* Phone number">
-                                </label>
-                            </div>
-                        </fieldset>
-                    </div>
-                </div>
+                </form>
             </div>
 
             <div class="choose-shopping-method">
@@ -255,7 +257,7 @@
                                 <div class="method-header">
                                     <label class="chechbox-container">
                                         Free Standard <span>(3-9 business days)</span>
-                                        <input type="checkbox">
+                                        <input type="radio" name="shipping">
                                         <span class="checkmark"></span>
                                     </label>
                                     <div class="price">$0.00</div>
@@ -267,7 +269,7 @@
                                 <div class="method-header">
                                     <label class="chechbox-container">
                                         Express <span>(1-4 business days)</span>
-                                        <input type="checkbox">
+                                        <input type="radio" name="shipping">
                                         <span class="checkmark"></span>
                                     </label>
                                     <div class="price">$9.00</div>
@@ -280,7 +282,7 @@
                                 <div class="method-header">
                                     <label class="chechbox-container">
                                         Priority <span>(1-2 business days)</span>
-                                        <input type="checkbox">
+                                        <input type="radio" name="shipping">
                                         <span class="checkmark"></span>
                                     </label>
                                     <div class="price">$25.00</div>
@@ -318,10 +320,22 @@
             <div class="col-md-7">
                 <div class="card-info-parent">
                     <div class="icons-parent">
-                        <img src="./assets/images/payment-icons/visa.svg" alt="visa">
-                        <img src="./assets/images/payment-icons/mastercard.svg" alt="mastercard">
-                        <img src="./assets/images/payment-icons/paypal.svg" alt="paypal">
-                        <img src="./assets/images/payment-icons/apple.svg" alt="apple pay">
+                        <label class="active">
+                            <img src="./assets/images/payment-icons/visa.svg" alt="visa">
+                            <input name="p_method" type="radio" value="visa">
+                        </label>
+                        <label>
+                            <img src="./assets/images/payment-icons/mastercard.svg" alt="mastercard">
+                            <input name="p_method" type="radio" value="mastercard">
+                        </label>
+                        <label>
+                            <img src="./assets/images/payment-icons/paypal.svg" alt="paypal">
+                            <input name="p_method" type="radio" value="paypal">
+                        </label>
+                        <label>
+                            <img src="./assets/images/payment-icons/apple.svg" alt="apple pay">
+                            <input name="p_method" type="radio" value="applepay">
+                        </label>
                     </div>
                     <div class="row">
                         <div class="col-md-9">
@@ -625,6 +639,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="assets/js/main.js"></script>
 
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.0/jquery.validate.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.0/additional-methods.js"></script>
 
 
 <script>
@@ -656,6 +672,102 @@ $('.go-to-payment').click(function() {
     $('.progress-second').addClass('active-second')
 })
 
+$("input[name='p_method']" ).click( function () {
+    $("input[name='p_method']").parent().removeClass('active');
+    $( this ).parent().addClass( 'active' );
+
+    switch($(this).val()) {
+        case 'visa':
+            $('.card-logo-parent img').attr("src", "assets/images/payment-icons/visa.svg");
+            break;
+        case 'mastercard':
+            $('.card-logo-parent img').attr("src", "assets/images/payment-icons/mastercard.svg");
+            $('.card-logo-parent img').attr("width", "50px");
+            break;
+        case 'paypal':
+            $('.card-logo-parent img').attr("src", "assets/images/payment-icons/paypal.svg");
+            break;
+        case 'applepay':
+            $('.card-logo-parent img').attr("src", "assets/images/payment-icons/apple.svg");
+            break;
+    }
+})
+
+
+$("#form").validate({
+    rules: {
+        "firstName": {
+            required: true,
+            minlength: 3
+        },
+        "lastName": {
+            required: true,
+            minlength: 3
+        },
+        "email": {
+            required: true,
+            email: true
+        },
+        "streetAddress" : {
+            required: true,
+            minlength: 2
+        },
+        "city" : {
+            required: true,
+            minlength: 2
+        },
+        "state" : {
+            required: true,
+            minlength: 2
+        },
+        "postal" : {
+            required: true,
+            minlength: 4
+        },
+        "country" : {
+            required: true,
+            minlength: 2
+        },
+        "phone" : {
+            required: true,
+            minlength: 6
+        },
+    },
+        messages: {
+            "firstName": {
+                required: "Please, enter a valid name"
+            },
+            "lastName": {
+                required: "Please, enter a valid name"
+            },
+            "email": {
+                required: "Please, enter an email",
+                email: "Email is invalid"
+            },
+            "streetAddress" : {
+                required: "Please, enter a valid Street name"
+            },
+            "city" : {
+                required: "Please, enter a valid City"
+            },
+            "state" : {
+                required: "Please, enter a valid State name"
+            },
+            "postal" : {
+                required: "Please, enter a valid Postal/Zip code"
+            },
+            "country" : {
+                required: "Please, enter a valid Country"
+            },
+            "phone" : {
+                required: "Please, enter a valid phone number"
+            }
+        },
+        submitHandler: function (form) { // for demo
+            alert('valid form submitted'); // for demo
+            return false; // for demo
+        }
+    });
 </script>
 
 

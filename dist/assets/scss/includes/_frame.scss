@@ -54,12 +54,10 @@
         }
 
         .fr {
-            z-index: 88;
+            z-index: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            
-           
 
             //.draggable,
             .draggable svg {
@@ -114,28 +112,20 @@
             left: 0;
 
             @media (max-width: 767px) {
-                width: 39%;
-                height: 25px;
-                top: 5%;
-                left: 29.5%;
+
             }
         }
 
         .right {
-            width: 20%;
-            height: 73.2%;
+            width: 19.8%;
+            height: 100%;
             position: absolute;
-            top: 13%;
+            top: 0;
             right: 0;
             writing-mode: tb-rl;
 
             @media (max-width: 767px) {
-                width: 7%;
-                height: 69%;
-                position: absolute;
-                top: 14%;
-                left: 62%;
-                writing-mode: tb-rl;
+
             }
         }
 
@@ -147,31 +137,20 @@
             left: 0;
 
             @media (max-width: 767px) {
-                width: 39.5%;
-                height: 24px;
-                position: absolute;
-                bottom: 8%;
-                left: 29.5%;
-                transform: rotate(-0.5deg);
+               
             }
         }
 
         .left {
             width: 20%;
-            height: 73.2%;
+            height: 100%;
             position: absolute;
-            top: 13%;
+            top: 0;
             left: 0;
             writing-mode: tb-rl;
 
             @media (max-width: 767px) {
-                width: 7%;
-                height: 68%;
-                position: absolute;
-                top: 15%;
-                right: 63.5%;
-                transform: rotate(-0.3deg);
-                writing-mode: tb-rl;
+
             }
         }
     
@@ -179,5 +158,6 @@
 }
 
 .snaptarget-hover {
-    background: #ff00002e;
+    background: #ffd1d17e;
+    z-index: 1;
 }

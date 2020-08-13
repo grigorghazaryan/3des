@@ -21,11 +21,16 @@
     resize: none;
     -webkit-transition: all .2s ease;
     transition: all .2s ease;
+
+    &.error {
+      border-color: red;
+    }
   }
   .formRow--input-wrapper {
     position: relative;
     display: block;
     width: 100%;
+    height: 52.5px;
   }
   .formRow--input-wrapper.active .placeholder {
     top: -5px;
@@ -38,12 +43,12 @@
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
-  .formRow--input-wrapper.active .formRow--input:not(:focus):not(:hover) ~ .placeholder {
-    color: #4e4e4e;
-  }
-  .formRow--input-wrapper .formRow--input:focus, .formRow--input-wrapper .formRow--input:hover {
-    border-color: #4e4e4e;
-  }
+  //.formRow--input-wrapper.active .formRow--input:not(:focus):not(:hover) ~ .placeholder {
+   // color: #4e4e4e;
+  //}
+  //.formRow--input-wrapper .formRow--input:focus, .formRow--input-wrapper .formRow--input:hover {
+  //  border-color: #4e4e4e;
+  //}
   .formRow .placeholder {
     position: absolute;
     top: 50%;
@@ -64,4 +69,8 @@
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
+  }
+
+  .error {
+    color: red;
   }
