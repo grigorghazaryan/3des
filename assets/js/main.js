@@ -91,3 +91,17 @@ document.querySelector('.s-in').onclick = function() {
     document.querySelector('.sup').style.display = "none"
     document.querySelector('.sin').style.display = "block"
 }
+
+// Open reset password
+document.querySelector('.f-pass').onclick = function() {
+    document.querySelector('.sup').style.display = "none"
+    document.querySelector('.sin').style.display = "none"
+    document.querySelector('.reset-password').style.display = "block"
+}
+
+// Go to sign
+document.querySelector('.to-sign').onclick = function() {
+    document.querySelector('.sup').style.display = "none"
+    document.querySelector('.reset-password').style.display = "none"
+    document.querySelector('.sin').style.display = "block"
+}

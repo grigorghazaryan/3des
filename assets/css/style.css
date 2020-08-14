@@ -1603,7 +1603,6 @@ section.our-products .more-parent .more-button i {
 }
 
 .textDropable {
-  z-index: 9999999999999999999;
   width: max-content !important;
   max-width: 333px !important;
   display: flex;
@@ -2172,35 +2171,40 @@ section.our-products .more-parent .more-button i {
   display: none;
 }
 
-.sign-in__parent .sign-in-block .sign-in, .sign-in__parent .sign-in-block .sign-up {
+.sign-in__parent .sign-in-block .reset-password {
+  display: none;
+}
+
+.sign-in__parent .sign-in-block .sign-in, .sign-in__parent .sign-in-block .sign-up, .sign-in__parent .sign-in-block .reset-password {
   width: 550px;
   margin: 35px 0;
 }
 
-.sign-in__parent .sign-in-block .sign-in h2, .sign-in__parent .sign-in-block .sign-in p, .sign-in__parent .sign-in-block .sign-up h2, .sign-in__parent .sign-in-block .sign-up p {
+.sign-in__parent .sign-in-block .sign-in h2, .sign-in__parent .sign-in-block .sign-in p, .sign-in__parent .sign-in-block .sign-up h2, .sign-in__parent .sign-in-block .sign-up p, .sign-in__parent .sign-in-block .reset-password h2, .sign-in__parent .sign-in-block .reset-password p {
   text-align: center;
 }
 
-.sign-in__parent .sign-in-block .sign-in h2, .sign-in__parent .sign-in-block .sign-up h2 {
+.sign-in__parent .sign-in-block .sign-in h2, .sign-in__parent .sign-in-block .sign-up h2, .sign-in__parent .sign-in-block .reset-password h2 {
   text-transform: uppercase;
   margin-bottom: 16px;
 }
 
-.sign-in__parent .sign-in-block .sign-in p, .sign-in__parent .sign-in-block .sign-up p {
+.sign-in__parent .sign-in-block .sign-in p, .sign-in__parent .sign-in-block .sign-up p, .sign-in__parent .sign-in-block .reset-password p {
   font-family: WhitneySansLight;
   color: #151D41;
   margin-bottom: 67px;
 }
 
 @media (max-width: 400px) {
-  .sign-in__parent .sign-in-block .sign-in p, .sign-in__parent .sign-in-block .sign-up p {
+  .sign-in__parent .sign-in-block .sign-in p, .sign-in__parent .sign-in-block .sign-up p, .sign-in__parent .sign-in-block .reset-password p {
     margin-bottom: 20px;
   }
 }
 
 .sign-in__parent .sign-in-block .sign-in .login-input-parent,
 .sign-in__parent .sign-in-block .sign-in .double-input-parent, .sign-in__parent .sign-in-block .sign-up .login-input-parent,
-.sign-in__parent .sign-in-block .sign-up .double-input-parent {
+.sign-in__parent .sign-in-block .sign-up .double-input-parent, .sign-in__parent .sign-in-block .reset-password .login-input-parent,
+.sign-in__parent .sign-in-block .reset-password .double-input-parent {
   width: 100%;
   margin-bottom: 25px;
   font-family: WhitneySansLight;
@@ -2213,14 +2217,16 @@ section.our-products .more-parent .more-button i {
 @media (max-width: 400px) {
   .sign-in__parent .sign-in-block .sign-in .login-input-parent,
   .sign-in__parent .sign-in-block .sign-in .double-input-parent, .sign-in__parent .sign-in-block .sign-up .login-input-parent,
-  .sign-in__parent .sign-in-block .sign-up .double-input-parent {
+  .sign-in__parent .sign-in-block .sign-up .double-input-parent, .sign-in__parent .sign-in-block .reset-password .login-input-parent,
+  .sign-in__parent .sign-in-block .reset-password .double-input-parent {
     margin-bottom: 15px;
   }
 }
 
 .sign-in__parent .sign-in-block .sign-in .login-input-parent input,
 .sign-in__parent .sign-in-block .sign-in .double-input-parent input, .sign-in__parent .sign-in-block .sign-up .login-input-parent input,
-.sign-in__parent .sign-in-block .sign-up .double-input-parent input {
+.sign-in__parent .sign-in-block .sign-up .double-input-parent input, .sign-in__parent .sign-in-block .reset-password .login-input-parent input,
+.sign-in__parent .sign-in-block .reset-password .double-input-parent input {
   width: 100%;
   height: 64px;
   background: #FFFFFF;
@@ -2232,22 +2238,24 @@ section.our-products .more-parent .more-button i {
 
 .sign-in__parent .sign-in-block .sign-in .login-input-parent input:focus,
 .sign-in__parent .sign-in-block .sign-in .double-input-parent input:focus, .sign-in__parent .sign-in-block .sign-up .login-input-parent input:focus,
-.sign-in__parent .sign-in-block .sign-up .double-input-parent input:focus {
+.sign-in__parent .sign-in-block .sign-up .double-input-parent input:focus, .sign-in__parent .sign-in-block .reset-password .login-input-parent input:focus,
+.sign-in__parent .sign-in-block .reset-password .double-input-parent input:focus {
   border-color: #36A7AA;
   outline: none;
   box-shadow: none;
 }
 
 @media (max-width: 767px) {
-  .sign-in__parent .sign-in-block .sign-in .double-input-parent, .sign-in__parent .sign-in-block .sign-up .double-input-parent {
+  .sign-in__parent .sign-in-block .sign-in .double-input-parent, .sign-in__parent .sign-in-block .sign-up .double-input-parent, .sign-in__parent .sign-in-block .reset-password .double-input-parent {
     gap: inherit;
+    flex-direction: column;
   }
-  .sign-in__parent .sign-in-block .sign-in .double-input-parent input:nth-child(1), .sign-in__parent .sign-in-block .sign-up .double-input-parent input:nth-child(1) {
+  .sign-in__parent .sign-in-block .sign-in .double-input-parent input:nth-child(1), .sign-in__parent .sign-in-block .sign-up .double-input-parent input:nth-child(1), .sign-in__parent .sign-in-block .reset-password .double-input-parent input:nth-child(1) {
     margin-bottom: 15px;
   }
 }
 
-.sign-in__parent .sign-in-block .sign-in .sign-in-button-wrapper, .sign-in__parent .sign-in-block .sign-up .sign-in-button-wrapper {
+.sign-in__parent .sign-in-block .sign-in .sign-in-button-wrapper, .sign-in__parent .sign-in-block .sign-up .sign-in-button-wrapper, .sign-in__parent .sign-in-block .reset-password .sign-in-button-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2255,18 +2263,18 @@ section.our-products .more-parent .more-button i {
 }
 
 @media (max-width: 400px) {
-  .sign-in__parent .sign-in-block .sign-in .sign-in-button-wrapper, .sign-in__parent .sign-in-block .sign-up .sign-in-button-wrapper {
+  .sign-in__parent .sign-in-block .sign-in .sign-in-button-wrapper, .sign-in__parent .sign-in-block .sign-up .sign-in-button-wrapper, .sign-in__parent .sign-in-block .reset-password .sign-in-button-wrapper {
     margin-bottom: 10px;
   }
 }
 
-.sign-in__parent .sign-in-block .sign-in .sign-in-button-wrapper a, .sign-in__parent .sign-in-block .sign-up .sign-in-button-wrapper a {
+.sign-in__parent .sign-in-block .sign-in .sign-in-button-wrapper a, .sign-in__parent .sign-in-block .sign-up .sign-in-button-wrapper a, .sign-in__parent .sign-in-block .reset-password .sign-in-button-wrapper a {
   color: #151D41;
   font-family: WhitneySansLight;
   text-decoration: underline;
 }
 
-.sign-in__parent .sign-in-block .sign-in .sign-in-button-wrapper button, .sign-in__parent .sign-in-block .sign-up .sign-in-button-wrapper button {
+.sign-in__parent .sign-in-block .sign-in .sign-in-button-wrapper button, .sign-in__parent .sign-in-block .sign-up .sign-in-button-wrapper button, .sign-in__parent .sign-in-block .reset-password .sign-in-button-wrapper button {
   color: #fff;
   background-color: #F16649;
   border-radius: 30px;
@@ -2280,27 +2288,61 @@ section.our-products .more-parent .more-button i {
   cursor: pointer;
 }
 
-.sign-in__parent .sign-in-block .sign-in .sign-in-button-wrapper button:hover, .sign-in__parent .sign-in-block .sign-up .sign-in-button-wrapper button:hover {
+.sign-in__parent .sign-in-block .sign-in .sign-in-button-wrapper button:hover, .sign-in__parent .sign-in-block .sign-up .sign-in-button-wrapper button:hover, .sign-in__parent .sign-in-block .reset-password .sign-in-button-wrapper button:hover {
   background: transparent;
   color: #000;
   border-color: #36A7AA;
 }
 
-.sign-in__parent .sign-in-block .sign-in .sign-in-bottom-block, .sign-in__parent .sign-in-block .sign-up .sign-in-bottom-block {
+.sign-in__parent .sign-in-block .sign-in .reset-pswd-wrapper, .sign-in__parent .sign-in-block .sign-up .reset-pswd-wrapper, .sign-in__parent .sign-in-block .reset-password .reset-pswd-wrapper {
+  text-align: right;
+}
+
+.sign-in__parent .sign-in-block .sign-in .reset-pswd-wrapper button, .sign-in__parent .sign-in-block .sign-up .reset-pswd-wrapper button, .sign-in__parent .sign-in-block .reset-password .reset-pswd-wrapper button {
+  color: #fff;
+  background-color: #F16649;
+  border-radius: 30px;
+  font-size: 18px;
+  border: 1px solid transparent;
+  outline: none;
+  width: 173px;
+  height: 54px;
+  transition: .3s ease-in;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.sign-in__parent .sign-in-block .sign-in .reset-pswd-wrapper button:hover, .sign-in__parent .sign-in-block .sign-up .reset-pswd-wrapper button:hover, .sign-in__parent .sign-in-block .reset-password .reset-pswd-wrapper button:hover {
+  background: transparent;
+  color: #000;
+  border-color: #36A7AA;
+}
+
+.sign-in__parent .sign-in-block .sign-in .sign-in-bottom-block, .sign-in__parent .sign-in-block .sign-up .sign-in-bottom-block, .sign-in__parent .sign-in-block .reset-password .sign-in-bottom-block {
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: WhitneySansLight;
 }
 
-.sign-in__parent .sign-in-block .sign-in .sign-in-bottom-block a, .sign-in__parent .sign-in-block .sign-up .sign-in-bottom-block a {
+.sign-in__parent .sign-in-block .sign-in .sign-in-bottom-block a, .sign-in__parent .sign-in-block .sign-up .sign-in-bottom-block a, .sign-in__parent .sign-in-block .reset-password .sign-in-bottom-block a {
   text-decoration: none;
   color: #F16649;
 }
 
-.sign-in__parent .sign-in-block .sign-in .sign-in-bottom-block div, .sign-in__parent .sign-in-block .sign-up .sign-in-bottom-block div {
+.sign-in__parent .sign-in-block .sign-in .sign-in-bottom-block div, .sign-in__parent .sign-in-block .sign-up .sign-in-bottom-block div, .sign-in__parent .sign-in-block .reset-password .sign-in-bottom-block div {
   margin-right: 10px;
   color: #151D41;
+}
+
+.sign-in__parent .sign-in-block .sign-in .return-to-sign, .sign-in__parent .sign-in-block .sign-up .return-to-sign, .sign-in__parent .sign-in-block .reset-password .return-to-sign {
+  text-align: center;
+  margin-top: 89px;
+}
+
+.sign-in__parent .sign-in-block .sign-in .return-to-sign span, .sign-in__parent .sign-in-block .sign-up .return-to-sign span, .sign-in__parent .sign-in-block .reset-password .return-to-sign span {
+  color: #F16649;
+  cursor: pointer;
 }
 
 @media (max-width: 650px) {
@@ -3297,6 +3339,327 @@ footer .rights-reserved {
   color: red;
 }
 
+.my-account {
+  margin-top: 40px;
+}
+
+.my-account h3 {
+  font-family: WhitneySans;
+  font-size: 30px;
+  margin-bottom: 32px;
+}
+
+.my-account h4 {
+  margin-bottom: 0;
+}
+
+.my-account .tab-pane .formRow {
+  margin-bottom: 16px;
+}
+
+.my-account .tab-pane .formRow .formRow--input-wrapper {
+  margin-bottom: 0;
+}
+
+.my-account .tabs-left {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.my-account .tabs-left a {
+  color: #252525;
+  text-decoration: none;
+  padding: 25px 0 25px 15px;
+  font-family: WhitneySansMedium;
+  border-bottom: 1px solid #ECECEC;
+}
+
+.my-account .tabs-left a:last-child {
+  border: none;
+}
+
+.my-account .tabs-left a.active {
+  background: #ECECEC;
+}
+
+.my-account .tabs-left a.active:hover {
+  background: #ECECEC;
+}
+
+.my-account .tabs-left a:hover {
+  background: #ececec4d;
+}
+
+.my-account .tab-content {
+  padding: 10px 0;
+}
+
+.my-account .tab-content .tab-title {
+  font-family: WhitneySans;
+  font-size: 18px;
+  color: #252525;
+  padding-bottom: 16px;
+}
+
+.my-account .tab-content .border-btm {
+  border-bottom: 1px solid #ECECEC;
+}
+
+.my-account .tab-content .edit {
+  color: #F16649;
+  display: inline-block;
+}
+
+.my-account .tab-content .change-pswd-parent {
+  margin-top: 30px;
+}
+
+.my-account .tab-content .change-pswd-parent a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.my-account .tab-content .change-pswd-parent a:first-child {
+  margin-right: 30px;
+}
+
+.my-account .tab-content .text {
+  font-size: 16px;
+  color: #252525;
+  font-family: WhitneySansMedium;
+}
+
+.my-account .tab-content .tab-order-box {
+  width: 100%;
+  display: flex;
+  margin-top: 35px;
+  border-bottom: 1px solid #676464;
+  padding-bottom: 30px;
+}
+
+.my-account .tab-content .tab-order-box .nice-select {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.my-account .tab-content .tab-order-box .order-image-box {
+  width: 140px;
+  height: 140px;
+  border-radius: 5px;
+  border: 1px solid #707070;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-account .tab-content .tab-order-box .order-image-box img {
+  width: 95%;
+}
+
+.my-account .tab-content .tab-order-box .order-box-right {
+  width: 100%;
+  margin-left: 20px;
+}
+
+.my-account .tab-content .tab-order-box .order-box-right .header {
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #676464;
+}
+
+.my-account .tab-content .tab-order-box .order-box-right .header div {
+  color: #252525;
+  font-family: WhitneySans;
+}
+
+.my-account .tab-content .tab-order-box .order-box-right .header div:nth-child(2) {
+  color: #676464;
+  font-size: 14px;
+  font-family: WhitneySansLight;
+}
+
+.my-account .tab-content .tab-order-box .order-box-right .body {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.my-account .tab-content .tab-order-box .order-box-right .body .items-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.my-account .tab-content .tab-order-box .order-box-right .body .list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-account .tab-content .tab-order-box .order-box-right .body .list-item .title {
+  color: #252525;
+  font-size: 16px;
+  font-family: WhitneySans;
+}
+
+.my-account .tab-content .tab-order-box .order-box-right .body .list-item .subtitle {
+  color: #676464;
+  font-size: 14px;
+  font-family: WhitneySansLight;
+  margin-left: 10px;
+}
+
+.my-account .tab-content .tab-order-box .order-box-right .body .color-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.my-account .tab-content .tab-order-box .order-box-right .body .color-wrapper .color-parent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.my-account .tab-content .tab-order-box .order-box-right .body .color-wrapper .color-parent div:first-child {
+  font-size: 14px;
+  color: #676464;
+  font-family: WhitneySansLight;
+}
+
+.my-account .tab-content .tab-order-box .order-box-right .body .color-wrapper .color-parent .circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #262624;
+}
+
+.my-account .tab-content .tab-order-box .order-box-right .body .color-wrapper .column {
+  display: flex;
+  flex-direction: column;
+}
+
+.my-account .tab-content .tab-order-box .order-box-right .body .color-wrapper .column .two-color-parent {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.my-account .tab-content .country-select-parent .nice-select {
+  width: 100%;
+  height: 52px;
+  border-color: #95989a;
+}
+
+.my-account .tab-content .country-select-parent .nice-select:after {
+  width: 10px;
+  height: 10px;
+}
+
+.my-account .tab-content .country-select-parent .nice-select .current {
+  color: #95989a;
+  font-size: 16px;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.my-account .address-button-parent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.my-account .payment-method {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.my-account .payment-method label {
+  margin: 0;
+}
+
+.my-account .payment-method .delete-pey-method {
+  cursor: pointer;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.credit-card-wrapper {
+  margin-top: 16px;
+  width: 100%;
+  height: 350px;
+  background-color: #F2F2F2;
+  border-radius: 15px;
+}
+
+.credit-card-wrapper .card-type-parent {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 17px 45px;
+  gap: 16px;
+}
+
+.credit-card-wrapper .inputs-parent {
+  padding: 0 30px 45px 30px;
+}
+
+.credit-card-wrapper .inputs-parent .card-input-parent {
+  position: relative;
+}
+
+.credit-card-wrapper .inputs-parent .card-input-parent .card-type {
+  position: absolute;
+  top: 55%;
+  left: 5%;
+  width: 50px;
+  border-right: 2px solid #DCDCDC;
+}
+
+.credit-card-wrapper .inputs-parent .card-input-parent .card-type img {
+  width: 80%;
+}
+
+.credit-card-wrapper .inputs-parent .card-input-parent div {
+  color: #252525;
+  margin-bottom: 10px;
+  font-family: WhitneySansMedium;
+  font-size: 16px;
+}
+
+.credit-card-wrapper .inputs-parent .card-input-parent input {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #707070;
+  background: #fff;
+  height: 50px;
+  font-family: WhitneySansMedium;
+  padding: 0 30px;
+}
+
+.credit-card-wrapper .inputs-parent .card-input-parent .card-number {
+  padding: 0 75px;
+}
+
 .textDropable.rotate span.click-me {
   transform: rotate(270deg);
   top: 0;
@@ -3389,6 +3752,26 @@ div#left .sticker-parent span {
 
 .border-bottom {
   border-bottom: 1px solid #E2E1E1;
+}
+
+.medium-button {
+  color: #fff;
+  background-color: #F16649;
+  border-radius: 30px;
+  font-size: 18px;
+  border: 1px solid transparent;
+  outline: none;
+  width: 173px;
+  height: 54px;
+  transition: .3s ease-in;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.medium-button:hover {
+  background: transparent;
+  color: #000;
+  border-color: #36A7AA;
 }
 
 @media screen and (max-width: 1200px) and (min-width: 768px) {

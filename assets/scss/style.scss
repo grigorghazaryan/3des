@@ -25,6 +25,7 @@
 @import './includes/faq';
 @import './includes/shopping';
 @import './includes/inputs';
+@import './includes/my-account';
 
 .textDropable.rotate span.click-me {
     transform: rotate(270deg);
@@ -110,6 +111,26 @@ div#left .sticker-parent span {
 
 .border-bottom {
     border-bottom: 1px solid #E2E1E1;
+}
+
+.medium-button {
+    color: #fff;
+    background-color: #F16649;
+    border-radius: 30px;
+    font-size: 18px;
+    border: 1px solid transparent;
+    outline: none;
+    width: 173px;
+    height: 54px;
+    transition: .3s ease-in;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    &:hover {
+        background: transparent;
+        color: #000;
+        border-color: #36A7AA;
+    }
 }
 
 // Nedd to change

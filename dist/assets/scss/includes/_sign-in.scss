@@ -47,7 +47,11 @@
             display: none;
         }
 
-        .sign-in, .sign-up {
+        .reset-password {
+            display: none;
+        }
+
+        .sign-in, .sign-up, .reset-password {
             width: 550px;
             margin: 35px 0;
 
@@ -104,6 +108,7 @@
             .double-input-parent {
                 @media (max-width: 767px) {
                    gap: inherit;
+                   flex-direction: column;
 
                    input:nth-child(1) {
                        margin-bottom: 15px;
@@ -148,6 +153,30 @@
                 }
             }
 
+            .reset-pswd-wrapper {
+                text-align: right;
+                
+                button {
+                    color: #fff;
+                    background-color: #F16649;
+                    border-radius: 30px;
+                    font-size: 18px;
+                    border: 1px solid transparent;
+                    outline: none;
+                    width: 173px;
+                    height: 54px;
+                    transition: .3s ease-in;
+                    box-sizing: border-box;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: transparent;
+                        color: #000;
+                        border-color: #36A7AA;
+                    }
+                }
+            }
+
             .sign-in-bottom-block {
                 display: flex;
                 justify-content: center;
@@ -162,6 +191,16 @@
                 div {
                     margin-right: 10px;
                     color: #151D41;
+                }
+            }
+
+            .return-to-sign {
+                text-align: center;
+                margin-top: 89px;
+
+                span {
+                    color: #F16649;
+                    cursor: pointer;
                 }
             }
         }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>3DES</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.ui.rotatable/1.0.1/jquery.ui.rotatable.css">
@@ -389,10 +389,10 @@
             <div class="col-md-5">
                 <div class="field-parent">
                     <div class="field-header">2 items in order</div>
-                    <div class="plus"><span>-</span></div>
+                    <div class="plus-order"><span>-</span></div>
                 </div>
 
-                <div class="border-bottom pb-30">
+                <div class="border-bottom pb-30 toggle-orders">
                     <div class="final-preview-item">
                         <div class="image-parent">
                             <img src="./assets/images/textimage.png" alt="testimage">
@@ -403,7 +403,7 @@
                         </div>
                         <div class="product-price">
                             <div>&nbsp;</div>
-                            <span>$ 40.00></span>
+                            <span>$ 40.00</span>
                         </div>
                     </div>
                     <div class="final-preview-item">
@@ -416,7 +416,7 @@
                         </div>
                         <div class="product-price">
                             <div>&nbsp;</div>
-                            <span>$ 40.00></span>
+                            <span>$ 40.00</span>
                         </div>
                     </div>
                 </div>
@@ -433,6 +433,10 @@
                     <div class="price-item">
                         <div class="title">Shipping</div>
                         <div class="price">$ 9.00</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="title">Promo or Coupon Code</div>
+                        <div class="price">$ -4.00</div>
                     </div>
                     <div class="price-item">
                         <div class="title">Total</div>
@@ -589,7 +593,7 @@
             </div>
 
             <div class="sign-in-button-wrapper">
-                <a href="#">Forgot your password</a>
+                <a href="javascript:void(0)" class="f-pass">Forgot your password</a>
                 <button>Sign in</button>
             </div>
 
@@ -631,6 +635,22 @@
                 <a href="javascript:void(0)" class="s-in">Sign in here</a>
             </div>
 
+        </div>
+        <div class="reset-password">
+            <h2>Reset Password</h2>
+            <p>Enter your email address and we'll send you a link to reset your password.</p>
+
+            <div class="login-input-parent">
+                <input type="text" placeholder="* Email address">
+            </div>
+
+            <div class="reset-pswd-wrapper">
+                <button>Reset Password</button>
+            </div>
+
+            <div class="return-to-sign">
+                Return to <span class="to-sign">Sign screen</span>
+            </div>
         </div>
     </div>
 </div>
@@ -693,6 +713,14 @@ $("input[name='p_method']" ).click( function () {
     }
 })
 
+$(".plus-order").click( function () {
+    if( $('.toggle-orders').css('display') == 'block') {
+        $('.plus-order > span').html("+");
+    } else {
+        $('.plus-order > span').html("-");
+    }
+    $( ".toggle-orders" ).slideToggle( "slow" );
+});
 
 $("#form").validate({
     rules: {
@@ -769,8 +797,6 @@ $("#form").validate({
         }
     });
 </script>
-
-
 
 </body>
 </html>

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.ui.rotatable/1.0.1/jquery.ui.rotatable.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/nice-select.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -135,356 +136,337 @@
 
 
 
-<section class="personalized-frames shopping">
+<section class="my-account">
     <div class="container">
+        <div class="row tabs-container">
 
-        <div class="personalized-frames_header">
-             <span class="pers-fr pers-fr-shipping">Shipping</span>
-        </div>
-
-        <div class="step-by-step-progres-parent">
-            <div class="progressbar-wrapper shopping">
-                <div class="progressbar">
-                    <div class="active"></div>
-                    <div class="progress-second"></div>
+                <div class="col-md-3 no-padding">
+                    <h3>My Account</h3>
+                    <div class="nav nav-tabs tabs-left">
+                        <a href="#tab1-v" class="active" data-toggle="tab">My Account</a>
+                        <a href="#tab2-v" data-toggle="tab">My Orders</a>
+                        <a href="#tab3-v" data-toggle="tab">Address Book</a>
+                        <a href="#tab4-v" data-toggle="tab">Account Information</a>
+                        <a href="#tab5-v" data-toggle="tab">Payment Methods</a>
+                        <a href="#tab6-v" data-toggle="tab">Logout</a>
+                    </div>
                 </div>
-            </div>
-        </div>
+                
+                <div class="col-md-9 no-padding">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab1-v">
+                        
+                        <h4 class="tab-title border-btm">Contact Information</h4>
+                       
+                        <div>Jone Smith</div>
+                        <div>jo.smith@gmail.com</div>
 
-        <div id="shopping">
-            <div class="shopping-parent border-bottom">
-                <form action="#" id="form">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <fieldset class="formRow">
-                                <div class="formRow--item">
-                                    <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
-                                        <input type="text" name="firstName" class="formRow--input js-input" id="firstName" placeholder="* First name">
-                                    </label>
-                                </div>
-                            </fieldset>
-                        </div>
-                        <div class="col-md-6">
-                            <fieldset class="formRow">
-                                <div class="formRow--item">
-                                    <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
-                                        <input type="text" name="lastName" class="formRow--input js-input" id="lastName" placeholder="* Last name">
-                                    </label>
-                                </div>
-                            </fieldset>
-                        </div>
-                        <div class="col-md-6">
-                            <fieldset class="formRow">
-                                <div class="formRow--item">
-                                    <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
-                                        <input type="text" name="email" class="formRow--input js-input" id="emailAdress" placeholder="* Email addess">
-                                    </label>
-                                </div>
-                            </fieldset>
-                        </div>
-                        <div class="col-md-6">
-                            <fieldset class="formRow">
-                                <div class="formRow--item">
-                                    <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
-                                        <input type="text" name="streetAddress" class="formRow--input js-input" id="streetAdress" placeholder="* Street addess">
-                                    </label>
-                                </div>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <fieldset class="formRow">
-                                <div class="formRow--item">
-                                    <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
-                                        <input type="text" name="city" class="formRow--input js-input" id="city" placeholder="* City">
-                                    </label>
-                                </div>
-                            </fieldset>
-                        </div>
-                        <div class="col-md-4">
-                            <fieldset class="formRow">
-                                <div class="formRow--item">
-                                    <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
-                                        <input type="text" name="state" class="formRow--input js-input" id="stateProvince" placeholder="* State/Province">
-                                    </label>
-                                </div>
-                            </fieldset>
-                        </div>
-                        <div class="col-md-4">
-                            <fieldset class="formRow">
-                                <div class="formRow--item">
-                                    <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
-                                        <input type="number" name="postal" class="formRow--input js-input" id="zipPostalcode" placeholder="* Zip/Postal code">
-                                    </label>
-                                </div>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <fieldset class="formRow">
-                                <div class="formRow--item">
-                                    <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
-                                        <input type="text" name="country" class="formRow--input js-input" id="country" placeholder="* Country">
-                                    </label>
-                                </div>
-                            </fieldset>
-                        </div>
-                        <div class="col-md-6">
-                            <fieldset class="formRow">
-                                <div class="formRow--item">
-                                    <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
-                                        <input type="number" name="phone" class="formRow--input js-input" id="phone" placeholder="* Phone number">
-                                    </label>
-                                </div>
-                            </fieldset>
-                        </div>
-                    </div>
-                </form>
-            </div>
-
-            <div class="choose-shopping-method">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-md-12">
-                            <div class="title">Choose Shipping Method</div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="method-box">
-                                <div class="method-header">
-                                    <label class="chechbox-container">
-                                        Free Standard <span>(3-9 business days)</span>
-                                        <input type="radio" name="shipping">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <div class="price">$0.00</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="method-box">
-                                <div class="method-header">
-                                    <label class="chechbox-container">
-                                        Express <span>(1-4 business days)</span>
-                                        <input type="radio" name="shipping">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <div class="price">$9.00</div>
-                                </div>
-                            </div>
+                        <div class="change-pswd-parent">
+                            <a href="#tab4-v" data-toggle="tab" class="edit">Edit</a>
+                            <a href="#tab4-v" data-toggle="tab" class="edit">Change Password</a>
                         </div>
                         
-                        <div class="col-md-4">
-                            <div class="method-box">
-                                <div class="method-header">
-                                    <label class="chechbox-container">
-                                        Priority <span>(1-2 business days)</span>
-                                        <input type="radio" name="shipping">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <div class="price">$25.00</div>
+                        
+                        <h4 class="tab-title mt-50 border-btm">Address Book</h4>
+                        <a href="#" class="edit">Manage Addresses</a>
+                        <h4 class="tab-title mt-10">Default Billing Address</h4>
+
+                        <div class="text mt-20">You have not set a default billing address</div>
+                        <a href="#" class="edit mt-10">Edit Address</a>
+
+                        <div class="text mt-30">Default Shipping Address</div>
+                        <div class="text mt-10">You have not set a default shipping address</div>
+                        <a href="#" class="edit mt-10">Edit Address</a>
+
+
+                        <h4 class="tab-title mt-50 border-btm">Payment Methods</h4>
+                        <a href="#" class="edit mt-20">Add</a>
+                        </div>
+                        <div class="tab-pane" id="tab2-v">
+                            <h4>My Orders</h4>
+                            <div class="tab-order-box">
+                                <div class="order-image-box">
+                                    <img src="./assets/images/textimage.png" alt="alt">
+                                </div>
+                                <div class="order-box-right">
+                                    <div class="header">
+                                        <div>Frame Name</div>
+                                        <div>Jun 12/2020</div>
+                                        <div>Total: $55.00</div>
+                                    </div>
+                                    <div class="body">
+                                        <div class="items-wrapper">
+                                            <div class="list-item">
+                                                <div class="title">Text</div>
+                                                <div class="subtitle">
+                                                    Lorem ipsum- Lorem ipsum-Lorem ipsum
+                                                </div>
+                                            </div>
+                                            <div class="list-item">
+                                                <div class="title">Font</div>
+                                                <div class="subtitle">
+                                                    Classic
+                                                </div>
+                                            </div>
+                                            <div class="list-item">
+                                                <div class="title">Sticker</div>
+                                                <div class="subtitle">
+                                                    Unicorn- Watermelon
+                                                </div>
+                                            </div>
+                                        </div>
+                                  
+                                        <div class="color-wrapper">
+                                            <div class="title">Color</div>
+                                            <div class="column">
+                                                <div class="two-color-parent">
+                                                    <div class="color-parent">
+                                                        <div>Front</div>
+                                                        <div class="circle"></div>
+                                                    </div>
+                                                    <div class="color-parent">
+                                                        <div>Back</div>
+                                                        <div class="circle"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="color-parent">
+                                                    <div>Font and sticker</div>
+                                                    <div class="circle"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                  
+                                </div>
+                                <select class="order-select">
+                                    <option data-display="More Info">Nothing</option>
+                                    <option value="1">Some option</option>
+                                    <option value="2">Another option</option>
+                                    <option value="3" disabled>A disabled option</option>
+                                    <option value="4">Potato</option>
+                                </select>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab3-v">
+                            <h4>Edit Address</h4>
+                            <div class="row mt-30">
+                                <div class="col-md-5">
+                                    <fieldset class="formRow">
+                                        <div class="formRow--item">
+                                            <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
+                                                <input type="text" name="firstName" class="formRow--input js-input" id="firstName" placeholder="* First name">
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-5">
+                                    <fieldset class="formRow">
+                                        <div class="formRow--item">
+                                            <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
+                                                <input type="text" name="lastName" class="formRow--input js-input" id="lastName" placeholder="* Last name">
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-10">
+                                    <fieldset class="formRow">
+                                        <div class="formRow--item">
+                                            <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
+                                                <input type="number" name="phone" class="formRow--input js-input" id="phone" placeholder="* Phone number">
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-10">
+                                    <fieldset class="formRow">
+                                        <div class="formRow--item">
+                                            <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
+                                                <input type="text" name="streetAddress" class="formRow--input js-input" id="streetAdress" placeholder="* Street addess">
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-5">
+                                    <fieldset class="formRow">
+                                        <div class="formRow--item">
+                                            <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
+                                                <input type="text" name="city" class="formRow--input js-input" id="city" placeholder="* City">
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-5">
+                                    <fieldset class="formRow">
+                                        <div class="formRow--item">
+                                            <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
+                                                <input type="text" name="state" class="formRow--input js-input" id="stateProvince" placeholder="* State/Province">
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-5">
+                                    <fieldset class="formRow">
+                                        <div class="formRow--item">
+                                            <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
+                                                <input type="number" name="postal" class="formRow--input js-input" id="zipPostalcode" placeholder="* Zip/Postal code">
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-5 country-select-parent">
+                                    <select class="country">
+                                        <option data-display="More Info">Nothing</option>
+                                        <option value="1">Some option</option>
+                                        <option value="2">Another option</option>
+                                        <option value="3" disabled>A disabled option</option>
+                                        <option value="4">Potato</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-10 mt-50">
+                                    <div class="address-button-parent">
+                                        <div>
+                                            <label class="chechbox-container">
+                                                Make Primary
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <button class="medium-button">Save Address</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="tab-pane" id="tab4-v">
+                            <h4>Account Information</h4>
+                            <div class="row mt-30">
+                                <div class="col-md-5">
+                                    <fieldset class="formRow">
+                                        <div class="formRow--item">
+                                            <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
+                                                <input type="text" name="firstName" class="formRow--input js-input" id="firstName" placeholder="* First name">
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-5">
+                                    <fieldset class="formRow">
+                                        <div class="formRow--item">
+                                            <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
+                                                <input type="text" name="lastName" class="formRow--input js-input" id="lastName" placeholder="* Last name">
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-5">
+                                    <fieldset class="formRow">
+                                        <div class="formRow--item">
+                                            <label for="email" class="formRow--input-wrapper js-inputWrapper">
+                                                <input type="email" name="email" class="formRow--input js-input" id="email" placeholder="* Email Address">
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-5 country-select-parent">
+                                    <select class="country">
+                                        <option data-display="Preferred Language">Nothing</option>
+                                        <option value="1">Some option</option>
+                                        <option value="2">Another option</option>
+                                        <option value="3" disabled>A disabled option</option>
+                                        <option value="4">Potato</option>
+                                    </select>
+                                </div>
+                            </div>
 
-                        <div class="col-md-4 totals start-final-view">
-                            <div class="method-final-title">Subtotal (1 item )</div>
-                            <div class="price">$ 55.00</div>
+                            <h4 class="mt-20">Change Password</h4>
+                            <div class="row mt-30">
+                                <div class="col-md-10">
+                                    <fieldset class="formRow">
+                                        <div class="formRow--item">
+                                            <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
+                                                <input type="text" name="firstName" class="formRow--input js-input" id="password" placeholder="* Current Password">
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-10">
+                                    <fieldset class="formRow">
+                                        <div class="formRow--item">
+                                            <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
+                                                <input type="text" name="lastName" class="formRow--input js-input" id="newPassword" placeholder="* New Password">
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-10">
+                                    <fieldset class="formRow">
+                                        <div class="formRow--item">
+                                            <label for="email" class="formRow--input-wrapper js-inputWrapper">
+                                                <input type="email" name="email" class="formRow--input js-input" id="confirm" placeholder="* Confirm New Password">
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-10 mt-50 text-right">
+                                    <button class="medium-button">Save</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-3 totals ">
-                            <div class="method-final-title">Tax</div>
-                            <div class="price">Not yet calculated</div>
+                        <div class="tab-pane" id="tab5-v">
+                            <h4 class="tab-title border-btm">Credit Card</h4>
+                            
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <div class="credit-card-wrapper">
+                                        <div class="card-type-parent">
+                                            <img src="./assets/images/payment-icons/visa.svg" alt="visa">
+                                            <img src="./assets/images/payment-icons/mastercard.svg" alt="mastercrd">
+                                            <img src="./assets/images/payment-icons/paypal.svg" alt="paypal">
+                                        </div>
+                                        <div class="row inputs-parent mt-20">
+                                            <div class="col-md-9 card-input-parent ">
+                                                <div>Credit Card Number</div>
+                                                <input type="text" class="card-number">
+                                                <div class="card-type">
+                                                    <img src="./assets/images/payment-icons/visa.svg" alt="card">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 card-input-parent">
+                                                <div>Expiration</div>
+                                                <input type="text" placeholder="MM / YY">
+                                            </div>
+                                            <div class="col-md-9 mt-20 card-input-parent">
+                                                <div>Cardholder Name</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="col-md-3 mt-20 card-input-parent">
+                                                <div>CVV</div>
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="payment-method">
+                                        <label class="chechbox-container">
+                                            Default Payment MethodCard
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <div class="edit delete-pey-method">Delete</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-10 mt-50 text-right">
+                                    <button class="medium-button">Save</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-2 totals ">
-                            <div class="method-final-title">Shipping</div>
-                            <div class="price">$ 9.00</div>
-                        </div>
-                        <div class="col-md-3 text-right totals">
-                            <div class="method-final-title">Total</div>
-                            <div class="price">$ 64.00</div>
-                        </div>
-
-                        <div class="col-md-12 text-center totals">
-                            <button class="next-button go-to-payment">Next</button>
-                        </div>
-
                     </div>
                 </div>
-            </div>
+
+            
         </div>
-
-        <div class="row payment-parent" id="payment">
-            <div class="col-md-7">
-                <div class="card-info-parent">
-                    <div class="icons-parent">
-                        <label class="active">
-                            <img src="./assets/images/payment-icons/visa.svg" alt="visa">
-                            <input name="p_method" type="radio" value="visa">
-                        </label>
-                        <label>
-                            <img src="./assets/images/payment-icons/mastercard.svg" alt="mastercard">
-                            <input name="p_method" type="radio" value="mastercard">
-                        </label>
-                        <label>
-                            <img src="./assets/images/payment-icons/paypal.svg" alt="paypal">
-                            <input name="p_method" type="radio" value="paypal">
-                        </label>
-                        <label>
-                            <img src="./assets/images/payment-icons/apple.svg" alt="apple pay">
-                            <input name="p_method" type="radio" value="applepay">
-                        </label>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-9">
-                            <fieldset class="formRow">
-                                <div class="formRow--item">
-                                    <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
-                                        <input type="text" class="formRow--input js-input" 
-                                        id="cardNumber" placeholder="Card Number">
-                                    </label>
-                                </div>
-                            </fieldset>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card-logo-parent">
-                                <img src="./assets/images/payment-icons/visa.svg" alt="visa">
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <fieldset class="formRow">
-                                <div class="formRow--item">
-                                    <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
-                                        <input type="text" class="formRow--input js-input" 
-                                        id="cardholderName" placeholder="Cardholder name">
-                                    </label>
-                                </div>
-                            </fieldset>
-                        </div>
-                        <div class="col-md-12">
-                            <fieldset class="formRow">
-                                <div class="formRow--item">
-                                    <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
-                                        <input type="text" class="formRow--input js-input" 
-                                        id="expireDate" placeholder="Expire date">
-                                    </label>
-                                </div>
-                            </fieldset>
-                        </div>
-                        <div class="col-md-6">
-                            <fieldset class="formRow">
-                                <div class="formRow--item">
-                                    <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
-                                        <input type="text" class="formRow--input js-input" 
-                                        id="cvv" placeholder="CVV">
-                                    </label>
-                                </div>
-                            </fieldset>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-5">
-                <div class="field-parent">
-                    <div class="field-header">2 items in order</div>
-                    <div class="plus-order"><span>-</span></div>
-                </div>
-
-                <div class="border-bottom pb-30 toggle-orders">
-                    <div class="final-preview-item">
-                        <div class="image-parent">
-                            <img src="./assets/images/textimage.png" alt="testimage">
-                        </div>
-                        <div class="preview-item">
-                            <div class="title">Product Name</div>
-                            <div class="product-quality">Qty: 02</div>
-                        </div>
-                        <div class="product-price">
-                            <div>&nbsp;</div>
-                            <span>$ 40.00</span>
-                        </div>
-                    </div>
-                    <div class="final-preview-item">
-                        <div class="image-parent">
-                            <img src="./assets/images/textimage.png" alt="testimage">
-                        </div>
-                        <div class="preview-item">
-                            <div class="title">Product Name</div>
-                            <div class="product-quality">Qty: 02</div>
-                        </div>
-                        <div class="product-price">
-                            <div>&nbsp;</div>
-                            <span>$ 40.00</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="price-final border-bottom" >
-                    <div class="price-item">
-                        <div class="title">Cart subtotal</div>
-                        <div class="price">$ 55.00</div>
-                    </div>
-                    <div class="price-item">
-                        <div class="title">Tax</div>
-                        <div class="price">$ 5.00</div>
-                    </div>
-                    <div class="price-item">
-                        <div class="title">Shipping</div>
-                        <div class="price">$ 9.00</div>
-                    </div>
-                    <div class="price-item">
-                        <div class="title">Promo or Coupon Code</div>
-                        <div class="price">$ -4.00</div>
-                    </div>
-                    <div class="price-item">
-                        <div class="title">Total</div>
-                        <div class="price">$ 69.00</div>
-                    </div>
-                </div>
-
-                <div class="use-shipping-address">
-                    <label class="chechbox-container">
-                        Use shipping address
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <div class="shipping-address">
-                        950 Ridge RD C25, W52422 - Claymont, Ontario 19703 <br>
-                        - Canada - 3024148567
-                    </div>
-                </div>
-            </div>
-            <div class="promo-or-coupon-parent">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="promo-title">Promo or Coupon code</div>
-                    </div>
-                    <div class="col-md-4">
-                        <fieldset class="formRow">
-                            <div class="formRow--item">
-                                <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
-                                    <input type="text" class="formRow--input js-input" 
-                                    id="promo" placeholder="Enter discount code">
-                                </label>
-                            </div>
-                        </fieldset>
-                    </div>
-                    <div class="col-md-2 apply-button-parent" >
-                        <button class="apply-button">
-                            Apply
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 text-center">
-                <button class="place-order">
-                    Place Order
-                </button>
-            </div>
-        </div>
-
     </div>
 </section>
 
@@ -657,11 +639,8 @@
 
 <script src="./assets/js/plugins/jquery-1.12.4.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="assets/js/plugins/jquery.nice-select.min.js"></script>
 <script src="assets/js/main.js"></script>
-
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.0/jquery.validate.min.js"></script>
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.0/additional-methods.js"></script>
-
 
 <script>
     var $inputItem = $(".js-inputWrapper");
@@ -683,119 +662,10 @@
         $this.addClass("active");
     });
 });
+</script>
 
-
-$('.go-to-payment').click(function() {
-    $('#shopping').css('display', 'none')
-    $('#payment').css('display', 'flex')
-    $('.pers-fr-shipping').html('Payment')
-    $('.progress-second').addClass('active-second')
-})
-
-$("input[name='p_method']" ).click( function () {
-    $("input[name='p_method']").parent().removeClass('active');
-    $( this ).parent().addClass( 'active' );
-
-    switch($(this).val()) {
-        case 'visa':
-            $('.card-logo-parent img').attr("src", "assets/images/payment-icons/visa.svg");
-            break;
-        case 'mastercard':
-            $('.card-logo-parent img').attr("src", "assets/images/payment-icons/mastercard.svg");
-            $('.card-logo-parent img').attr("width", "50px");
-            break;
-        case 'paypal':
-            $('.card-logo-parent img').attr("src", "assets/images/payment-icons/paypal.svg");
-            break;
-        case 'applepay':
-            $('.card-logo-parent img').attr("src", "assets/images/payment-icons/apple.svg");
-            break;
-    }
-})
-
-$(".plus-order").click( function () {
-    if( $('.toggle-orders').css('display') == 'block') {
-        $('.plus-order > span').html("+");
-    } else {
-        $('.plus-order > span').html("-");
-    }
-    $( ".toggle-orders" ).slideToggle( "slow" );
-});
-
-$("#form").validate({
-    rules: {
-        "firstName": {
-            required: true,
-            minlength: 3
-        },
-        "lastName": {
-            required: true,
-            minlength: 3
-        },
-        "email": {
-            required: true,
-            email: true
-        },
-        "streetAddress" : {
-            required: true,
-            minlength: 2
-        },
-        "city" : {
-            required: true,
-            minlength: 2
-        },
-        "state" : {
-            required: true,
-            minlength: 2
-        },
-        "postal" : {
-            required: true,
-            minlength: 4
-        },
-        "country" : {
-            required: true,
-            minlength: 2
-        },
-        "phone" : {
-            required: true,
-            minlength: 6
-        },
-    },
-        messages: {
-            "firstName": {
-                required: "Please, enter a valid name"
-            },
-            "lastName": {
-                required: "Please, enter a valid name"
-            },
-            "email": {
-                required: "Please, enter an email",
-                email: "Email is invalid"
-            },
-            "streetAddress" : {
-                required: "Please, enter a valid Street name"
-            },
-            "city" : {
-                required: "Please, enter a valid City"
-            },
-            "state" : {
-                required: "Please, enter a valid State name"
-            },
-            "postal" : {
-                required: "Please, enter a valid Postal/Zip code"
-            },
-            "country" : {
-                required: "Please, enter a valid Country"
-            },
-            "phone" : {
-                required: "Please, enter a valid phone number"
-            }
-        },
-        submitHandler: function (form) { // for demo
-            alert('valid form submitted'); // for demo
-            return false; // for demo
-        }
-    });
+<script>
+    $('.order-select, .country').niceSelect();  
 </script>
 
 </body>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>3DES</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.ui.rotatable/1.0.1/jquery.ui.rotatable.css">
@@ -160,9 +160,9 @@
                     <div class="cart-section">
                         <div class="title">Quantity</div>
                         <div class="quantity-counter">
-                            <div class="counter-item">-</div>
-                            <div class="counter-item">20</div>
-                            <div class="counter-item">+</div>
+                            <div class="counter-item minus" value="minus">-</div>
+                            <div class="counter-item num">0</div>
+                            <div class="counter-item plus" value="plus">+</div>
                         </div>
                         <div class="empty">&nbsp;</div>
                     </div>
@@ -374,7 +374,7 @@
             </div>
 
             <div class="sign-in-button-wrapper">
-                <a href="#">Forgot your password</a>
+                <a href="javascript:void(0)" class="f-pass">Forgot your password</a>
                 <button>Sign in</button>
             </div>
 
@@ -417,12 +417,43 @@
             </div>
 
         </div>
+        <div class="reset-password">
+            <h2>Reset Password</h2>
+            <p>Enter your email address and we'll send you a link to reset your password.</p>
+
+            <div class="login-input-parent">
+                <input type="text" placeholder="* Email address">
+            </div>
+
+            <div class="reset-pswd-wrapper">
+                <button>Reset Password</button>
+            </div>
+
+            <div class="return-to-sign">
+                Return to <span class="to-sign">Sign screen</span>
+            </div>
+        </div>
     </div>
 </div>
 
 <script src="./assets/js/plugins/jquery-1.12.4.js"></script>
 <script src="assets/js/main.js"></script>
 
+<script>
+    // Quantity counter
+    document.querySelector('.minus').onclick = function() {
+        let parent = document.querySelector('.num');
+        let num = parseInt(parent.innerHTML)
+        num--
+        parent.innerHTML = num;
+    }
+    document.querySelector('.plus').onclick = function() {
+        let parent = document.querySelector('.num');
+        let num = parseInt(parent.innerHTML)
+        num++
+        parent.innerHTML = num;
+    }
+</script>
 
 </body>
 </html>
