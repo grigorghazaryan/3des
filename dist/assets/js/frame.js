@@ -519,3 +519,13 @@ $("input[name='font-color']" ).click( function () {
     $('.fr .sticker-parent svg path.c').css('fill', $( this ).val())
     $('.fr .sticker-parent svg circle.c').css('fill', $( this ).val())
 })
+
+$('.accept-rev-checkbox').click(function(){
+    if($(this).is(':checked')){
+        $('.add-to-card').attr("disabled", false);
+        $('.add-to-card').removeClass('disabled');
+    } else{
+        $('.add-to-card').attr("disabled", true);
+        $('.add-to-card').addClass('disabled');
+    }
+});

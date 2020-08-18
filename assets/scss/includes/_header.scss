@@ -120,15 +120,22 @@ nav {
             }
         }
 
+        .flag {
+            margin-left: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .languages {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 0 40px 0 28px;
+            margin: 0 40px 0 5px;
             color: #A7A7A7;
             border: 1px solid;
             border-radius: 50px;
-            padding: 2px 13px 3px;
+            padding: 2px 15px 2px;
 
 
             .line {

@@ -29,6 +29,7 @@
             position: absolute;
             border: 1px solid black;
             box-sizing: border-box;
+            box-shadow: 0px 0px 18px 2px #0000003b;
 
             @media (max-width: 768px) {
                 zoom: .45;

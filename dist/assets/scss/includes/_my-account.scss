@@ -170,25 +170,26 @@
                     .color-wrapper  {
                         display: flex;
                         gap: 10px;
+                        
 
                         .color-parent {
                             display: flex;
                             align-items: center;
                             gap: 10px;
                             justify-content: space-between;
-
-                            div:first-child {
-                                font-size: 14px;
-                                color: #676464;
-                                font-family: WhitneySansLight;
-                            }
-                            .circle {
-                                width: 16px;
-                                height: 16px;
-                                border-radius: 50%;
-                                background: #fff;
-                                border: 1px solid #262624;
-                            }
+          
+                                div:first-child {
+                                    font-size: 14px;
+                                    color: #676464;
+                                    font-family: WhitneySansLight;
+                                }
+                                .circle {
+                                    width: 16px;
+                                    height: 16px;
+                                    border-radius: 50%;
+                                    background: #fff;
+                                    border: 1px solid #262624;
+                                }
                         }
                         .column {
                             display: flex; 

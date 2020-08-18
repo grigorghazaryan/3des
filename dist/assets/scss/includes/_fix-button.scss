@@ -12,7 +12,11 @@
     z-index: 999;
     margin-top: 64px;
 
-
+    .bordered-medium-button {
+        @media (max-width: 768px) { 
+            display: none !important;
+        }
+    }
 
     .next-button {
         width: 214px;

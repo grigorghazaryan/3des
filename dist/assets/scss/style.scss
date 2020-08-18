@@ -125,11 +125,89 @@ div#left .sticker-parent span {
     transition: .3s ease-in;
     box-sizing: border-box;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    text-decoration: none;
+
+    &.disabled {
+        background-color: #d2d2d2;
+        pointer-events: none;
+        cursor: default;
+    }
 
     &:hover {
         background: transparent;
         color: #000;
         border-color: #36A7AA;
+        text-decoration: none;
+    }
+
+    svg {
+        width: 30px;
+        height: 20px;
+        transform: rotate(180deg);
+        transition: .3s;
+
+        path {
+            transition: .3s ease-in;
+        }
+    }
+
+    &:hover {
+        svg {
+            path {
+                fill: #000;
+            }
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.bordered-medium-button {
+    color: #607D8B;
+    background-color: #f3f3f361;
+    border-radius: 30px;
+    font-size: 18px;
+    border: 1px solid #607D8B;
+    outline: none;
+    width: 173px;
+    height: 54px;
+    transition: .3s ease-in;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    outline: none;
+
+    &:hover {
+        background: #0000000d;
+        color: #000;
+        border-color: #000000;
+
+        svg {
+            path {
+                fill: #000;
+            }
+        }
+    }
+
+    svg {
+        width: 20px;
+        height: 20px;
+
+        path {
+            transition: .3s ease-in;
+            fill: #607D8B;
+        }
+    }
+
+    &:focus {
+        outline: none;
     }
 }
 

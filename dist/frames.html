@@ -23,10 +23,6 @@
             </button>
 
             <div class="flex-1">
-                <a href="javascript:void(0)" class="back-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512.008 512.008" style="enable-background:new 0 0 512.008 512.008;" xml:space="preserve" width="512px" height="512px"><g><path style="fill:#2196F3;" d="M501.342,245.185H36.424L210.227,71.404c4.093-4.237,3.975-10.99-0.262-15.083  c-4.134-3.992-10.687-3.992-14.82,0l-192,192c-4.171,4.16-4.179,10.914-0.019,15.085c0.006,0.006,0.013,0.013,0.019,0.019l192,192  c4.093,4.237,10.845,4.354,15.083,0.262c4.237-4.093,4.354-10.845,0.262-15.083c-0.086-0.089-0.173-0.176-0.262-0.262  L36.424,266.519h464.917c5.891,0,10.667-4.776,10.667-10.667S507.233,245.185,501.342,245.185z" data-original="#2196F3"/><path d="M202.675,458.519c-2.831,0.005-5.548-1.115-7.552-3.115l-192-192c-4.164-4.165-4.164-10.917,0-15.083l192-192  c4.237-4.093,10.99-3.975,15.083,0.262c3.992,4.134,3.992,10.687,0,14.82L25.758,255.852L210.206,440.3  c4.171,4.16,4.179,10.914,0.019,15.085C208.224,457.39,205.508,458.518,202.675,458.519z" data-original="#000000" class="active-path" style="fill:#252525" data-old_color="#000000"/><path d="M501.342,266.519H10.675c-5.891,0-10.667-4.776-10.667-10.667s4.776-10.667,10.667-10.667h490.667  c5.891,0,10.667,4.776,10.667,10.667S507.233,266.519,501.342,266.519z" data-original="#000000" class="active-path" style="fill:#252525" data-old_color="#000000"/></g> </svg>
-                    Back
-                </a>
             </div>
             
             <a class="navbar-brand" href="index.html">
@@ -38,6 +34,9 @@
                     <div class="sign-in">
                         Sign in
                         <span class="dot" style="background-color: rgb(54, 167, 170)"></span>
+                    </div>
+                    <div class="flag">
+                        <img src="./assets/images/canada.png" alt="canada">
                     </div>
                     <div class="languages">
                         <div>FR</div>
@@ -173,38 +172,38 @@
 
          <div class="two-blocks-parent">
 
-                 <div class="left-col">
-                     <div class="preview-frame-parent">
-                         <div class="frame">
+                <div class="left-col">
+                    <div class="preview-frame-parent">
+                        <div class="frame">
 
-                            <div class="frame-parent">
-                                <div class="frame-child"></div>
+                        <div class="frame-parent">
+                            <div class="frame-child"></div>
 
-                                <div id="top" class="fr top"></div>
-                                <div id="right" class="fr right"></div>
-                                <div id="bottom" class="fr bottom"></div>
-                                <div id="left" class="fr left"></div>
+                            <div id="top" class="fr top"></div>
+                            <div id="right" class="fr right"></div>
+                            <div id="bottom" class="fr bottom"></div>
+                            <div id="left" class="fr left"></div>
 
+                        </div>
+
+                        <div class="frame-back-parent">
+                            <div class="frame-back-side">
+                                <div class="frame-backside-circle"></div>
                             </div>
-
-                            <div class="frame-back-parent">
-                                <div class="frame-back-side">
-                                    <div class="frame-backside-circle"></div>
-                                </div>
-                            </div>
-                            
-                         </div>
-                     </div>
-                     <div class="accept-reviewed-checkbox"> 
+                        </div>
+                        
+                        </div>
+                    </div>
+                    <div class="accept-reviewed-checkbox"> 
 
                         <label class="chechbox-container">
                             I have reviewed and approve my design
-                            <input type="checkbox">
+                            <input type="checkbox" class="accept-rev-checkbox">
                             <span class="checkmark"></span>
                         </label>
 
-                     </div>
-                 </div>
+                    </div>
+                </div>
 
                 <div class="right-col">
 
@@ -478,40 +477,116 @@
                     </div>
 
                     <div class="second-step">
+
+
+
                         <div class="field-parent">
                             <div class="field-header">Choose frame front color</div>
                         </div>
-                        <div class="color-parent front-col-par">
 
-                            <label class="color-item">
-                                <div class="color-item-circle gold"></div>
-                                <input name="front-color" type="radio" value='#BDB130'>
-                            </label>
-
-                            <label class="color-item">
-                                <div class="color-item-circle red"></div>
-                                <input name="front-color" type="radio" value='#F16649'>
-                            </label>
-
-                            <label class="color-item">
-                                <div class="color-item-circle green"></div>
-                                <input name="front-color" type="radio" value='#36A7AA'>
-                            </label>
-
-                            <label class="color-item">
-                                <div class="color-item-circle gold"></div>
-                                <input name="front-color" type="radio" value='#BDB130'>
-                            </label>
-
-                            <label class="color-item">
-                                <div class="color-item-circle green"></div>
-                                <input name="front-color" type="radio" value='#36A7AA'>
-                            </label>
-                        </div>
+                        <section class="color-parent-slider">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div  id="carouselExampleIndicators2" class="carousel mt-0" data-ride="carousel">
+                                            <a class="mb-3 mr-1 slider-left" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                                                <i class="fas fa-chevron-left"></i>
+                                            </a>
+                                            <a class="mb-3 slider-right" href="#carouselExampleIndicators2" role="button" data-slide="next">
+                                                <i class="fas fa-chevron-right"></i>
+                                            </a>
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <div class="row">
+                                                            <div class="col-md-2  flex-center">
+                                                                <label class="color-item">
+                                                                    <div class="color-item-circle dark-blue"></div>
+                                                                    <input name="front-color" type="radio" value='#0032A0'>
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-md-2 flex-center">
+                                                                <label class="color-item">
+                                                                    <div class="color-item-circle red"></div>
+                                                                    <input name="front-color" type="radio" value='#D6001C'>
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-md-2 flex-center">
+                                                                <label class="color-item">
+                                                                    <div class="color-item-circle gold"></div>
+                                                                    <input name="front-color" type="radio" value='#BDB130'>
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-md-2 flex-center">
+                                                                <label class="color-item">
+                                                                    <div class="color-item-circle dark-green"></div>
+                                                                    <input name="front-color" type="radio" value='#009A17'>
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-md-2 flex-center">
+                                                                <label class="color-item">
+                                                                    <div class="color-item-circle purple"></div>
+                                                                    <input name="front-color" type="radio" value='#8F1A95'>
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-md-2 flex-center">
+                                                                <label class="color-item">
+                                                                    <div class="color-item-circle yellow"></div>
+                                                                    <input name="front-color" type="radio" value='#EEDC00'>
+                                                                </label>
+                                                            </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="row">
+                                                        <div class="col-md-2 flex-center">
+                                                            <label class="color-item">
+                                                                <div class="color-item-circle blue"></div>
+                                                                <input name="front-color" type="radio" value='#009CDE'>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-md-2 flex-center">
+                                                            <label class="color-item">
+                                                                <div class="color-item-circle pink"></div>
+                                                                <input name="front-color" type="radio" value='#E45DBF'>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-md-2 flex-center">
+                                                            <label class="color-item">
+                                                                <div class="color-item-circle orange"></div>
+                                                                <input name="front-color" type="radio" value='#FFA400'>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-md-2 flex-center">
+                                                            <label class="color-item">
+                                                                <div class="color-item-circle gray"></div>
+                                                                <input name="front-color" type="radio" value='#97999B'>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-md-2 flex-center">
+                                                            <label class="color-item">
+                                                                <div class="color-item-circle black-c"></div>
+                                                                <input name="front-color" type="radio" value='#000000'>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-md-2 flex-center">
+                                                            <label class="color-item">
+                                                                <div class="color-item-circle white"></div>
+                                                                <input name="front-color" type="radio" value='#ffffff'>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
 
                         <div class="field-parent">
                             <div class="field-header">Choose frame back color</div>
                         </div>
+
                         <div class="color-parent back-col-par">
                                 
                             <label class="color-item">
@@ -520,8 +595,8 @@
                             </label>
 
                             <label class="color-item">
-                                <div class="color-item-circle red"></div>
-                                <input name="back-color" type="radio" value='#F16649'>
+                                <div class="color-item-circle pink"></div>
+                                <input name="back-color" type="radio" value='#E45DBF'>
                             </label>
 
                             <label class="color-item">
@@ -549,42 +624,111 @@
                             <div class="field-header">Choose font & sticker color</div>
                         </div>
 
-                        <div class="color-parent stick-col-par">
-
-                            <label class="color-item">
-                                <div class="color-item-circle green"></div>
-                                <input name="font-color" type="radio" value='#36A7AA'>
-                            </label>
-
-                            <label class="color-item">
-                                <div class="color-item-circle gold"></div>
-                                <input name="font-color" type="radio" value='#BDB130'>
-                            </label>
-
-                            <label class="color-item">
-                                <div class="color-item-circle red"></div>
-                                <input name="font-color" type="radio" value='#F16649'>
-                            </label>
-
-                            <label class="color-item">
-                                <div class="color-item-circle green"></div>
-                                <input name="font-color" type="radio" value='#36A7AA'>
-                            </label>
-                     
-                            <label class="color-item">
-                                <div class="color-item-circle red"></div>
-                                <input name="font-color" type="radio" value='#F16649'>
-                            </label>
-
-                            <label class="color-item">
-                                <div class="color-item-circle gold"></div>
-                                <input name="font-color" type="radio" value='#BDB130'>
-                            </label>
-
-                        </div>
+                        <section class="color-parent-slider">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div  id="carouselExampleIndicators3" class="carousel mt-0" data-ride="carousel">
+                                            <a class="mb-3 mr-1 slider-left" href="#carouselExampleIndicators3" role="button" data-slide="prev">
+                                                <i class="fas fa-chevron-left"></i>
+                                            </a>
+                                            <a class="mb-3 slider-right" href="#carouselExampleIndicators3" role="button" data-slide="next">
+                                                <i class="fas fa-chevron-right"></i>
+                                            </a>
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <div class="row">
+                                                            <div class="col-md-2  flex-center">
+                                                                <label class="color-item">
+                                                                    <div class="color-item-circle dark-blue"></div>
+                                                                    <input name="font-color" type="radio" value='#0032A0'>
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-md-2 flex-center">
+                                                                <label class="color-item">
+                                                                    <div class="color-item-circle red"></div>
+                                                                    <input name="font-color" type="radio" value='#D6001C'>
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-md-2 flex-center">
+                                                                <label class="color-item">
+                                                                    <div class="color-item-circle gold"></div>
+                                                                    <input name="font-color" type="radio" value='#BDB130'>
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-md-2 flex-center">
+                                                                <label class="color-item">
+                                                                    <div class="color-item-circle dark-green"></div>
+                                                                    <input name="font-color" type="radio" value='#009A17'>
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-md-2 flex-center">
+                                                                <label class="color-item">
+                                                                    <div class="color-item-circle purple"></div>
+                                                                    <input name="font-color" type="radio" value='#8F1A95'>
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-md-2 flex-center">
+                                                                <label class="color-item">
+                                                                    <div class="color-item-circle yellow"></div>
+                                                                    <input name="font-color" type="radio" value='#EEDC00'>
+                                                                </label>
+                                                            </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="row">
+                                                        <div class="col-md-2 flex-center">
+                                                            <label class="color-item">
+                                                                <div class="color-item-circle blue"></div>
+                                                                <input name="font-color" type="radio" value='#009CDE'>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-md-2 flex-center">
+                                                            <label class="color-item">
+                                                                <div class="color-item-circle pink"></div>
+                                                                <input name="font-color" type="radio" value='#E45DBF'>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-md-2 flex-center">
+                                                            <label class="color-item">
+                                                                <div class="color-item-circle orange"></div>
+                                                                <input name="font-color" type="radio" value='#FFA400'>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-md-2 flex-center">
+                                                            <label class="color-item">
+                                                                <div class="color-item-circle gray"></div>
+                                                                <input name="font-color" type="radio" value='#97999B'>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-md-2 flex-center">
+                                                            <label class="color-item">
+                                                                <div class="color-item-circle black-c"></div>
+                                                                <input name="font-color" type="radio" value='#000000'>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-md-2 flex-center">
+                                                            <label class="color-item">
+                                                                <div class="color-item-circle white"></div>
+                                                                <input name="font-color" type="radio" value='#ffffff'>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
 
                         <div class="fix-button-parent">
-                            <button class="next-button second-step-button">
+                            <button class="bordered-medium-button back-button mr-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="Layer" enable-background="new 0 0 64 64" height="512px" viewBox="0 0 64 64" width="512px" class="hovered-paths"><g><path d="m54 30h-39.899l15.278-14.552c.8-.762.831-2.028.069-2.828-.761-.799-2.027-.831-2.828-.069l-17.448 16.62c-.755.756-1.172 1.76-1.172 2.829 0 1.068.417 2.073 1.207 2.862l17.414 16.586c.387.369.883.552 1.379.552.528 0 1.056-.208 1.449-.621.762-.8.731-2.065-.069-2.827l-15.342-14.552h39.962c1.104 0 2-.896 2-2s-.896-2-2-2z" data-original="#000000" class="hovered-path active-path" data-old_color="#000000" fill="#FFFFFF"/></g> </svg>    
+                                Back
+                            </button>
+                            <button class="medium-button second-step-button">
                                 <span>Next</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" id="Layer" enable-background="new 0 0 64 64" height="512px" viewBox="0 0 64 64" width="512px" class="hovered-paths"><g><path d="m54 30h-39.899l15.278-14.552c.8-.762.831-2.028.069-2.828-.761-.799-2.027-.831-2.828-.069l-17.448 16.62c-.755.756-1.172 1.76-1.172 2.829 0 1.068.417 2.073 1.207 2.862l17.414 16.586c.387.369.883.552 1.379.552.528 0 1.056-.208 1.449-.621.762-.8.731-2.065-.069-2.827l-15.342-14.552h39.962c1.104 0 2-.896 2-2s-.896-2-2-2z" data-original="#000000" class="hovered-path active-path" data-old_color="#000000" fill="#FFFFFF"/></g> </svg>    
                             </button>
@@ -680,18 +824,34 @@
                             <span class="go-to-second">Edit</span>
                         </div>
 
+                        <div class="accept-reviewed-checkbox mobile-on"> 
+
+                            <label class="chechbox-container">
+                                I have reviewed and approve my design
+                                <input type="checkbox" class="accept-rev-checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+    
+                        </div>
+
 
                         <div class="fix-button-parent">
-                            <a href="my-cart.html" class="next-button add-to-card">
+                            <button class="bordered-medium-button back-button mr-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="Layer" enable-background="new 0 0 64 64" height="512px" viewBox="0 0 64 64" width="512px" class="hovered-paths"><g><path d="m54 30h-39.899l15.278-14.552c.8-.762.831-2.028.069-2.828-.761-.799-2.027-.831-2.828-.069l-17.448 16.62c-.755.756-1.172 1.76-1.172 2.829 0 1.068.417 2.073 1.207 2.862l17.414 16.586c.387.369.883.552 1.379.552.528 0 1.056-.208 1.449-.621.762-.8.731-2.065-.069-2.827l-15.342-14.552h39.962c1.104 0 2-.896 2-2s-.896-2-2-2z" data-original="#000000" class="hovered-path active-path" data-old_color="#000000" fill="#FFFFFF"/></g> </svg>    
+                                Back
+                            </button>
+                            <a href="my-cart.html" class="disabled medium-button add-to-card">
                                 <span>Add to Card</span>
                             </a>
                         </div>
                     </div>
                 </div>
+
         </div>
        </div>
 </section>
 
+            
 <section class="newsletter">
     <div class="container">
         <div class="newletter_header">SUBSCRIBE TO OUR NEWSLETTER</div>
@@ -860,12 +1020,15 @@
 <script src="./assets/js/plugins/jquery-1.12.4.js"></script>
 <script src="./assets/js/plugins/jquery-ui.js"></script>
 <script src="./assets/js/plugins/jquery.ui.rotatable.min.js"></script>
-<script src="./assets/js/plugins/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="./assets/js/plugins/jquery.ui.touch-punch.min.js"></script>
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/textFit.js"></script>
-
 <script src="./assets/js/frame.js"></script>
 <script src="./assets/js/main.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+
 
 <!-- Begin of Chaport Live Chat code -->
 <script type="text/javascript">
