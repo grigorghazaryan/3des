@@ -216,13 +216,21 @@
         }
 
         .price {
-            margin-bottom: 25px;
+            margin-bottom: 0px;
         }
 
         .payment-parent {
             .card-info-parent {
+
+                .col-3 {
+                    padding-left: 0;
+                }
+                
+
                 .icons-parent {
                     flex-wrap: wrap;
+                    gap: 0;
+                    justify-content: flex-start;
                 }
                 .card-logo-parent {
                     margin-bottom: 16px;
@@ -317,15 +325,16 @@
 
 
     @media screen and (max-width: 767px) and (min-width: 280px) { 
-        .choose-shopping-method {
+        
             .method-box {
                 .method-header {
                     margin-bottom: 5px;
                 }
             }
-        }
+ 
     }
 }
+
 
 .text-right {
     text-align: right;

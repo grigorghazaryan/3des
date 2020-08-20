@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Norican&display=swap');
 
 @font-face {
     font-family: WhitneySans;
@@ -13,7 +12,14 @@
     font-family: WhitneySansLight;
     src: url(../fonts/Whitney-Light.otf);
 }
-
+@font-face {
+    font-family: Fyodor;
+    src: url(../fonts/Fyodor.ttf);
+}
+@font-face {
+    font-family: Courgette;
+    src: url(../fonts/Courgette.ttf);
+}
 
 .whitneysans {
     font-family: WhitneySans;
@@ -23,11 +29,11 @@
     font-family: Chewy;
     font-size: 7rem;
 }
-.damion {
-    font-family: Norican, cursive;
-    font-size: 4.5rem;
+.courgette {
+    font-family: Courgette;
+    font-size: 7rem;
 }
-.arial {
-    font-family: Arial;
+.fyodor {
+    font-family: Fyodor;
     font-size: 7rem;
 }

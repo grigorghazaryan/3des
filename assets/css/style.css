@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Chewy&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Norican&display=swap");
 @font-face {
   font-family: WhitneySans;
   src: url(../fonts/Whitney-Semibold.otf);
@@ -16,6 +15,16 @@
   src: url(../fonts/Whitney-Light.otf);
 }
 
+@font-face {
+  font-family: Fyodor;
+  src: url(../fonts/Fyodor.ttf);
+}
+
+@font-face {
+  font-family: Courgette;
+  src: url(../fonts/Courgette.ttf);
+}
+
 .whitneysans {
   font-family: WhitneySans;
   font-size: 7rem;
@@ -26,13 +35,13 @@
   font-size: 7rem;
 }
 
-.damion {
-  font-family: Norican, cursive;
-  font-size: 4.5rem;
+.courgette {
+  font-family: Courgette;
+  font-size: 7rem;
 }
 
-.arial {
-  font-family: Arial;
+.fyodor {
+  font-family: Fyodor;
   font-size: 7rem;
 }
 
@@ -1532,15 +1541,11 @@ section.our-products .more-parent .more-button i {
 }
 
 .personalized-frames .two-blocks-parent .fonts-list .font-item:nth-child(3) {
-  font-family: Norican, cursive;
+  font-family: Courgette;
 }
 
 .personalized-frames .two-blocks-parent .fonts-list .font-item:nth-child(4) {
-  font-family: Arial;
-}
-
-.personalized-frames .two-blocks-parent .fonts-list .font-item:nth-child(4) .font-prev {
-  font-weight: 900;
+  font-family: Fyodor;
 }
 
 .personalized-frames .two-blocks-parent .fonts-list .font-item .font-prev.font-border {
@@ -1617,7 +1622,7 @@ section.our-products .more-parent .more-button i {
 .textDropable {
   width: max-content !important;
   max-width: 333px !important;
-  text-shadow: 4px 4px #56555552;
+  text-shadow: 2px 2px #56555552;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3286,10 +3291,15 @@ footer .rights-reserved {
     align-items: center;
   }
   .shopping .price {
-    margin-bottom: 25px;
+    margin-bottom: 0px;
+  }
+  .shopping .payment-parent .card-info-parent .col-3 {
+    padding-left: 0;
   }
   .shopping .payment-parent .card-info-parent .icons-parent {
     flex-wrap: wrap;
+    gap: 0;
+    justify-content: flex-start;
   }
   .shopping .payment-parent .card-info-parent .card-logo-parent {
     margin-bottom: 16px;
@@ -3381,7 +3391,7 @@ footer .rights-reserved {
 }
 
 @media screen and (max-width: 767px) and (min-width: 280px) {
-  .choose-shopping-method .choose-shopping-method .method-box .method-header {
+  .choose-shopping-method .method-box .method-header {
     margin-bottom: 5px;
   }
 }

@@ -334,13 +334,10 @@
                     font-family: 'Chewy', cursive;
                 }
                 &:nth-child(3) {
-                    font-family: Norican, cursive;
+                    font-family: Courgette;
                 }
                 &:nth-child(4) {
-                    font-family: Arial;
-                    .font-prev {
-                        font-weight: 900;
-                    }
+                    font-family: Fyodor;
                 }
 
                 .font-prev {
@@ -424,7 +421,7 @@
 .textDropable {
     width: max-content !important;
     max-width: 333px !important;
-    text-shadow: 4px 4px #56555552;
+    text-shadow: 2px 2px #56555552;
     //margin: 0 6px;
 
     display: flex;

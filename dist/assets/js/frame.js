@@ -36,7 +36,7 @@ checkDefaultFont();
 
 $( ".draggable" ).draggable( {
     helper: "clone",
-    appendTo: "html",
+    appendTo: "body",
     //revert: false,
     //snap: ".ui-droppable",
     //stack: ".draggable",
@@ -49,8 +49,6 @@ function setDroppable(id) {
         activeClass: "snaptarget-hover",
         drop: function (event, ui) {
 
-            
-
             var ct = $(this);
             var item = $(ui.draggable);
             var origPos;
@@ -59,7 +57,6 @@ function setDroppable(id) {
             if (item.is('.fr')) {
                 origPos = item.offset();
                 ct.append(item);
-                console.log('if')
             } else {
 
                 origPos = ui.offset;
@@ -69,25 +66,37 @@ function setDroppable(id) {
                 var dataId = ui.draggable[0].attributes.data_id.value
                 stickersArray.push(dataId)
 
-                //ct.append(ui.draggable.css('position','static'))
-
                 item.removeClass("ui-draggable");
                 item.addClass('fr');
 
-               // ct.append(ui.draggable.css('position','static'))
-
                 item.draggable({
-                    containment: $(id),
-                    //snap: false,
-                    //stack: ".draggable",
-                    //scroll: false
+                    containment: $(id)
                 });
             }
 
-            item.css({
-                top: origPos.top - ctPos.top - 3,
-                left: origPos.left - ctPos.left -3
-            });
+            switch(id){
+                case '#top':
+                    item.css({ left: origPos.left - ctPos.left - 1 });
+                    break;
+                case '#bottom':
+                    item.css({ left: origPos.left - ctPos.left - 1 });
+                    break;
+                case '#right':
+                    item.css({ top: origPos.top - ctPos.top - 1 });
+                    break;    
+                case '#left':
+                    item.css({ top: origPos.top - ctPos.top - 1 });
+                    break; 
+            }
+
+            // item.css({
+            //     top: origPos.top - ctPos.top - 1,
+            // });
+
+            // item.css({
+            //     top: origPos.top - ctPos.top - 1,
+            //     left: origPos.left - ctPos.left - 1
+            // });
 
             // if(window.matchMedia("(max-width: 767px)").matches){
             //     $('.fr > .sticker-parent').rotatable().resizable({
@@ -143,10 +152,10 @@ function setFontFamily(value, el) {
             el.classList.add( 'chewy' );
             break;
         case 'script':
-            el.classList.add( 'damion' );
+            el.classList.add( 'courgette' );
             break;
-        case 'chunky':
-            el.classList.add( 'arial' );
+        case 'wide':
+            el.classList.add( 'fyodor' );
             break;
         default:
             break;
@@ -327,29 +336,12 @@ $("input[name='font']" ).click( function () {
         localStorage.setItem('font', radioValue)
     }
 
-    $(".textDropable").removeClass("whitneysans chewy damion arial");
+    $(".textDropable").removeClass("whitneysans chewy fyodor courgette");
 
     createElementOnFrame('#top-input', '#top', 'topText');
     createElementOnFrame('#bottom-input', '#bottom', 'bottomText');
     createElementOnFrame('#right-input', '#right', 'rightText');
     createElementOnFrame( '#left-input', '#left', 'leftText' );
-    
-    // switch(radioValue) {
-    //     case 'classic':
-    //         $(".textDropable").addClass( 'whitneysans' );
-    //         break;
-    //     case 'rounded':
-    //         $(".textDropable").addClass( 'chewy' );
-    //         break;
-    //     case 'script':
-    //         $(".textDropable").addClass( 'damion' );
-    //         break;
-    //     case 'chunky':
-    //         $(".textDropable").addClass( 'arial' );
-    //         break;
-    //     default:
-    //         break;
-    // }
 })
 
 function renderSelectedStickers() {
@@ -420,10 +412,10 @@ function setFontFamilyPrev() {
             $('.font-border').addClass( 'chewy' );
             break;
         case 'script':
-            $('.font-border').addClass( 'damion' );
+            $('.font-border').addClass( 'courgette' );
             break;
-        case 'chunky':
-            $('.font-border').addClass( 'arial' );
+        case 'wide':
+            $('.font-border').addClass( 'fyodor' );
             break;
         default:
             break;
