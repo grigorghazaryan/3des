@@ -68,6 +68,10 @@ document.querySelector('.sign-in-black').onclick = function() {
         this.style.opacity = '0'
         popup.style.visibility = 'hidden';
         popup.style.opacity = '0'
+
+        document.querySelector('.sin').style.display = "block"
+        document.querySelector('.sup').style.display = "none"
+        document.querySelector('.reset-password').style.display = "none"
 }
 document.querySelector('.popup-close').onclick = function() {
     let popup = document.querySelector('.sign-in__parent'),
@@ -105,3 +109,14 @@ document.querySelector('.to-sign').onclick = function() {
     document.querySelector('.reset-password').style.display = "none"
     document.querySelector('.sin').style.display = "block"
 }
+
+// language change
+$('.languages > div').click( function () {
+    $('.languages > div').removeClass('active')
+    if($(this).attr( "data-id" ) == 'fr') {
+        $('.flag > img').attr("src", "./assets/images/france.png");
+    } else {
+        $('.flag > img').attr("src", "./assets/images/canada.png");
+    }
+    $(this).addClass('active')
+})

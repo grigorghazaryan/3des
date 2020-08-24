@@ -49,6 +49,19 @@
             box-sizing: border-box;
         }
 
+        .frame-bottom-line {
+            width: 60.1%;
+            height: 20px;
+            background-color: white;
+            position: absolute;
+            bottom: 25%;
+            left: 20%;
+            border: none;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            box-sizing: border-box;
+        }
+
         @media (max-width: 768px) {
             height: 245px;
             background-size: contain;
@@ -119,9 +132,9 @@
 
         .right {
             width: 19.8%;
-            height: 100%;
+            height: 73.2%;
             position: absolute;
-            top: 0;
+            top: 13%;
             right: 0;
             writing-mode: tb-rl;
 
@@ -143,10 +156,10 @@
         }
 
         .left {
-            width: 20%;
-            height: 100%;
+            width: 19.8%;
+            height: 73.2%;
             position: absolute;
-            top: 0;
+            top: 13%;
             left: 0;
             writing-mode: tb-rl;
 

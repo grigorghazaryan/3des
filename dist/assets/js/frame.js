@@ -70,8 +70,10 @@ function setDroppable(id) {
                 item.addClass('fr');
 
                 item.draggable({
-                    containment: $(id)
-                });
+                    containment: $(id),
+                    obstacle: ".textDropable",
+                    preventCollision: true
+                }).resizable({ containment: $(id),});
             }
 
             switch(id){
@@ -126,7 +128,6 @@ function setDroppable(id) {
             }
 
             $('<span class="click-me" data_id='+ dataId +'>X</span>').appendTo(item).click(removeElement);
-           // $('<span class="click-me" data_id='+ dataId +'>X</span>').appendTo('.fr > .sticker-parent').click(removeElement);
         }
     }); 
 }
@@ -499,6 +500,7 @@ $("input[name='front-color']" ).click( function () {
     $( this ).parent().addClass( 'checked-color' );
     $('.frame-parent').css('background', $( this ).val())
     $('.front-prev').css('background', $( this ).val())
+    $('.frame-bottom-line').css('background', $( this ).val())
 })
 
 $("input[name='font-color']" ).click( function () {
