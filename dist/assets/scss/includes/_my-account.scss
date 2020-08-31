@@ -1,0 +1,320 @@
+.my-account {
+    margin-top: 40px;
+
+    h3 {
+        font-family: WhitneySans;
+        font-size:  30px;
+        margin-bottom: 32px;
+    }
+
+    h4 {
+        margin-bottom: 0;
+    }
+
+    .tab-pane {
+        .formRow {
+            margin-bottom: 16px;
+
+            .formRow--input-wrapper {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .tabs-left {
+        display: flex;
+        flex-direction: column;
+        border: none;
+        
+
+        a {
+            color: #252525;
+            text-decoration: none;
+            padding: 25px 0 25px 15px;
+            font-family: WhitneySansMedium;
+            border-bottom: 1px solid #ECECEC;
+
+            &:last-child {
+                border: none;
+            }
+
+            &.active {
+                background: #ECECEC;
+
+                &:hover {
+                    background: #ECECEC
+                }
+            }
+
+            &:hover {
+                background: #ececec4d;
+            }
+        }
+    }
+
+    .tab-content {
+        padding: 10px 0;
+
+        .tab-title {
+            font-family: WhitneySans;
+            font-size: 18px;
+            color: #252525;
+            padding-bottom: 16px;
+        }
+
+        .border-btm {
+            border-bottom: 1px solid #ECECEC;
+        }
+
+        .edit {
+            color: #F16649;
+            display: inline-block;
+        }
+
+        .change-pswd-parent {
+            margin-top: 30px;
+
+            a {
+                display: inline-block;
+                text-decoration: none;
+            }
+
+            a:first-child {
+                margin-right: 30px;
+            }
+        }
+
+        .text {
+            font-size: 16px;
+            color: #252525;
+            font-family: WhitneySansMedium;
+        }
+
+        .tab-order-box {
+            width: 100%;
+            display: flex;
+            margin-top: 35px;
+            border-bottom: 1px solid #676464;
+            padding-bottom: 30px;
+
+            .nice-select {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .order-image-box {
+                width: 140px;
+                height: 140px;
+                border-radius: 5px;
+                border: 1px solid #707070;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 95%;
+                }
+            }
+            .order-box-right {
+                width: 100%;
+                margin-left: 20px;
+
+                .header {
+                    padding-bottom: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 1px solid #676464;
+
+                    div{
+                        color: #252525;
+                        font-family: WhitneySans;
+                    }
+
+                    div:nth-child(2) {
+                        color: #676464;
+                        font-size: 14px;
+                        font-family: WhitneySansLight;
+                    }
+                }
+                .body {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 20px;
+
+                    .items-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: end;
+                    }
+
+                    .list-item {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .title {
+                            color: #252525;
+                            font-size: 16px;
+                            font-family: WhitneySans;
+                        }
+
+                        .subtitle {
+                            color: #676464;
+                            font-size: 14px;
+                            font-family: WhitneySansLight;
+                            margin-left: 10px;
+                        }
+                    }
+
+                    .color-wrapper  {
+                        display: flex;
+                        gap: 10px;
+                        
+
+                        .color-parent {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            justify-content: space-between;
+          
+                                div:first-child {
+                                    font-size: 14px;
+                                    color: #676464;
+                                    font-family: WhitneySansLight;
+                                }
+                                .circle {
+                                    width: 16px;
+                                    height: 16px;
+                                    border-radius: 50%;
+                                    background: #fff;
+                                    border: 1px solid #262624;
+                                }
+                        }
+                        .column {
+                            display: flex; 
+                            flex-direction: column;
+
+                            .two-color-parent {
+                                display: flex;
+                                gap: 10px;
+                                margin-bottom: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .country-select-parent {
+            .nice-select {
+                width: 100%;
+                height: 52px;
+                border-color: #95989a;
+
+                &:after {
+                    width: 10px;
+                    height: 10px;
+                }
+
+                .current {
+                    color: #95989a;
+                    font-size: 16px;
+                    margin-top: 5px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    .address-button-parent {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .payment-method {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        label {
+            margin: 0;
+        }
+
+        .delete-pey-method {
+            cursor: pointer;
+        }
+    }
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+.mt-30 {
+    margin-top: 30px;
+}
+
+
+.credit-card-wrapper {
+    margin-top: 16px;
+    width: 100%;
+    height: 350px;
+    background-color: #F2F2F2;
+    border-radius: 15px;
+
+    .card-type-parent {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 17px 45px;
+        gap: 16px;
+    }
+
+    .inputs-parent {
+        padding: 0 30px 45px 30px;
+
+        .card-input-parent {
+            position: relative;
+
+            .card-type {
+                position: absolute;
+                top: 55%;
+                left: 5%;
+                width: 50px;
+                border-right: 2px solid #DCDCDC;
+            
+                img {
+                    width: 80%;
+                }
+            }
+
+            div {
+                color: #252525;
+                margin-bottom: 10px;
+                font-family: WhitneySansMedium;
+                font-size: 16px;
+            }
+
+            input {
+                width: 100%;
+                border-radius: 5px;
+                border: 1px solid #707070;
+                background: #fff;
+                height: 50px;
+                font-family: WhitneySansMedium;
+                padding: 0 30px;
+            }
+
+            .card-number {
+                padding: 0 75px;
+            }
+        }
+    }
+}
