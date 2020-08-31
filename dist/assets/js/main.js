@@ -236,3 +236,16 @@ $("#subscribe-form").on('submit', function (e) {
         sendSubscribe(e)
     }
 });
+
+if(document.querySelector('#video')) {
+    axios.get('http://admin.3des.ca/api/v1/video-get')
+        .then(function (res) {
+            let data = res.data.data.video.link;
+            let video = document.querySelector('#video');
+            if(data) {
+                video.src = 'http://admin.3des.ca/'+data
+            } else {
+                video.src="https://www.w3schools.com/html/mov_bbb.mp4"
+            }
+        });
+}
