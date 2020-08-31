@@ -73,6 +73,7 @@ document.querySelector('.sign-in-black').onclick = function() {
         document.querySelector('.sup').style.display = "none"
         document.querySelector('.reset-password').style.display = "none"
 }
+
 document.querySelector('.popup-close').onclick = function() {
     let popup = document.querySelector('.sign-in__parent'),
         black = document.querySelector('.sign-in-black');
@@ -82,7 +83,6 @@ document.querySelector('.popup-close').onclick = function() {
         popup.style.visibility = 'hidden';
         popup.style.opacity = '0'
 }
-
 
 // Open sign up
 document.querySelector('.s-up').onclick = function() {
@@ -120,3 +120,119 @@ $('.languages > div').click( function () {
     }
     $(this).addClass('active')
 })
+
+// Send contact us request
+function sendContactUs(e) {
+    e.preventDefault();
+
+    $(".send").html("Sending...");
+    $('.send').attr('disabled', true);
+
+    axios.post('http://admin.3des.ca/api/v1/contact-store', {
+        "first_name": $('#c-first-name').val(),
+        "last_name": $('#c-last-name').val(),
+        "phone": $('#c-phone').val(),
+        "email": $('#c-email').val(),
+        "message": $('#c-message').val(),
+    })
+        .then(function (res) {
+
+            if(res.data.status) {
+                $('.message-info').html('Thanks for contacting us.')
+                $('.message-info').addClass('green');
+            } else {
+                $('.message-info').html('Message not sent!');
+                $('.message-info').addClass('red');
+            }
+
+            $(".send").html("Send");
+            $('.send').attr('disabled', false);
+        })
+}
+// Send subscribe request
+function sendSubscribe(e) {
+    e.preventDefault();
+
+    $(".subscribe-button").html("Sending...");
+    $('.subscribe-button').attr('disabled', true);
+
+    axios.post('http://admin.3des.ca/api/v1/subscriber-store', {
+        "name": $('#first-name-newsletter').val(),
+        "email": $('#email-address-newsletter').val()
+    })
+        .then(function (res) {
+
+            if(res.data.status) {
+                $('.subscribe-info').html('Thank You For Subscribing!')
+                $('.subscribe-info').addClass('green');
+            } else {
+                $('.subscribe-info').html('Error subscribing!');
+                $('.subscribe-info').addClass('red');
+            }
+
+            $(".subscribe-button").html("Send");
+            $('.subscribe-button').attr('disabled', false);
+        })
+}
+
+$("#form").validate({
+    rules: {
+        "firstName": {
+            required: true,
+            minlength: 3
+        },
+        "lastName": {
+            required: true,
+            minlength: 3
+        },
+        "phone": {
+            required: true
+        },
+        "email": {
+            required: true,
+            email: true
+        },
+        "message": {
+            required: true
+        }
+    },
+    messages: {
+        "email": {
+            required: "Please, enter an email",
+            email: "Email is invalid"
+        }
+    }
+});
+
+$("#subscribe-form").validate({
+    rules: {
+        "firstName": {
+            required: true,
+            minlength: 3
+        },
+        "email": {
+            required: true,
+            email: true
+        }
+    },
+    messages: {
+        "email": {
+            required: "Please, enter an email",
+            email: "Email is invalid"
+        }
+    }
+});
+
+$("#form").on('submit', function (e) {
+    var isValid = $("#form").valid();
+    if (isValid) {
+        sendContactUs(e)
+    }
+});
+
+$("#subscribe-form").on('submit', function (e) {
+    var isValid = $("#subscribe-form").valid();
+    if (isValid) {
+        sendSubscribe(e)
+    }
+});

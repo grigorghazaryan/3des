@@ -509,6 +509,7 @@ li.nav-item.dropdown .dropdown-menu a.dropdown-item:active {
   height: 58px;
   padding: 20px 28px;
   font-family: WhitneySansLight;
+  color: #252525;
 }
 
 .newsletter .form-group input:focus {
@@ -525,6 +526,7 @@ li.nav-item.dropdown .dropdown-menu a.dropdown-item:active {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  height: 95px;
 }
 
 @media (max-width: 992px) {
@@ -558,6 +560,11 @@ li.nav-item.dropdown .dropdown-menu a.dropdown-item:active {
   background: transparent;
   color: #000;
   border-color: #36A7AA;
+}
+
+.newsletter .subscribe-button:disabled {
+  background: #b9b9b9;
+  pointer-events: none;
 }
 
 section.our-products {
@@ -984,6 +991,27 @@ section.our-products .more-parent .more-button i {
   background: transparent;
   color: #000;
   border-color: #36A7AA;
+}
+
+.contact-us .contact-us__form-parent .form .send-button-parent .send:disabled {
+  background: #b9b9b9;
+  pointer-events: none;
+}
+
+.message-info, .subscribe-info {
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.message-info.green, .subscribe-info.green {
+  background-color: #10af10;
+}
+
+.message-info.red, .subscribe-info.red {
+  background-color: maroon;
 }
 
 .back-to-top {

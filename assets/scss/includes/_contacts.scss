@@ -136,8 +136,29 @@
                         color: #000;
                         border-color: #36A7AA;
                     }
+
+                    &:disabled {
+                        background: #b9b9b9;
+                        pointer-events: none;
+                    }
                 }
             }
         }
+    }
+}
+
+
+.message-info, .subscribe-info {
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+
+    &.green {
+        background-color: rgb(16, 175, 16);
+    }
+    &.red {
+        background-color: rgb(128, 0, 0);
     }
 }

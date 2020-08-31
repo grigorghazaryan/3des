@@ -28,6 +28,7 @@
             height: 58px;
             padding: 20px 28px;
             font-family: WhitneySansLight;
+            color: #252525;
 
             &:focus {
                 outline: none;
@@ -45,6 +46,7 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        height: 95px;
 
         @media (max-width: 992px) {
             justify-content: flex-end;
@@ -72,6 +74,11 @@
             background: transparent;
             color: #000;
             border-color: #36A7AA;
+        }
+
+        &:disabled {
+            background: #b9b9b9;
+            pointer-events: none;
         }
     }
 }

@@ -276,32 +276,38 @@
         </div>
 
         <div class="contact-us__form-parent">
-            <div class="form">
+            <form class="form" id="form">
                 <div class="form__row">
                     <div class="input-parent">
-                        <input type="text" placeholder="* First name">
+                        <input type="text" id="c-first-name"
+                        name="firstName" placeholder="* First name">
                     </div>
-                     <div class="input-parent">
-                        <input type="text" placeholder="* Last name">
+                    <div class="input-parent">
+                        <input type="text" id="c-last-name"
+                        name="lastName" placeholder="* Last name">
                     </div>
                 </div>
                 <div class="form__row">
                     <div class="input-parent">
-                        <input type="text" placeholder="* Phone number">
+                        <input type="text" id="c-phone"
+                        name="phone" placeholder="* Phone number">
                     </div>
-                     <div class="input-parent">
-                        <input type="text" placeholder="* Email address">
+                    <div class="input-parent">
+                        <input type="text" id="c-email"
+                        name="email" placeholder="* Email address">
                     </div>
                 </div>
                 <div class="form__row">
                     <div class="textarea-parent">
-                        <textarea placeholder="Message"></textarea>
+                        <textarea name="message" id="c-message"
+                        placeholder="Message"></textarea>
                     </div>
                 </div>
+                <p class="message-info"></p>
                 <div class="send-button-parent">
-                    <button class="send">Send</button>
+                    <button class="send" type="submit">Send</button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 </section>
@@ -309,23 +315,32 @@
 <section class="newsletter">
     <div class="container">
         <div class="newletter_header">SUBSCRIBE TO OUR NEWSLETTER</div>
-        <div class="row justify-content-center">
-            <div class="col-md-3">
-                <div class="form-group">
-                    <label for="first-name">* First Name</label>
-                    <input type="text" id="first-name" placeholder="freebies@sales.com">
+        <form id="subscribe-form">
+            <div class="row justify-content-center">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="first-name">* First Name</label>
+                        <input type="text" name="firstName" 
+                            id="first-name-newsletter" 
+                            placeholder="freebies@sales.com">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="email-address">* Email Address</label>
+                        <input type="text" name="email" 
+                            id="email-address-newsletter" 
+                            placeholder="freebies@sales.com">
+                    </div>
+                </div>
+                <div class="col-md-3 subscribe-button-parent">
+                    <button class="subscribe-button" type="submit">Subscribe</button>
+                </div>
+                <div class="col-md-12">
+                    <p class="subscribe-info"></p>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label for="email-address">* Email Address</label>
-                    <input type="text" id="email-address" placeholder="freebies@sales.com">
-                </div>
-            </div>
-            <div class="col-md-3 subscribe-button-parent">
-                <button class="subscribe-button">Subscribe</button>
-            </div>
-        </div>
+        </form>
     </div>
 </section>
 
@@ -472,7 +487,12 @@
 </div>
 
 <script src="./assets/js/plugins/jquery-1.12.4.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.0/jquery.validate.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.0/additional-methods.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
 <script src="assets/js/main.js"></script>
+
+
 
 <!-- Begin of Chaport Live Chat code -->
 <script type="text/javascript">
