@@ -1,5 +1,5 @@
 function getFaqs() {
-    axios.get('http://admin.3des.ca/api/v1/faq-get')
+    axios.get('https://admin.3des.ca/api/v1/faq-get')
         .then(function (res) {
             let data = res.data.data.faq;
             $('#accordionExample').html('');
@@ -29,5 +29,6 @@ function getFaqs() {
             }
         })
 }
+
 
 getFaqs();
