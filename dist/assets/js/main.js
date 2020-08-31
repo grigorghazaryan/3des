@@ -243,7 +243,7 @@ if(document.querySelector('#video')) {
             let data = res.data.data.video.link;
             let video = document.querySelector('#video');
             if(data) {
-                video.src = 'http://admin.3des.ca/'+data
+                video.src = 'https://admin.3des.ca/'+data
             } else {
                 video.src="https://www.w3schools.com/html/mov_bbb.mp4"
             }
