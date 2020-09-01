@@ -128,7 +128,7 @@ function sendContactUs(e) {
     $(".send").html("Sending...");
     $('.send').attr('disabled', true);
 
-    axios.post('http://admin.3des.ca/api/v1/contact-store', {
+    axios.post('https://admin.3des.ca/api/v1/contact-store', {
         "first_name": $('#c-first-name').val(),
         "last_name": $('#c-last-name').val(),
         "phone": $('#c-phone').val(),
@@ -156,7 +156,7 @@ function sendSubscribe(e) {
     $(".subscribe-button").html("Sending...");
     $('.subscribe-button').attr('disabled', true);
 
-    axios.post('http://admin.3des.ca/api/v1/subscriber-store', {
+    axios.post('https://admin.3des.ca/api/v1/subscriber-store', {
         "name": $('#first-name-newsletter').val(),
         "email": $('#email-address-newsletter').val()
     })
@@ -238,7 +238,7 @@ $("#subscribe-form").on('submit', function (e) {
 });
 
 if(document.querySelector('#video')) {
-    axios.get('http://admin.3des.ca/api/v1/video-get')
+    axios.get('https://admin.3des.ca/api/v1/video-get')
         .then(function (res) {
             let data = res.data.data.video.link;
             let video = document.querySelector('#video');

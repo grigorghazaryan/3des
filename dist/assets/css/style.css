@@ -3118,6 +3118,10 @@ footer .rights-reserved {
   fill: #F16649;
 }
 
+.faq .accordion .card .card-header .collapsed span {
+  margin-left: 16px;
+}
+
 .shopping .shopping-parent {
   margin-top: 85px;
   padding-bottom: 30px;
