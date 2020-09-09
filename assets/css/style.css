@@ -211,18 +211,19 @@ nav .header-right-section {
   }
 }
 
-nav .header-right-section .sign-in {
+nav .header-right-section .sign-in, nav .header-right-section .my-account {
   cursor: pointer;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.5);
   font-weight: 600;
   position: relative;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
+  margin: 0;
 }
 
-nav .header-right-section .sign-in .dot {
+nav .header-right-section .sign-in .dot, nav .header-right-section .my-account .dot {
   visibility: hidden;
   position: absolute;
   width: 8px;
@@ -234,7 +235,7 @@ nav .header-right-section .sign-in .dot {
   transition: .5s;
 }
 
-nav .header-right-section .sign-in:hover .dot {
+nav .header-right-section .sign-in:hover .dot, nav .header-right-section .my-account:hover .dot {
   visibility: visible;
   opacity: 1;
   top: 28px;
@@ -998,20 +999,30 @@ section.our-products .more-parent .more-button i {
   pointer-events: none;
 }
 
-.message-info, .subscribe-info {
+.message-info,
+.subscribe-info,
+.sign-info,
+.sign-up-info {
   color: #fff;
   padding: 5px;
   border-radius: 5px;
   text-align: center;
   font-size: 18px;
+  margin-bottom: 10px;
 }
 
-.message-info.green, .subscribe-info.green {
+.message-info.green,
+.subscribe-info.green,
+.sign-info.green,
+.sign-up-info.green {
   background-color: #10af10;
 }
 
-.message-info.red, .subscribe-info.red {
-  background-color: maroon;
+.message-info.red,
+.subscribe-info.red,
+.sign-info.red,
+.sign-up-info.red {
+  background-color: #D6001C;
 }
 
 .back-to-top {
@@ -2378,7 +2389,6 @@ section.our-products .more-parent .more-button i {
   margin-bottom: 25px;
   font-family: WhitneySansLight;
   gap: 25px;
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -2412,6 +2422,10 @@ section.our-products .more-parent .more-button i {
   border-color: #36A7AA;
   outline: none;
   box-shadow: none;
+}
+
+.sign-in__parent .sign-in-block .sign-in .double-input-parent input:nth-child(1), .sign-in__parent .sign-in-block .sign-up .double-input-parent input:nth-child(1), .sign-in__parent .sign-in-block .reset-password .double-input-parent input:nth-child(1) {
+  margin-bottom: 25px;
 }
 
 @media (max-width: 767px) {
@@ -2463,6 +2477,11 @@ section.our-products .more-parent .more-button i {
   border-color: #36A7AA;
 }
 
+.sign-in__parent .sign-in-block .sign-in .sign-in-button-wrapper button:disabled, .sign-in__parent .sign-in-block .sign-up .sign-in-button-wrapper button:disabled, .sign-in__parent .sign-in-block .reset-password .sign-in-button-wrapper button:disabled {
+  background: #b9b9b9;
+  pointer-events: none;
+}
+
 .sign-in__parent .sign-in-block .sign-in .reset-pswd-wrapper, .sign-in__parent .sign-in-block .sign-up .reset-pswd-wrapper, .sign-in__parent .sign-in-block .reset-password .reset-pswd-wrapper {
   text-align: right;
 }
@@ -2485,6 +2504,11 @@ section.our-products .more-parent .more-button i {
   background: transparent;
   color: #000;
   border-color: #36A7AA;
+}
+
+.sign-in__parent .sign-in-block .sign-in .reset-pswd-wrapper button:disabled, .sign-in__parent .sign-in-block .sign-up .reset-pswd-wrapper button:disabled, .sign-in__parent .sign-in-block .reset-password .reset-pswd-wrapper button:disabled {
+  background: #b9b9b9;
+  pointer-events: none;
 }
 
 .sign-in__parent .sign-in-block .sign-in .sign-in-bottom-block, .sign-in__parent .sign-in-block .sign-up .sign-in-bottom-block, .sign-in__parent .sign-in-block .reset-password .sign-in-bottom-block {

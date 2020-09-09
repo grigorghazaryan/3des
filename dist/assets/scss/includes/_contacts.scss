@@ -148,17 +148,21 @@
 }
 
 
-.message-info, .subscribe-info {
+.message-info, 
+.subscribe-info, 
+.sign-info, 
+.sign-up-info {
     color: #fff;
     padding: 5px;
     border-radius: 5px;
     text-align: center;
     font-size: 18px;
+    margin-bottom: 10px;
 
     &.green {
         background-color: rgb(16, 175, 16);
     }
     &.red {
-        background-color: rgb(128, 0, 0);
+        background-color: #D6001C
     }
 }

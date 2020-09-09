@@ -49,29 +49,9 @@ document.querySelector('.chat-close').onclick = function(e) {
     e.stopPropagation();
 }
 
-// Open popup
-$('.sign-in').click(function() {
-    let black = document.querySelector('.sign-in-black'),
-        popup = document.querySelector('.sign-in__parent');
-
-        black.style.visibility = 'visible';
-        black.style.opacity = '1'
-        popup.style.visibility = 'visible';
-        popup.style.opacity = '1'
-});
-
 // Close popup
 document.querySelector('.sign-in-black').onclick = function() {
-    let popup = document.querySelector('.sign-in__parent');
-
-        this.style.visibility = 'hidden';
-        this.style.opacity = '0'
-        popup.style.visibility = 'hidden';
-        popup.style.opacity = '0'
-
-        document.querySelector('.sin').style.display = "block"
-        document.querySelector('.sup').style.display = "none"
-        document.querySelector('.reset-password').style.display = "none"
+    closePopup();
 }
 
 document.querySelector('.popup-close').onclick = function() {
@@ -110,6 +90,21 @@ document.querySelector('.to-sign').onclick = function() {
     document.querySelector('.sin').style.display = "block"
 }
 
+// Close popup
+function closePopup() {
+    let popup = document.querySelector('.sign-in__parent');
+    let self = document.querySelector('.sign-in-black');
+
+    self.style.visibility = 'hidden';
+    self.style.opacity = '0'
+    popup.style.visibility = 'hidden';
+    popup.style.opacity = '0'
+
+    document.querySelector('.sin').style.display = "block"
+    document.querySelector('.sup').style.display = "none"
+    document.querySelector('.reset-password').style.display = "none"
+}
+
 // language change
 $('.languages > div').click( function () {
     $('.languages > div').removeClass('active')
@@ -120,6 +115,46 @@ $('.languages > div').click( function () {
     }
     $(this).addClass('active')
 })
+
+window.onload = function() {
+    getUser()
+}
+
+if($('.logout')) {
+    $('.logout').click( function () {
+        let token = localStorage.getItem('access_token')
+        const config = {
+            headers: { Authorization: `Bearer ${token}` }
+        };
+        axios.get('https://admin.3des.ca/api/v1/user/logout', config)
+        .then(function (res) {
+            if(res.data.status) {
+                headerChecker(false)
+                window.location.href = 'index.html'
+            }
+        })
+        .catch(e => {
+            headerChecker(true)
+        })
+    })
+}
+
+// Get user
+function getUser() {
+    let token = localStorage.getItem('access_token')
+    const config = {
+        headers: { Authorization: `Bearer ${token}` }
+    };
+    axios.get('https://admin.3des.ca/api/v1/user/get-user', config)
+        .then(function (res) {
+            if(res.data.status) {
+                headerChecker(true)
+            }
+        })
+        .catch(e => {
+            headerChecker(false)
+        })
+}
 
 // Send contact us request
 function sendContactUs(e) {
@@ -161,18 +196,124 @@ function sendSubscribe(e) {
         "email": $('#email-address-newsletter').val()
     })
         .then(function (res) {
-
             if(res.data.status) {
                 $('.subscribe-info').html('Thank You For Subscribing!')
                 $('.subscribe-info').addClass('green');
-            } else {
-                $('.subscribe-info').html('Error subscribing!');
-                $('.subscribe-info').addClass('red');
             }
-
-            $(".subscribe-button").html("Send");
-            $('.subscribe-button').attr('disabled', false);
         })
+
+        .catch(e => {
+
+            $('.subscribe-info').html('The email has already been taken!');
+            $('.subscribe-info').addClass('red');
+        
+        }) 
+
+        $(".subscribe-button").html("Send");
+        $('.subscribe-button').attr('disabled', false);
+}
+
+function signIn(e) {
+    e.preventDefault();
+
+    $('.sign-in-button').attr('disabled', true);
+
+    axios.post('https://admin.3des.ca/api/v1/user/sign-in', {
+            "email": $('#sign-in-email').val(),
+            "password": $('#sign-in-password').val()
+        })
+
+        .then(function (res) {
+            let data = res.data
+            if(data.status) {
+                localStorage.setItem('access_token', data.data.tokens.access_token)
+                localStorage.setItem('user-info', JSON.stringify(data.data.user))
+                closePopup()
+                headerChecker(true);
+                $('.sign-in-button').attr('disabled', false)
+            }
+        })
+
+        .catch(error => {
+            if (error.response) {
+                $('.sign-info').html(error.response.data.message);
+                $('.sign-info').addClass('red');
+                $('.sign-in-button').attr('disabled', false)
+            }
+        }) 
+
+        
+
+}
+
+function signUp(e) {
+    e.preventDefault();
+
+    $('.sign-up-button').attr('disabled', true);
+
+    axios.post('https://admin.3des.ca/api/v1/user/sign-up', {
+            "full_name": $('#sign-up-full-name').val(),
+            "email": $('#sign-up-email').val(),
+            "phone":  $('#sign-up-phone').val(),
+            "password": $('#sign-up-password').val(),
+            "confirm_password": $('#sign-up-confirm-password').val(),
+        })
+
+        .then(function (res) {
+            let data = res.data
+
+            if(data.status) {
+                $('.sign-up-info').html('User created successfully!');
+                $('.sign-up-info').addClass('green');
+                setTimeout(()=> {
+                    localStorage.setItem('access_token', data.data.tokens.access_token)
+                    localStorage.setItem('user-info', JSON.stringify(data.data.user))
+                    closePopup()
+                    headerChecker(true);
+                }, 1000)
+                $('.sign-up-button').attr('disabled', false)
+            }
+        })
+        .catch(function (error) {
+            if (error.response) {
+                $('.sign-up-info').html(error.response.data.message);
+                $('.sign-up-info').addClass('red');
+                $('.sign-up-button').attr('disabled', false)
+            }
+          });
+
+        
+}
+
+// Header draw
+function headerChecker(bool) {
+    let header = document.querySelector('.header-sw')
+    $(header).html('');
+    if(!bool) {
+        let html = '<div class="sign-in">' +
+                        '<span>Sign in</span>' +
+                        '<span class="dot" style="background-color: rgb(54, 167, 170)"></span>'
+                    '</div>';
+
+                    $(header).append(html);
+        // Open popup
+        $('.sign-in').click(function() {
+            let black = document.querySelector('.sign-in-black'),
+                popup = document.querySelector('.sign-in__parent');
+
+                black.style.visibility = 'visible';
+                black.style.opacity = '1'
+                popup.style.visibility = 'visible';
+                popup.style.opacity = '1'
+        });
+    } else {
+        let html =' <a href="my-account.html" class="my-account">' +
+            '<span>My Account</span>' +
+            '<span class="dot" style="background-color: rgb(54, 167, 170)"></span>' +
+        '</a>';
+
+        $(header).append(html);
+    }
 }
 
 $("#form").validate({
@@ -223,6 +364,59 @@ $("#subscribe-form").validate({
     }
 });
 
+// Sign in form validation
+$("#sign-in-form").validate({
+    rules: {
+        "email": {
+            required: true,
+            email: true
+        },
+        "password": {
+            required: true,
+            minlength: 6
+        }
+    },
+    messages: {
+        "email": {
+            required: "Please, enter an email",
+            email: "Email is invalid"
+        }
+    }
+});
+
+// Sign in form validation
+$("#sign-up-form").validate({
+    rules: {
+        "fullName": {
+            required: true,
+            minlength: 3
+        },
+        "phone": {
+            required: true,
+            minlength: 10
+        },
+        "email": {
+            required: true,
+            email: true
+        },
+        "password": {
+            required: true,
+            minlength: 6
+        },
+        "confirmPassword" : {
+            required: true,
+            minlength: 6,
+            equalTo: "#sign-up-password"
+        }
+    },
+    messages: {
+        "email": {
+            required: "Please, enter an email",
+            email: "Email is invalid"
+        }
+    }
+});
+
 $("#form").on('submit', function (e) {
     var isValid = $("#form").valid();
     if (isValid) {
@@ -249,3 +443,17 @@ if(document.querySelector('#video')) {
             }
         });
 }
+
+$('#sign-in-form').on('submit', function(e) {
+    var isValid = $("#sign-in-form").valid();
+    if (isValid) { 
+        signIn(e)
+    }
+})
+
+$('#sign-up-form').on('submit', function(e) {
+    var isValid = $("#sign-up-form").valid();
+    if (isValid) { 
+        signUp(e)
+    }
+})

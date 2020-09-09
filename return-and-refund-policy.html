@@ -27,9 +27,8 @@
 
             <div class="flex-1">
                 <div class="header-right-section">
-                    <div class="sign-in">
-                        Sign in
-                        <span class="dot" style="background-color: rgb(54, 167, 170)"></span>
+                    <div class="header-sw">
+
                     </div>
                     <div class="flag">
                         <img src="./assets/images/canada.png" alt="canada">
@@ -39,10 +38,10 @@
                         <div class="line">|</div>
                         <div class="active">ENG</div>
                     </div>
-                    <div class="card-parent">
+                    <a href="my-cart.html" class="card-parent">
                         <div class="card-counter">01</div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 21.71 21.176"><defs><style>.a{fill:#f16649;}</style></defs><g transform="translate(638.806 974.9)"><g transform="translate(-638.806 -974.9)"><path class="a" d="M26.286,17.5c0,4.616-1.822,8.174-4.246,8.174s-4.255-3.583-4.255-8.2a.961.961,0,0,1-.421-.748.891.891,0,0,1,.9-.882h.842a.876.876,0,0,1,.474,1.63c0,4.115,1.458,6.436,2.455,6.436s2.473-2.559,2.46-6.466a.923.923,0,0,1-.381-.718.891.891,0,0,1,.9-.882h.842a.891.891,0,0,1,.9.882.919.919,0,0,1-.483.774Zm6.577,13.625L29.632,11.839a.894.894,0,0,0-.891-.739h-13.4a.9.9,0,0,0-.891.739L11.2,31.247a.89.89,0,0,0,.891,1.024H32A.88.88,0,0,0,32.863,31.126Z" transform="translate(-11.194 -11.1)"/></g></g></svg>
-                    </div>
+                    </a>
                 </div>
             </div>
 
@@ -341,18 +340,23 @@
             <h2>Sign in</h2>
             <p>Enter your details below to continue</p>
 
-            <div class="login-input-parent">
-                <input type="text" placeholder="* Email address">
-            </div>
+            <form id="sign-in-form">
+                <div class="login-input-parent">
+                    <input type="text" placeholder="* Email address" name="email" id="sign-in-email">
+                </div>
+    
+                <div class="login-input-parent">
+                    <input type="password" placeholder="* Password" name="password" id="sign-in-password">
+                </div>
+    
+                <div class="sign-in-button-wrapper">
+                    <a href="javascript:void(0)" class="f-pass">Forgot your password</a>
+                    <button type="submit" class="sign-in-button">Sign in</button>
+                </div>
 
-            <div class="login-input-parent">
-                <input type="text" placeholder="* Password">
-            </div>
+                <div class="sign-info"></div>
 
-            <div class="sign-in-button-wrapper">
-                <a href="javascript:void(0)" class="f-pass">Forgot your password</a>
-                <button>Sign in</button>
-            </div>
+            </form>
 
             <div class="sign-in-bottom-block">
                 <div>Don't have an account?</div>
@@ -365,27 +369,31 @@
             <h2>Sign up</h2>
             <p>Enter your details below to continue</p>
 
-            <div class="login-input-parent">
-                <input type="text" placeholder="* Full name">
-            </div>
+            <form id="sign-up-form">
+                <div class="login-input-parent">
+                    <input type="text" placeholder="* Full name" name="fullName" id="sign-up-full-name">
+                </div>
+    
+                <div class="login-input-parent">
+                    <input type="number" placeholder="* Phone number" name="phone" id="sign-up-phone">
+                </div>
+    
+                <div class="login-input-parent">
+                    <input type="email" placeholder="* Email adress" name="email" id="sign-up-email"> 
+                </div>
+    
+                <div class="double-input-parent">
+                    <input type="password" placeholder="* Password" name="password" id="sign-up-password">
+                    <input type="password" placeholder="* Confirm password" name="confirmPassword" id="sign-up-confirm-password">
+                </div>
+    
+                <div class="sign-in-button-wrapper">
+                    <a href="#">Forgot your password</a>
+                    <button type="submit" class="sign-up-button">Sign up</button>
+                </div>
 
-            <div class="login-input-parent">
-                <input type="number" placeholder="* Phone number">
-            </div>
-
-            <div class="login-input-parent">
-                <input type="email" placeholder="* Email adress">
-            </div>
-
-            <div class="double-input-parent">
-                <input type="password" placeholder="* Password">
-                <input type="password" placeholder="* Confirm password">
-            </div>
-
-            <div class="sign-in-button-wrapper">
-                <a href="#">Forgot your password</a>
-                <button>Sign up</button>
-            </div>
+                <div class="sign-up-info"></div>
+            </form>
 
             <div class="sign-in-bottom-block">
                 <div>Already have an account?</div>

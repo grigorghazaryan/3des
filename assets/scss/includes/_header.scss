@@ -91,15 +91,16 @@ nav {
         font-family: WhitneySansMedium;
         font-size: 16px;
 
-        .sign-in {
+        .sign-in, .my-account {
             cursor: pointer;
             text-transform: uppercase;
             color: rgba(0,0,0,.5);
             font-weight: 600;
             position: relative;
-            display: flex;
+            display: inline-flex;
             flex-direction: column;
             align-items: center;
+            margin: 0;
 
             .dot { 
                 visibility: hidden;

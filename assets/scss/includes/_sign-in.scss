@@ -80,7 +80,7 @@
                 margin-bottom: 25px;
                 font-family: WhitneySansLight;
                 gap: 25px;
-                display: flex;
+                // display: flex;
                 justify-content: space-between;
                 align-items: center;
 
@@ -106,6 +106,13 @@
             }
 
             .double-input-parent {
+                
+                input {
+                    &:nth-child(1) {
+                        margin-bottom: 25px;
+                    }
+                }
+
                 @media (max-width: 767px) {
                    gap: inherit;
                    flex-direction: column;
@@ -150,6 +157,11 @@
                         color: #000;
                         border-color: #36A7AA;
                     }
+
+                    &:disabled {
+                        background: #b9b9b9;
+                        pointer-events: none;
+                    }
                 }
             }
 
@@ -173,6 +185,11 @@
                         background: transparent;
                         color: #000;
                         border-color: #36A7AA;
+                    }
+
+                    &:disabled {
+                        background: #b9b9b9;
+                        pointer-events: none;
                     }
                 }
             }
