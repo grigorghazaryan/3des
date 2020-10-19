@@ -3894,7 +3894,7 @@ footer .rights-reserved {
 
 .sticker-parent span.click-me {
   font-size: 15px;
-  font-family: cursive;
+  /* font-family: cursive; */
   position: absolute;
   top: -15px;
   right: 0;
