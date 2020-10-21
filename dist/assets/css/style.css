@@ -545,7 +545,7 @@ li.nav-item.dropdown .dropdown-menu a.dropdown-item:active {
 .newsletter .subscribe-button {
   color: #fff;
   background-color: #F16649;
-  border-radius: 30px;
+  border-radius: 10px;
   font-size: 18px;
   border: 1px solid transparent;
   outline: none;
@@ -977,7 +977,7 @@ section.our-products .more-parent .more-button i {
 .contact-us .contact-us__form-parent .form .send-button-parent .send {
   color: #fff;
   background-color: #F16649;
-  border-radius: 30px;
+  border-radius: 10px;
   font-size: 18px;
   border: 1px solid transparent;
   outline: none;
@@ -2040,7 +2040,7 @@ section.our-products .more-parent .more-button i {
   width: 214px;
   height: 55px;
   background-color: #F16649;
-  border-radius: 28px;
+  border-radius: 10px;
   font-size: 18px;
   color: #fff;
   border: 2px solid transparent;
@@ -2460,7 +2460,7 @@ section.our-products .more-parent .more-button i {
 .sign-in__parent .sign-in-block .sign-in .sign-in-button-wrapper button, .sign-in__parent .sign-in-block .sign-up .sign-in-button-wrapper button, .sign-in__parent .sign-in-block .reset-password .sign-in-button-wrapper button {
   color: #fff;
   background-color: #F16649;
-  border-radius: 30px;
+  border-radius: 10px;
   font-size: 18px;
   border: 1px solid transparent;
   outline: none;
@@ -3431,7 +3431,7 @@ footer .rights-reserved {
   width: 330px;
   height: 55px;
   background: #F16649;
-  border-radius: 28px;
+  border-radius: 10px;
   color: #fff;
   border: 1px solid transparent;
   margin-top: 64px;
@@ -3959,7 +3959,7 @@ div#left .sticker-parent span {
 .medium-button {
   color: #fff;
   background-color: #F16649;
-  border-radius: 30px;
+  border-radius: 10px;
   font-size: 18px;
   border: 1px solid transparent;
   outline: none;
@@ -4010,7 +4010,7 @@ div#left .sticker-parent span {
 .bordered-medium-button {
   color: #607D8B;
   background-color: #f3f3f361;
-  border-radius: 30px;
+  border-radius: 10px;
   font-size: 18px;
   border: 1px solid #607D8B;
   outline: none;
