@@ -34,10 +34,16 @@
                     <div class="flag">
                         <img src="./assets/images/canada.png" alt="canada">
                     </div>
-                    <div class="languages">
+                    <!-- <div class="languages">
                         <div>FR</div>
                         <div class="line">|</div>
                         <div class="active">ENG</div>
+                    </div> -->
+                    <div class="switch-field">
+                        <input type="radio" id="radio-one" name="switch-one" value="yes" checked/>
+                        <label for="radio-one"><span>FR</span></label>
+                        <input type="radio" id="radio-two" name="switch-one" value="no" />
+                        <label for="radio-two">ENG</label>
                     </div>
                     <a href="my-cart.html" class="card-parent">
                         <div class="card-counter">01</div>
@@ -258,7 +264,16 @@
                             </div>
                         </div>
                         <div class="tab-pane" id="tab3-v">
-                            <h4>Edit Address</h4>
+                            <div style="display: flex; justify-content: space-between; align-items: end; width: 83%">
+                                <h4>Billing Address</h4>
+                                <div>
+                                    <label class="chechbox-container">
+                                        Make Primary
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
                             <div class="row mt-30">
                                 <div class="col-md-5">
                                     <fieldset class="formRow">
@@ -334,9 +349,10 @@
                                 </div>
                                 <div class="col-md-10 mt-50">
                                     <div class="address-button-parent">
-                                        <div>
+                                        <div class="billing-address-container">
+                                            <span class="billing-address-btn">Billing Address</span>
                                             <label class="chechbox-container">
-                                                Make Primary
+                                                Use the same address as for shipping
                                                 <input type="checkbox">
                                                 <span class="checkmark"></span>
                                             </label>
@@ -516,7 +532,7 @@
 
 <footer>
     <div class="faq-parent">
-        <div><a href="./return-and-refund-policy.html">Return Policy</a></div>
+        <!-- <div><a href="./return-and-refund-policy.html">Return Policy</a></div> -->
     </div>
     <div class="support-parent">
         <div>
@@ -533,6 +549,7 @@
         </div>
     </div>
     <div class="privacy-parent">
+        <div><a href="./privacy-policy.html">Return Policy</a></div>
         <div><a href="./privacy-policy.html">PRIVACY & SECURITY</a></div>
         <div><a href="#">TERMS & CONDITIONS</a></div>
     </div>

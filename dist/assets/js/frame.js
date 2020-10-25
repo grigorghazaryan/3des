@@ -127,7 +127,7 @@ function setDroppable(id) {
                 $('.fr .sticker-parent svg circle.c').css('fill',fontColor)
             }
 
-            $('<span class="click-me" data_id='+ dataId +'>X</span>').appendTo(item).click(removeElement);
+            $('<span class="click-me" data_id='+ dataId +'>&#x2715</span>').appendTo(item).click(removeElement);
         }
     }); 
 }
@@ -203,7 +203,7 @@ function createElementOnFrame( valueId, frameId, ls_key ) {
 
                 setTimeout( () => {
                     textFit(document.querySelector('#'+id));
-                    $('<span class="click-me">X</span>').appendTo('.textDropable').click(removeElement);
+                    $('<span class="click-me">&#x2715</span>').appendTo('.textDropable').click(removeElement);
                 }, 0);
 
                 setFontFamily( font, div );
