@@ -246,6 +246,10 @@ function signIn(e) {
 
 }
 
+function resetPassword(e) {
+    e.preventDefault()
+}
+
 function signUp(e) {
     e.preventDefault();
 
@@ -364,6 +368,22 @@ $("#subscribe-form").validate({
     }
 });
 
+//  password reset form validation
+$('#password-reset-form').validate({
+    rules: {
+        "email": {
+            required: true,
+            email: true
+        },
+        messages: {
+            "email": {
+                required: "Please, enter an email",
+                email: "Email is invalid"
+            }
+        }
+    }    
+})
+
 // Sign in form validation
 $("#sign-in-form").validate({
     rules: {
@@ -456,4 +476,9 @@ $('#sign-up-form').on('submit', function(e) {
     if (isValid) { 
         signUp(e)
     }
+})
+
+$('#password-reset-form').on('submit', (e) => {
+    let isValid = $('#password-reset-form').valid()
+    if (isValid) resetPassword(e)
 })
