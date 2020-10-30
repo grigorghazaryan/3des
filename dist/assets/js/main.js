@@ -248,6 +248,17 @@ function signIn(e) {
 
 function resetPassword(e) {
     e.preventDefault()
+
+    axios.post('https://admin.3des.ca/api/v1/reset/send-mail', {
+        "email": $('#password-reset').val()
+    }).then((res) => {
+        let data = res.data
+
+        if(data.status) {
+            $('.password-reset-info').html(data.message)
+            $('.password-reset-info').addClass('green')
+        }
+    })
 }
 
 function signUp(e) {

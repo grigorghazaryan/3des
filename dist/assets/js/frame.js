@@ -91,33 +91,33 @@ function setDroppable(id) {
                     break; 
             }
 
-            // item.css({
-            //     top: origPos.top - ctPos.top - 1,
-            // });
+            item.css({
+                top: origPos.top - ctPos.top - 1,
+            });
 
-            // item.css({
-            //     top: origPos.top - ctPos.top - 1,
-            //     left: origPos.left - ctPos.left - 1
-            // });
+            item.css({
+                top: origPos.top - ctPos.top - 1,
+                left: origPos.left - ctPos.left - 1
+            });
 
-            // if(window.matchMedia("(max-width: 767px)").matches){
-            //     $('.fr > .sticker-parent').rotatable().resizable({
-            //         disabled: true
-            //     });
-            // } else{
-            //     item.rotatable()
+            if(window.matchMedia("(max-width: 767px)").matches){
+                $('.fr > .sticker-parent').rotatable().resizable({
+                    disabled: true
+                });
+            } else{
+                item.rotatable()
                 
-            //     // .resizable({
-            //     //     containment: $(id),
-            //     //     //maxWidth: 80,
-            //     //     //maxHeight: 80,
-            //     //     snap: false,
-            //     //     minWidth: 40,
-            //     //     minHeight: 40,
-            //     //     animateDuration: "fast",
-            //     //     autoHide: true,
-            //     // });
-            // }
+                // .resizable({
+                //     containment: $(id),
+                //     //maxWidth: 80,
+                //     //maxHeight: 80,
+                //     snap: false,
+                //     minWidth: 40,
+                //     minHeight: 40,
+                //     animateDuration: "fast",
+                //     autoHide: true,
+                // });
+            }
 
             if(fontColor == '') {
                 $('.fr .sticker-parent svg path.c').css('fill', "#242424")
