@@ -4167,4 +4167,18 @@ div#left .sticker-parent span {
     width: 100%;
   }
 }
+
+.shipping-billing-address-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.edit-delete-address {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 55%;
+}
 /*# sourceMappingURL=style.css.map */
