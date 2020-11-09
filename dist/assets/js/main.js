@@ -149,6 +149,8 @@ function getUser() {
         .then(function (res) {
             if(res.data.status) {
                 headerChecker(true)
+                $('.user-name').html(res.data.data.full_name)
+                $('.user-email').html(res.data.data.email)
             }
         })
         .catch(e => {
@@ -236,7 +238,7 @@ function signIn(e) {
 
         .catch(error => {
             if (error.response) {
-                $('.sign-info').html(error.response.data.message);
+                $('.sign-info').html('The email and password you entered did not match our records. Please double-check and try again');
                 $('.sign-info').addClass('red');
                 $('.sign-in-button').attr('disabled', false)
             }
@@ -255,7 +257,7 @@ function resetPassword(e) {
         let data = res.data
 
         if(data.status) {
-            $('.password-reset-info').html(data.message)
+            $('.password-reset-info').html('The message is sent to the mentioned address containing a link to reset your password')
             $('.password-reset-info').addClass('green')
         }
     })

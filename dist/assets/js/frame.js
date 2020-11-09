@@ -461,6 +461,13 @@ $('.go-to-second').click(function() {
 
 $('.first-step-button').click(function() {
     step++;
+    html2canvas(document.querySelector(".frame-parent") , {
+        onrendered: function(canvas) {
+          var img = canvas.toDataURL()
+          console.log("setDroppable -> img", img)
+          window.open(img);
+        }
+      });
     $('.first-step').css('display', 'none')
     $('.second-step').css('display', 'block')
     $('.back-button').css('display', 'flex')
