@@ -309,6 +309,7 @@ nav .header-right-section .languages {
 
 nav .header-right-section .languages div {
   cursor: pointer;
+  font-family: sans-serif;
 }
 
 nav .header-right-section .languages .line {
@@ -3139,7 +3140,7 @@ footer .rights-reserved {
 
 .faq .subtitle {
   font-size: 16px;
-  font-family: WhitneySansMedium;
+  /* font-family: WhitneySansMedium; */
   text-align: center;
   margin-top: 7px;
 }
@@ -3900,7 +3901,7 @@ footer .rights-reserved {
   justify-content: flex-end;
   align-items: center;
   padding: 17px 45px;
-  gap: 16px;
+  gap: 26px;
 }
 
 .credit-card-wrapper .inputs-parent {
@@ -3915,11 +3916,12 @@ footer .rights-reserved {
   position: absolute;
   top: 55%;
   left: 5%;
-  width: 50px;
-  border-right: 2px solid #DCDCDC;
+  width: 33px;
+  border-right: 1px solid #DCDCDC;
 }
 
 .credit-card-wrapper .inputs-parent .card-input-parent .card-type img {
+  vertical-align: -webkit-baseline-middle;
   width: 80%;
 }
 
@@ -4180,5 +4182,13 @@ div#left .sticker-parent span {
   justify-content: space-between;
   flex-wrap: wrap;
   width: 55%;
+}
+
+.password-reset-info {
+  margin-top: 20px;
+  border: none;
+  padding: 10px;
+  background-color: #F16649;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

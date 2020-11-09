@@ -1,7 +1,9 @@
 function getFaqs() {
-    axios.get('https://admin.3des.ca/api/v1/faq-get')
+    let page_number = 1
+    axios.get(`https://admin.3des.ca/api/v1/faq-get?limit=${page_number}`)
+    // axios.get('https://run.mocky.io/v3/af428d14-fe55-414c-b17d-a3608ecd7b16')
         .then(function (res) {
-            let data = res.data.data.faq;
+            let data = res.data.data.list;
             $('#accordionExample').html('');
             for(let i=0; i<data.length; i++) {
                 let html = '<div class="card">' +
