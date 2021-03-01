@@ -164,6 +164,9 @@ function setFontFamily(value, el) {
 }
 
 function createElementOnFrame( valueId, frameId, ls_key ) {
+
+    console.log(valueId, frameId, ls_key)
+
         counter++;
         let value = document.querySelector( valueId ).value;
 
@@ -175,7 +178,6 @@ function createElementOnFrame( valueId, frameId, ls_key ) {
            //if($(frameId + " .clear-text ").text() !== value) {
 
                 if($(frameId).children('.textDropable').length) {
-                    console.log(frameId)
                     $(frameId + ' > .textDropable').remove()
                 }
                 
@@ -184,17 +186,15 @@ function createElementOnFrame( valueId, frameId, ls_key ) {
                     id = (frameId + counter).replace('#', ''),
                     pre = document.createElement('span');
 
-                if(frameId == '#right' || frameId == '#left') {
-                    div.className = 'textDropable rotate'
-                }else {
-                    div.className = 'textDropable'
-                }
+                    div.className = 'textDropable fr draggable'
 
                 if(fontColor == '') {
                     div.style.color = "#242424"
                 } else {
                     div.style.color = fontColor
                 }
+
+                console.log('id', id)
 
                 div.id = id;
                 pre.className = 'clear-text'
@@ -209,36 +209,41 @@ function createElementOnFrame( valueId, frameId, ls_key ) {
                 setFontFamily( font, div );
                 document.querySelector( frameId ).append( div );
 
-                switch(frameId) {
-                    case '#top':
-                        $( '#'+id ).draggable({ 
-                            containment: frameId,
-                            axis: 'x'
-                        })  
-                        break;
-                    case '#bottom':
-                        $( '#'+id ).draggable({ 
-                            containment: frameId,
-                        axis: 'x'
-                        })  
-                        break;    
-                    case '#right':
-                        $( '#'+id ).draggable({ 
-                            containment: frameId,
-                            axis: 'y'
-                        })  
-                        break;  
-                    case '#left':
-                        $( '#'+id ).draggable({ 
-                            containment: frameId,
-                            axis: 'y'
-                        })  
-                        break;  
-                    default:
-                        break;
-                }  
+                $( '#'+id ).draggable({ 
+                    // containment: '.frame-parent',
+                })  
 
-                //$( '#'+id ).draggable({ containment: frameId })  
+                // switch(frameId) {
+                //     case '#top':
+                //         $( '#'+id ).draggable({ 
+                //             containment: frameId,
+                //             axis: 'x'
+                //         })  
+                //         break;
+                //     case '#bottom':
+                //         $( '#'+id ).draggable({ 
+                //             containment: frameId,
+                //         axis: 'x'
+                //         })  
+                //         break;    
+                //     case '#right':
+                //         $( '#'+id ).draggable({ 
+                //             containment: frameId,
+                //             axis: 'y'
+                //         })  
+                //         break;  
+                //     case '#left':
+                //         $( '#'+id ).draggable({ 
+                //             containment: frameId,
+                //             axis: 'y'
+                //         })  
+                //         break;  
+                //     default:
+                        
+                //         break;
+                // }  
+
+                // $( '#'+id ).draggable({ containment: frameId })  
             //} 
         }
 }
@@ -295,10 +300,10 @@ function clearInnerHtml(elementId) {
     document.querySelector(elementId).innerHTML = ''
 }
 
-setDroppable( '#top' );
-setDroppable( '#right' );
-setDroppable( '#bottom' );
-setDroppable( '#left' );
+setDroppable( '.frame-parent' );
+// setDroppable( '#right' );
+// setDroppable( '#bottom' );
+// setDroppable( '#left' );
 
 $(".plus").click( function () {
     if( $('.toggle-inputs').css('display') == 'block') {
@@ -309,17 +314,17 @@ $(".plus").click( function () {
     $( ".toggle-inputs" ).slideToggle( "slow" );
 });
 
-textValidation('#top-input', '.top-counter', 15);
-textValidation('#bottom-input', '.bottom-counter', 15);
-textValidation('#left-input', '.left-counter', 20);
-textValidation( '#right-input', '.right-counter', 20 );
+// textValidation('#top-input', '.top-counter', 15);
+// textValidation('#bottom-input', '.bottom-counter', 15);
+// textValidation('#left-input', '.left-counter', 20);
+// textValidation( '#right-input', '.right-counter', 20 );
 
-document.querySelector( '.apply-button' ).onclick = function () {
-    createElementOnFrame('#top-input', '#top', 'topText');
-    createElementOnFrame('#bottom-input', '#bottom', 'bottomText');
-    createElementOnFrame('#right-input', '#right', 'rightText');
-    createElementOnFrame( '#left-input', '#left', 'leftText' );
-}
+$(".apply-button" ).click( function () {
+    createElementOnFrame('#top-input', '#char-preview', 'topText');
+    $('#top-input').val('')
+});
+
+
 
 function resetInputCounterValues(id, value) {
     $('#' + id + '-input').attr('maxlength', value);
@@ -327,10 +332,11 @@ function resetInputCounterValues(id, value) {
 }
 
 // Set font family
-$("input[name='font']" ).click( function () {
+$("input[name='font']" ).click( function () {  
 
     $("input[name='font']").parent().removeClass('checked-font');
     $( this ).parent().addClass( 'checked-font' );
+
     
     var radioValue = $( "input[name='font']:checked" ).val();
     if(radioValue){
@@ -339,10 +345,11 @@ $("input[name='font']" ).click( function () {
 
     $(".textDropable").removeClass("whitneysans chewy fyodor courgette");
 
-    createElementOnFrame('#top-input', '#top', 'topText');
-    createElementOnFrame('#bottom-input', '#bottom', 'bottomText');
-    createElementOnFrame('#right-input', '#right', 'rightText');
-    createElementOnFrame( '#left-input', '#left', 'leftText' );
+    createElementOnFrame('#top-input', '#char-preview', 'topText');
+
+    // createElementOnFrame('#bottom-input', '#bottom', 'bottomText');
+    // createElementOnFrame('#right-input', '#right', 'rightText');
+    // createElementOnFrame( '#left-input', '#left', 'leftText' );
 })
 
 function renderSelectedStickers() {

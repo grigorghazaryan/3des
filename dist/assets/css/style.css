@@ -1961,7 +1961,7 @@ section.our-products .more-parent .more-button i {
   background: #36A7AA;
   outline: none;
   opacity: 1;
-  margin-bottom: 34px;
+  margin-bottom: 20px;
   -webkit-transition: .3s;
   transition: .3s;
   cursor: pointer;
@@ -1980,10 +1980,11 @@ section.our-products .more-parent .more-button i {
 }
 
 .textDropable {
+  position: absolute;
   width: -webkit-max-content !important;
   width: -moz-max-content !important;
   width: max-content !important;
-  max-width: 333px !important;
+  max-width: 333px;
   text-shadow: 2px 2px #56555552;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1994,7 +1995,7 @@ section.our-products .more-parent .more-button i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 115px;
+  height: 80px;
   cursor: -webkit-grab;
   cursor: grab;
   text-transform: uppercase;
@@ -2279,16 +2280,7 @@ section.our-products .more-parent .more-button i {
 }
 
 .preview-frame-parent .frame .fr {
-  z-index: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  z-index: 4;
 }
 
 .preview-frame-parent .frame .fr .draggable svg {
@@ -2701,6 +2693,26 @@ section.our-products .more-parent .more-button i {
 
 .sticker-parent.draggable.fr.ui-draggable {
   position: absolute !important;
+}
+
+.sticker-parent.draggable.ui-draggable-handle.fr.ui-draggable.ui-resizable {
+  width: 50px;
+  height: 50px;
+}
+
+.char-parent {
+  width: 100%;
+  height: 150px;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .sign-in-black {
